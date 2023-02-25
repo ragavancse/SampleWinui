@@ -12,58 +12,92 @@
         <viewmodel:JobsViewModel x:Key="JobsViewModel" />
     </UserControl.Resources>
 
-    <Grid DataContext="{StaticResource JobsViewModel}" Margin="30" CornerRadius="5" >
+    <Grid
+        Margin="30"
+        CornerRadius="5"
+        DataContext="{StaticResource JobsViewModel}">
         <Grid.RowDefinitions>
             <RowDefinition Height="60" />
             <RowDefinition />
-            <RowDefinition Height="50"/>
+            <RowDefinition Height="50" />
         </Grid.RowDefinitions>
 
         <Grid Background="White">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="AUTO"/>
-                <ColumnDefinition Width="AUTO"/>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="AUTO" />
+                <ColumnDefinition Width="AUTO" />
             </Grid.ColumnDefinitions>
-            <TextBlock Text="List of Jobs" Style="{StaticResource TextFontColor}" VerticalAlignment="Center" Margin="15,0,0,0" />
-            <StackPanel Orientation="Horizontal" Grid.Column="1" Margin="0,0,30,0" >
-                <SymbolIcon Symbol="Refresh" Margin="0,0,10,0" />
-                <TextBlock Text="REFRESH"  FontSize="10" FontWeight="SemiBold" VerticalAlignment="Center" />
+            <TextBlock
+                Margin="15,0,0,0"
+                VerticalAlignment="Center"
+                Style="{StaticResource TextFontColor}"
+                Text="List of Jobs" />
+            <StackPanel
+                Grid.Column="1"
+                Margin="0,0,30,0"
+                Orientation="Horizontal">
+                <SymbolIcon Margin="0,0,10,0" Symbol="Refresh" />
+                <TextBlock
+                    VerticalAlignment="Center"
+                    FontSize="10"
+                    FontWeight="SemiBold"
+                    Text="REFRESH" />
             </StackPanel>
-            
-            <Border Grid.Column="2" BorderBrush="CadetBlue" Width="200" Margin="0,0,10,0" BorderThickness="1" CornerRadius="20" Height="30">
-                
-            <Grid>
-                <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="40"/>
-                        <ColumnDefinition Width="AUTO"/>
-                        <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                <SymbolIcon Symbol="Find" Width="20" Height="20"/>
-                    <Border BorderBrush="CadetBlue" Grid.Column="1" Margin="0,0,0,0" BorderThickness="1"/>
-                    <TextBox  PlaceholderText="Search" Grid.Column="2"  VerticalAlignment="Center" />
-            </Grid>
+
+            <Border
+                Grid.Column="2"
+                Width="200"
+                Height="30"
+                Margin="0,0,10,0"
+                BorderBrush="CadetBlue"
+                BorderThickness="1"
+                CornerRadius="20">
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="40" />
+                        <ColumnDefinition Width="AUTO" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <SymbolIcon
+                        Width="20"
+                        Height="20"
+                        Symbol="Find" />
+                    <Border
+                        Grid.Column="1"
+                        Margin="0,0,0,0"
+                        BorderBrush="CadetBlue"
+                        BorderThickness="1" />
+                    <TextBox
+                        Grid.Column="2"
+                        VerticalAlignment="Center"
+                        PlaceholderText="Search" />
+                </Grid>
             </Border>
 
 
 
-        </Grid >
+        </Grid>
 
 
         <controls:DataGrid
             x:Name="gridView"
             Grid.Row="1"
-            Foreground="Black" 
+            AutoGenerateColumns="False"
             Background="White"
-            AutoGenerateColumns="False" GridLinesVisibility="All" HorizontalGridLinesBrush="#bdbdbd" VerticalGridLinesBrush="#bdbdbd"
-            ItemsSource="{Binding Jobs}">
+            Foreground="Black"
+            GridLinesVisibility="All"
+            HorizontalGridLinesBrush="#bdbdbd"
+            ItemsSource="{Binding Jobs}"
+            VerticalGridLinesBrush="#bdbdbd">
             <controls:DataGrid.CellStyle>
                 <Style TargetType="controls:DataGridCell">
-                    <Setter Property="Height" Value="50"/>
+                    <Setter Property="Height" Value="50" />
                 </Style>
             </controls:DataGrid.CellStyle>
 
-        <controls:DataGrid.Columns>
+            <controls:DataGrid.Columns>
                 <controls:DataGridTextColumn
                     Width="140"
                     Binding="{Binding JobType}"
@@ -73,7 +107,7 @@
                     Binding="{Binding JobId}"
                     Header="Job ID" />
                 <controls:DataGridTextColumn
-                    Width="600"
+                    Width="900"
                     Binding="{Binding Descripton}"
                     Header="Descripton" />
                 <controls:DataGridTextColumn
@@ -81,13 +115,16 @@
                     Binding="{Binding Status}"
                     Header="Status" />
                 <controls:DataGridTextColumn
-                    Width="200"
+                    Width="300"
                     Binding="{Binding LastMessage}"
                     Header="Last Message" />
             </controls:DataGrid.Columns>
         </controls:DataGrid>
-  
-    <StackPanel Grid.Row="2" Orientation="Horizontal" Background="White">
+
+        <StackPanel
+            Grid.Row="2"
+            Background="White"
+            Orientation="Horizontal">
             <Button Background="Transparent">
                 <Path
                     Width="10"
