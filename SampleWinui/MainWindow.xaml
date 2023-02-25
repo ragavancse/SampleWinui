@@ -8,15 +8,16 @@
     mc:Ignorable="d">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width=".2*" />
+            <ColumnDefinition Width="Auto" />
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
-        <Grid VerticalAlignment="Top" Background="#FFFFFF">
+        <Grid Background="#FFFFFF">
             <NavigationView
                 x:Name="nvSample8"
                 Grid.Row="1"
-                Height="460"
                 IsBackButtonVisible="Collapsed"
+                IsPaneToggleButtonVisible="False"
+                IsSettingsVisible="False"
                 IsTabStop="False"
                 PaneDisplayMode="Left">
                 <NavigationView.MenuItems>
@@ -73,16 +74,19 @@
                         </Border>
                     </DataTemplate>
                 </Pivot.HeaderTemplate>
-                <PivotItem Background="#D9E4E8" Header="All">
-                    <TextBlock Text="all emails go here." />
+                <PivotItem Background="#D9E4E8" Header="File">
+                    <TextBlock Text="File." />
                 </PivotItem>
-                <PivotItem Background="#D9E4E8" Header="Unread">
+                <PivotItem Background="#D9E4E8" Header="Jobs">
                     <TextBlock Text="unread emails go here." />
                 </PivotItem>
-                <PivotItem Background="#D9E4E8" Header="Flagged">
+                <PivotItem Background="#D9E4E8" Header="Issues">
                     <TextBlock Text="flagged emails go here." />
                 </PivotItem>
-                <PivotItem Background="#D9E4E8" Header="Urgent">
+                <PivotItem Background="#D9E4E8" Header="Mointer">
+                    <TextBlock Text="urgent emails go here." />
+                </PivotItem>
+                <PivotItem Background="#D9E4E8" Header="Schedule">
                     <TextBlock Text="urgent emails go here." />
                 </PivotItem>
             </Pivot>
