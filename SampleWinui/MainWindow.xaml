@@ -9,103 +9,154 @@
     xmlns:view="using:SampleWinui.View"
     mc:Ignorable="d">
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto" />
-            <ColumnDefinition />
-        </Grid.ColumnDefinitions>
-        <Grid Background="#FFFFFF">
-            <NavigationView
-                x:Name="nvSample8"
-                Grid.Row="1"
-                IsBackButtonVisible="Collapsed"
-                IsPaneToggleButtonVisible="False"
-                IsSettingsVisible="False"
-                IsTabStop="False"
-                PaneDisplayMode="Left">
-                <NavigationView.MenuItems>
-                    <NavigationViewItem
-                        Content="Home"
-                        Icon="Home"
-                        Tag="SamplePage1"
-                        ToolTipService.ToolTip="Home" />
-                    <NavigationViewItem
-                        Content="Account"
-                        Icon="Contact"
-                        Tag="SamplePage2"
-                        ToolTipService.ToolTip="Account">
-                        <NavigationViewItem.MenuItems>
-                            <NavigationViewItem
-                                Content="Mail"
-                                Icon="Mail"
-                                Tag="SamplePage3"
-                                ToolTipService.ToolTip="Mail" />
-                            <NavigationViewItem
-                                Content="Calendar"
-                                Icon="Calendar"
-                                Tag="SamplePage4"
-                                ToolTipService.ToolTip="Calendar" />
-                        </NavigationViewItem.MenuItems>
-                    </NavigationViewItem>
-                    <NavigationViewItem
-                        Content="Document options"
-                        Icon="Page2"
-                        SelectsOnInvoked="False"
-                        ToolTipService.ToolTip="Document options">
-                        <NavigationViewItem.MenuItems>
-                            <NavigationViewItem
-                                Content="Create new"
-                                Icon="NewFolder"
-                                Tag="SamplePage5"
-                                ToolTipService.ToolTip="Create new" />
-                            <NavigationViewItem
-                                Content="Upload file"
-                                Icon="OpenLocal"
-                                Tag="SamplePage6"
-                                ToolTipService.ToolTip="Upload file" />
-                        </NavigationViewItem.MenuItems>
-                    </NavigationViewItem>
-                </NavigationView.MenuItems>
-            </NavigationView>
-        </Grid>
-        <Grid Grid.Column="1">
-            <Pivot>
-                <Pivot.HeaderTemplate>
-                    <DataTemplate>
-                        <Border>
-                            <TextBlock Text="{Binding}" />
-                        </Border>
-                    </DataTemplate>
-                </Pivot.HeaderTemplate>
-                <PivotItem Background="#D9E4E8" Header="File">
-                    <TextBlock Text="File." />
-                </PivotItem>
-                <PivotItem Background="#D9E4E8" Header="Jobs">
-                    <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition />
-                            <RowDefinition />
-                        </Grid.RowDefinitions>
-                        <view:JobsView />
-                        <Grid Grid.Row="1">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition />
-                                <ColumnDefinition />
-                            </Grid.ColumnDefinitions>
-                            <view:TaskList />
-                            <view:LogView Grid.Column="1" />
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <Grid x:Name="AppTitleBar" Background="#3871CA" />
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid Background="#FFFFFF">
+                <NavigationView
+                    x:Name="nvSample8"
+                    Grid.Row="1"
+                    IsBackButtonVisible="Collapsed"
+                    IsPaneToggleButtonVisible="False"
+                    IsSettingsVisible="False"
+                    IsTabStop="False"
+                    PaneDisplayMode="Left">
+                    <NavigationView.MenuItems>
+                        <NavigationViewItem
+                            Content="Home"
+                            Icon="Home"
+                            Tag="SamplePage1"
+                            ToolTipService.ToolTip="Home" />
+                        <NavigationViewItem
+                            Content="Account"
+                            Icon="Contact"
+                            Tag="SamplePage2"
+                            ToolTipService.ToolTip="Account">
+                            <NavigationViewItem.MenuItems>
+                                <NavigationViewItem
+                                    Content="Mail"
+                                    Icon="Mail"
+                                    Tag="SamplePage3"
+                                    ToolTipService.ToolTip="Mail" />
+                                <NavigationViewItem
+                                    Content="Calendar"
+                                    Icon="Calendar"
+                                    Tag="SamplePage4"
+                                    ToolTipService.ToolTip="Calendar" />
+                            </NavigationViewItem.MenuItems>
+                        </NavigationViewItem>
+                        <NavigationViewItem
+                            Content="Document options"
+                            Icon="Page2"
+                            SelectsOnInvoked="False"
+                            ToolTipService.ToolTip="Document options">
+                            <NavigationViewItem.MenuItems>
+                                <NavigationViewItem
+                                    Content="Create new"
+                                    Icon="NewFolder"
+                                    Tag="SamplePage5"
+                                    ToolTipService.ToolTip="Create new" />
+                                <NavigationViewItem
+                                    Content="Upload file"
+                                    Icon="OpenLocal"
+                                    Tag="SamplePage6"
+                                    ToolTipService.ToolTip="Upload file" />
+                            </NavigationViewItem.MenuItems>
+                        </NavigationViewItem>
+                    </NavigationView.MenuItems>
+                </NavigationView>
+            </Grid>
+            <Grid Grid.Column="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Pivot Grid.ColumnSpan="2">
+                    <Pivot.HeaderTemplate>
+                        <DataTemplate>
+                            <Border
+                                Height="50"
+                                Margin="10,0,30,0"
+                                VerticalAlignment="Center">
+                                <TextBlock
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    FontSize="20"
+                                    FontWeight="Bold"
+                                    Text="{Binding}"
+                                    TextAlignment="Center" />
+                            </Border>
+                        </DataTemplate>
+                    </Pivot.HeaderTemplate>
+                    <PivotItem Background="#D9E4E8" Header="File">
+                        <TextBlock Text="File." />
+                    </PivotItem>
+                    <PivotItem Background="#D9E4E8" Header="Jobs">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition />
+                                <RowDefinition />
+                            </Grid.RowDefinitions>
+                            <view:JobsView />
+                            <Grid Grid.Row="1">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition />
+                                    <ColumnDefinition />
+                                </Grid.ColumnDefinitions>
+                                <view:TaskList />
+                                <view:LogView Grid.Column="1" />
+                            </Grid>
                         </Grid>
+                    </PivotItem>
+                    <PivotItem Background="#D9E4E8" Header="Issues">
+                        <TextBlock Text="flagged emails go here." />
+                    </PivotItem>
+                    <PivotItem Background="#D9E4E8" Header="Mointer">
+                        <TextBlock Text="urgent emails go here." />
+                    </PivotItem>
+                    <PivotItem Background="#D9E4E8" Header="Schedule">
+                        <TextBlock Text="urgent emails go here." />
+                    </PivotItem>
+                </Pivot>
+                <StackPanel
+                    Grid.Column="1"
+                    Margin="10"
+                    Orientation="Horizontal">
+                    <TextBlock Margin="5" Text="Instance" />
+                    <ComboBox Width="150" SelectedIndex="0">
+                        <ComboBoxItem>Primary</ComboBoxItem>
+                    </ComboBox>
+                    <TextBlock Margin="5" Text="AccuntName" />
+                    <Grid Margin="0,0,20,0" VerticalAlignment="Top">
+                        <Grid
+                            Name="backgroundGrid"
+                            Width="30"
+                            Height="30"
+                            Visibility="Visible">
+                            <Ellipse
+                                Name="Fill"
+                                Fill="#D9E4E8"
+                                Visibility="Visible" />
+                        </Grid>
+                        <Path
+                            Width="20"
+                            Height="20"
+                            Margin="0,0,0,0"
+                            Data="M21.576999,13.473151C26.414003,15.496185 30.259996,20.071221 31.999999,25.86432 15.448002,32.143386 0,25.86432 0,25.86432 1.7140042,20.158227 5.4690005,15.632174 10.202001,13.564156 11.338002,15.514191 13.444005,16.827195 15.862003,16.827195 18.317996,16.827195 20.455997,15.474182 21.576999,13.473151z M16.000003,0C19.617999,1.5323894E-07 22.550998,2.9330488 22.550998,6.5510722 22.550998,10.170134 19.617999,13.102144 16.000003,13.102144 12.381993,13.102144 9.4489957,10.170134 9.4489957,6.5510722 9.4489957,2.9330488 12.381993,1.5323894E-07 16.000003,0z"
+                            Fill="#FFFFFFFF"
+                            RenderTransformOrigin="0.5,0.5"
+                            Stretch="Uniform" />
                     </Grid>
-                </PivotItem>
-                <PivotItem Background="#D9E4E8" Header="Issues">
-                    <TextBlock Text="flagged emails go here." />
-                </PivotItem>
-                <PivotItem Background="#D9E4E8" Header="Mointer">
-                    <TextBlock Text="urgent emails go here." />
-                </PivotItem>
-                <PivotItem Background="#D9E4E8" Header="Schedule">
-                    <TextBlock Text="urgent emails go here." />
-                </PivotItem>
-            </Pivot>
+                </StackPanel>
+            </Grid>
         </Grid>
     </Grid>
 </Window>
