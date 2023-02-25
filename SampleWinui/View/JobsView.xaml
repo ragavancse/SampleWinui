@@ -12,20 +12,44 @@
         <viewmodel:JobsViewModel x:Key="JobsViewModel" />
     </UserControl.Resources>
 
-    <Grid DataContext="{StaticResource JobsViewModel}">
+    <Grid DataContext="{StaticResource JobsViewModel}" Margin="30" CornerRadius="5" >
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
+            <RowDefinition Height="60" />
             <RowDefinition />
         </Grid.RowDefinitions>
+
+        <Grid Style="{StaticResource TabColor}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="List of Jobs" Style="{StaticResource TextFontColor}" VerticalAlignment="Center" Margin="15,0,0,0" />
+            <AutoSuggestBox Width="200" Height="30" Margin="0,0,30,0" VerticalAlignment="Center"
+                            CornerRadius="15" Grid.Column="2" PlaceholderText="Search" Foreground="Black"/>
+
+        </Grid >
+
+
         <controls:DataGrid
             x:Name="gridView"
-            AutoGenerateColumns="False"
+            Grid.Row="1" 
+            Foreground="Black" 
+            Background="White"
+            AutoGenerateColumns="False" GridLinesVisibility="All" HorizontalGridLinesBrush="Gray" VerticalGridLinesBrush="Gray"
             ItemsSource="{Binding Jobs}">
+
             <controls:DataGrid.Columns>
                 <controls:DataGridTextColumn
-                    Width="*"
+                    Width="*" 
                     Binding="{Binding JobType}"
-                    Header="Job Type" />
+                    Header="Job Type" >
+                    <controls:DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="GridViewHeaderItem">
+                            <Setter Property="Background" Value="Gray"></Setter>
+                        </Style>
+                    </controls:DataGridTextColumn.HeaderStyle>
+                </controls:DataGridTextColumn>
                 <controls:DataGridTextColumn
                     Width="*"
                     Binding="{Binding JobId}"
@@ -44,7 +68,8 @@
                     Header="Last Message" />
             </controls:DataGrid.Columns>
         </controls:DataGrid>
-        <StackPanel Grid.Row="1" Orientation="Horizontal">
+  
+    <StackPanel Grid.Row="1" Orientation="Horizontal">
             <Button Background="Transparent">
                 <Path
                     Width="10"

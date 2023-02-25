@@ -12,6 +12,18 @@
             <!--  Other app resources here  -->
             <SolidColorBrush x:Key="WindowCaptionForeground">white</SolidColorBrush>
             <SolidColorBrush x:Key="WindowCaptionForegroundDisabled">white</SolidColorBrush>
+            <Style x:Key="TabColor" TargetType="Grid" >
+                <Setter Property="Background" Value="Bisque"/>
+            </Style>
+
+            <Style x:Key="FontColor" TargetType="TextBlock">
+                <Setter Property="Foreground" Value="Black"/>
+            </Style>
+
+            <Style x:Key="TextFontColor" TargetType="TextBlock" BasedOn="{StaticResource FontColor}">
+                <Setter Property="FontWeight" Value="SemiBold"/>
+                <Setter Property="FontSize" Value="16"/>
+            </Style>
         </ResourceDictionary>
     </Application.Resources>
 </Application>
