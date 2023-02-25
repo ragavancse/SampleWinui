@@ -7,7 +7,138 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid>
-        <TextBlock Text="Task List in progress" />
+    <Grid
+        Margin="15"
+        Background="#FFFF"
+        CornerRadius="6">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="auto" />
+
+        </Grid.RowDefinitions>
+        <Grid
+            Grid.Row="0"
+            BorderBrush="#bdbdbd"
+            BorderThickness="0,0,0,1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="auto" />
+            </Grid.ColumnDefinitions>
+            <TextBlock
+                Margin="20,15,15,15"
+                FontWeight="Bold"
+                Text="Task List" />
+            <ComboBox
+                Name="MyComboBox"
+                Grid.Column="1"
+                Width="150"
+                Height="30"
+                Margin="15"
+                HorizontalContentAlignment="Center"
+                Background="#6692a5"
+                CornerRadius="12"
+                FontSize="10"
+                Foreground="#FFFFFF"
+                ItemsSource="{Binding MyComboBox}"
+                SelectedIndex="0"
+                SelectedItem="{Binding SelectedItem}">
+                <ComboBoxItem Content="Set Up" />
+                <ComboBoxItem Content="Exit" />
+            </ComboBox>
+            <Button
+                Grid.Column="2"
+                Width="150"
+                Height="30"
+                Margin="15"
+                HorizontalContentAlignment="Center"
+                Background="#25c1f3"
+                Content="Start Job"
+                FontSize="10"
+                Foreground="#FFFFFF"
+                Style="{StaticResource ButtonStyle}" />
+        </Grid>
+        <Grid
+            Grid.Row="1"
+            Margin="20"
+            BorderBrush="#bdbdbd"
+            BorderThickness="1"
+            CornerRadius="6">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+            </Grid.RowDefinitions>
+            <CheckBox
+                Grid.Row="0"
+                Margin="30,20,20,10"
+                Content="SQL Server Action-Weekly Translations Email"
+                IsChecked="True" />
+            <CheckBox
+                Grid.Row="1"
+                Margin="30,0,20,10"
+                Content="Data Export-Test Aideo File"
+                IsChecked="True" />
+            <CheckBox
+                Grid.Row="2"
+                Margin="30,0,20,10"
+                Content="Data Export-Test Gebbs File"
+                IsChecked="True" />
+            <CheckBox
+                Grid.Row="3"
+                Margin="30,0,20,10"
+                Content="Data Export-Test Aideo Feedback"
+                IsChecked="True" />
+        </Grid>
+        <Grid Grid.Row="2">
+            <StackPanel Orientation="Horizontal">
+                <Button
+                    Grid.Column="2"
+                    Width="150"
+                    Height="30"
+                    Margin="25,10,10,15"
+                    HorizontalContentAlignment="Center"
+                    Background="#6692a5"
+                    Content="Expand All"
+                    FontSize="10"
+                    Foreground="#FFFFFF"
+                    Style="{StaticResource ButtonStyle}" />
+                <Button
+                    Grid.Column="2"
+                    Width="150"
+                    Height="30"
+                    Margin="10,10,10,15"
+                    HorizontalContentAlignment="Center"
+                    Background="#99afb8"
+                    Content="Collapse All"
+                    FontSize="10"
+                    Foreground="#FFFFFF"
+                    Style="{StaticResource ButtonStyle}" />
+                <Button
+                    Grid.Column="2"
+                    Width="150"
+                    Height="30"
+                    Margin="10,10,10,15"
+                    HorizontalContentAlignment="Center"
+                    Background="#6692a5"
+                    Content="Setup Task"
+                    FontSize="10"
+                    Foreground="#FFFFFF"
+                    Style="{StaticResource ButtonStyle}" />
+                <Button
+                    Grid.Column="2"
+                    Width="150"
+                    Height="30"
+                    Margin="10,10,10,15"
+                    HorizontalContentAlignment="Center"
+                    Background="#25c1f3"
+                    Content="Start Task"
+                    FontSize="10"
+                    Foreground="#FFFFFF"
+                    Style="{StaticResource ButtonStyle}" />
+            </StackPanel>
+        </Grid>
     </Grid>
 </UserControl>

@@ -7,7 +7,56 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid>
-        <TextBlock Text="Log List in progress" />
+    <Grid
+        Margin="15"
+        Background="#FFFF"
+        CornerRadius="6">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+
+        </Grid.RowDefinitions>
+        <Pivot Margin="10,0,0,0">
+            <Pivot.HeaderTemplate>
+                <DataTemplate>
+                    <Border>
+                        <TextBlock
+                            FontSize="18"
+                            FontWeight="Bold"
+                            Text="{Binding}" />
+                    </Border>
+                </DataTemplate>
+            </Pivot.HeaderTemplate>
+            <PivotItem Padding="10" Header="Job Log" />
+            <PivotItem Padding="10" Header="Task Log" />
+        </Pivot>
+
+        <Grid Grid.Row="1" VerticalAlignment="Bottom">
+            <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
+                <Button
+                    Width="150"
+                    Height="30"
+                    Margin="10,10,10,15"
+                    HorizontalContentAlignment="Center"
+                    Background="#25c1f3"
+                    Content="Save As"
+                    FontSize="10"
+                    Foreground="#FFFFFF"
+                    Style="{StaticResource ButtonStyle}" />
+                <Button
+                    Width="150"
+                    Height="30"
+                    Margin="10,10,10,15"
+                    HorizontalContentAlignment="Center"
+                    Background="#99afb8"
+                    Content="Clear"
+                    FontSize="10"
+                    Foreground="#FFFFFF"
+                    Style="{StaticResource ButtonStyle}" />
+            </StackPanel>
+
+        </Grid>
+
+
     </Grid>
 </UserControl>
