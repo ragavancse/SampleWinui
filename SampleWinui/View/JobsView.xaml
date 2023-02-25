@@ -16,60 +16,78 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="60" />
             <RowDefinition />
+            <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
 
-        <Grid Style="{StaticResource TabColor}">
+        <Grid Background="White">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="AUTO"/>
+                <ColumnDefinition Width="AUTO"/>
             </Grid.ColumnDefinitions>
             <TextBlock Text="List of Jobs" Style="{StaticResource TextFontColor}" VerticalAlignment="Center" Margin="15,0,0,0" />
-            <AutoSuggestBox Width="200" Height="30" Margin="0,0,30,0" VerticalAlignment="Center"
-                            CornerRadius="15" Grid.Column="2" PlaceholderText="Search" Foreground="Black"/>
+            <StackPanel Orientation="Horizontal" Grid.Column="1" Margin="0,0,30,0" >
+                <SymbolIcon Symbol="Refresh" Margin="0,0,10,0" />
+                <TextBlock Text="REFRESH"  FontSize="10" FontWeight="SemiBold" VerticalAlignment="Center" />
+            </StackPanel>
+            
+            <Border Grid.Column="2" BorderBrush="CadetBlue" Width="200" Margin="0,0,10,0" BorderThickness="1" CornerRadius="20" Height="30">
+                
+            <Grid>
+                <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="40"/>
+                        <ColumnDefinition Width="AUTO"/>
+                        <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <SymbolIcon Symbol="Find" Width="20" Height="20"/>
+                    <Border BorderBrush="CadetBlue" Grid.Column="1" Margin="0,0,0,0" BorderThickness="1"/>
+                    <TextBox  PlaceholderText="Search" Grid.Column="2"  VerticalAlignment="Center" />
+            </Grid>
+            </Border>
+
+
 
         </Grid >
 
 
         <controls:DataGrid
             x:Name="gridView"
-            Grid.Row="1" 
+            Grid.Row="1"
             Foreground="Black" 
             Background="White"
-            AutoGenerateColumns="False" GridLinesVisibility="All" HorizontalGridLinesBrush="Gray" VerticalGridLinesBrush="Gray"
+            AutoGenerateColumns="False" GridLinesVisibility="All" HorizontalGridLinesBrush="#bdbdbd" VerticalGridLinesBrush="#bdbdbd"
             ItemsSource="{Binding Jobs}">
+            <controls:DataGrid.CellStyle>
+                <Style TargetType="controls:DataGridCell">
+                    <Setter Property="Height" Value="50"/>
+                </Style>
+            </controls:DataGrid.CellStyle>
 
-            <controls:DataGrid.Columns>
+        <controls:DataGrid.Columns>
                 <controls:DataGridTextColumn
-                    Width="*" 
+                    Width="140"
                     Binding="{Binding JobType}"
-                    Header="Job Type" >
-                    <controls:DataGridTextColumn.HeaderStyle>
-                        <Style TargetType="GridViewHeaderItem">
-                            <Setter Property="Background" Value="Gray"></Setter>
-                        </Style>
-                    </controls:DataGridTextColumn.HeaderStyle>
-                </controls:DataGridTextColumn>
+                    Header="Job Type" />
                 <controls:DataGridTextColumn
-                    Width="*"
+                    Width="100"
                     Binding="{Binding JobId}"
                     Header="Job ID" />
                 <controls:DataGridTextColumn
-                    Width="*"
+                    Width="600"
                     Binding="{Binding Descripton}"
                     Header="Descripton" />
                 <controls:DataGridTextColumn
-                    Width="*"
+                    Width="180"
                     Binding="{Binding Status}"
                     Header="Status" />
                 <controls:DataGridTextColumn
-                    Width="*"
+                    Width="200"
                     Binding="{Binding LastMessage}"
                     Header="Last Message" />
             </controls:DataGrid.Columns>
         </controls:DataGrid>
   
-    <StackPanel Grid.Row="1" Orientation="Horizontal">
+    <StackPanel Grid.Row="2" Orientation="Horizontal" Background="White">
             <Button Background="Transparent">
                 <Path
                     Width="10"
