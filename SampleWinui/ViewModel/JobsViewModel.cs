@@ -9,7 +9,7 @@ namespace SampleWinui.ViewModel
 {
     public class JobsViewModel
     {
-        public List<Job> Jobs => GetJobs().Skip(4).Take(2).ToList();
+        public List<Job> Jobs => GetJobs().ToList();
 
         public List<Job> GetJobs()
         {
