@@ -16,8 +16,6 @@
 
     <Grid DataContext="{StaticResource FileViewModel}">
         <Grid.Resources>
-            <SolidColorBrush x:Key="NavigationViewItemBackgroundSelected" Color="#6593a4" />
-            <SolidColorBrush x:Key="NavigationViewItemBackgroundSelectedPointerOver" Color="#bdbdbd" />
         </Grid.Resources>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto" />

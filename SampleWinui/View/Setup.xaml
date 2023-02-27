@@ -38,10 +38,11 @@
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
                         <Grid>
-                            <Button Click="Button_Click"
+                            <Button
                                 Grid.Column="0"
                                 Margin="20,20,0,0"
-                                BorderThickness="0">
+                                BorderThickness="0"
+                                Click="Button_Click">
                                 <Button.Content>
                                     <Grid>
                                         <Grid.ColumnDefinitions>
