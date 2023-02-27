@@ -34,5 +34,14 @@ namespace SampleWinui.ChildWindowControls
         {
             content.Content = userControl;
         }
+
+        public void SetSize(int width, int height)
+        {
+            IntPtr hWnd = WinRT.Interop.WindowNative.GetWindowHandle(this);
+            var windowId = Microsoft.UI.Win32Interop.GetWindowIdFromWindow(hWnd);
+            var appWindow = Microsoft.UI.Windowing.AppWindow.GetFromWindowId(windowId);
+            appWindow.Resize(new Windows.Graphics.SizeInt32 { Width = width, Height = height });
+
+        }
     }
 }
