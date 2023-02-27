@@ -26,55 +26,49 @@
             Margin="30,0,20,20"
             Background="#fff"
             CornerRadius="6">
-            <ItemsControl VerticalAlignment="Top" ItemsSource="{Binding SystemUtilitiesCollections}">
-                <ItemsControl.ItemsPanel>
+            <GridView VerticalAlignment="Top" SelectionChanged="GridView_SelectionChanged"  ItemsSource="{Binding SystemUtilitiesCollections}">
+                <GridView.ItemsPanel>
                     <ItemsPanelTemplate>
                         <controls:WrapPanel Orientation="Horizontal" />
                     </ItemsPanelTemplate>
-                </ItemsControl.ItemsPanel>
-                <ItemsControl.ItemTemplate>
+                </GridView.ItemsPanel>
+                <GridView.ItemTemplate>
                     <DataTemplate>
-                        <Grid>
-                            <Button
+                        <Grid
+                            Grid.Column="0"
+                            Margin="20,20,0,0"
+                            BorderThickness="0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="50" />
+                                <ColumnDefinition Width="200" />
+                            </Grid.ColumnDefinitions>
+                            <Image
                                 Grid.Column="0"
-                                Margin="20,20,0,0"
-                                BorderThickness="0">
-                                <Button.Content>
-                                    <Grid>
-                                        <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="50" />
-                                            <ColumnDefinition Width="200" />
-                                        </Grid.ColumnDefinitions>
-                                        <Image
-                                            Grid.Column="0"
-                                            Margin="0,7,0,0"
-                                            VerticalAlignment="Top"
-                                            Source="{Binding Icon}" />
-                                        <Grid Grid.Column="1">
-                                            <Grid.RowDefinitions>
-                                                <RowDefinition Height="Auto" />
-                                                <RowDefinition Height="Auto" />
-                                            </Grid.RowDefinitions>
-                                            <TextBlock
-                                                FontSize="18"
-                                                FontWeight="Bold"
-                                                Text="{Binding HeaderText}" />
-                                            <TextBlock
-                                                Grid.Row="1"
-                                                Margin="0,5,0,0"
-                                                FontSize="12"
-                                                MaxLines="3"
-                                                Text="{Binding FooterText}"
-                                                TextWrapping="Wrap" />
-                                        </Grid>
-                                    </Grid>
-                                </Button.Content>
-                            </Button>
+                                Margin="0,7,0,0"
+                                VerticalAlignment="Top"
+                                Source="{Binding Icon}" />
+                            <Grid Grid.Column="1">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                <TextBlock
+                                    FontSize="18"
+                                    FontWeight="Bold"
+                                    Text="{Binding HeaderText}" />
+                                <TextBlock
+                                    Grid.Row="1"
+                                    Margin="0,5,0,0"
+                                    FontSize="12"
+                                    MaxLines="3"
+                                    Text="{Binding FooterText}"
+                                    TextWrapping="Wrap" />
+                            </Grid>
                         </Grid>
                     </DataTemplate>
-                </ItemsControl.ItemTemplate>
+                </GridView.ItemTemplate>
 
-            </ItemsControl>
+            </GridView>
         </Border>
     </Grid>
 </UserControl>

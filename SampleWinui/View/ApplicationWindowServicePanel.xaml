@@ -10,7 +10,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="#ffffff">
+    <Grid HorizontalAlignment="Center" Background="#ffffff">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
@@ -140,8 +140,8 @@
                 Margin="20,10,10,0"
                 BorderBrush="#bdbdbd"
                 BorderThickness="1"
-                CornerRadius="4" >
-                <ListView x:Name="LogCollection"/>
+                CornerRadius="4">
+                <ListView x:Name="LogCollection" />
             </Grid>
             <Button
                 Grid.Row="2"

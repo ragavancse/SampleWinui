@@ -9,6 +9,8 @@ using Microsoft.UI.Xaml.Input;
 using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Navigation;
 using SampleWinui.ChildWindowControls;
+using SampleWinui.Model;
+using SampleWinui.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -31,12 +33,42 @@ namespace SampleWinui.View
         {
             this.InitializeComponent();
         }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void btnItemControl_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            var window = new ChildWindow();
-            window.SetContent(new Backup());
-            window.Activate();
+            if (sender is GridView gridView)
+            {
+                var item = gridView.SelectedItem as FileModel;
+                var window = new ChildWindow();
+                if (item.HeaderText == "Instances")
+                {
+                    
+                    window.SetContent(new ApplicationInstances());
+                   
+                }
+                else if (item.HeaderText == "Service")
+                {
+                  
+                    window.SetContent(new ApplicationWindowServicePanel());
+                   
+                }
+                else if (item.HeaderText == "PMMS")
+                {
+                   
+                    window.SetContent(new PMMSSetup());
+                 
+                }
+                else
+                {
+                  
+                    window.SetContent(new EmailSetup());
+                  
+                }
+                window.Activate();
+            }
+
+            
+            
+           
         }
     }
 }
