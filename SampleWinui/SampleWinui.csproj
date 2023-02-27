@@ -59,6 +59,7 @@
     <None Remove="Image\__MACOSX\._Path 1854.svg" />
     <None Remove="View\ApplicationInstances.xaml" />
     <None Remove="View\EmailSetup.xaml" />
+    <None Remove="View\ApplicationWindowServicePanel.xaml" />
     <None Remove="View\FileView.xaml" />
     <None Remove="View\JobsView.xaml" />
     <None Remove="View\ListJobsView.xaml" />
@@ -227,6 +228,11 @@
   -->
   <ItemGroup Condition="'$(DisableMsixProjectCapabilityAddedByProject)'!='true' and '$(EnableMsixTooling)'=='true'">
     <ProjectCapability Include="Msix" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="View\ApplicationWindowServicePanel.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Page Update="View\SystemUtilities.xaml">
