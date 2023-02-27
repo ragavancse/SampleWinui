@@ -47,45 +47,8 @@ namespace SampleWinui.ViewModel
 
 
 
-    //foreach (var item in Items)
-    //{
-    //    TreeViewNode node = new TreeViewNode { Content = item.Name };
-    //    //AddNode(node);
-    //    ScheduleItem schedule=new ScheduleItem();
-
-
-    //    schedule.NameCollection = node.Content.ToString();
-
-
-
-
-    //foreach (var item1 in item.Items)
-    //        {
-    //            TreeViewNode node1 = new TreeViewNode { Content = item1 };
-    //            node.Children.Add(node1);
-    //        }
-    //    }
-    //}
-
-    //public void AddNode(TreeViewNode treeNode)
-
-
-    //{
-
-    //    Add(treeNode);
-    //}
-
-
-
-
-    //public ObservableCollection<ScheduleItem> Items { get; set; }= new ObservableCollection<ScheduleItem>() { new Items() { N} };
-    //Items = new ObservableCollection<ScheduleItem>()
-    //{
-    //    new ScheduleItem()  {Name="Item 1"},
-    //    new ScheduleItem()  {Name="Item 2"},
-
-    //};
-
+    
+    
 }
     
 
