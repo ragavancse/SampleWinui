@@ -35,10 +35,10 @@ namespace SampleWinui.View
             switch (selectedItem.Tag)
             {
                 case "SystemUtilities":
-                    ContentFrame.Navigate(typeof(SystemUtilities));
+                    ContentFrame.Content = new SystemUtilities();
                     break;
                 case "Setup":
-                    ContentFrame.Navigate(typeof(Setup));
+                    ContentFrame.Content = new Setup();
                     break;
               
             }
