@@ -63,6 +63,7 @@
     <None Remove="View\IssuesView.xaml" />
     <None Remove="View\ApplicationInstances.xaml" />
     <None Remove="View\EmailSetup.xaml" />
+    <None Remove="View\ApplicationWindowServicePanel.xaml" />
     <None Remove="View\FileView.xaml" />
     <None Remove="View\IssuesSubVIew.xaml" />
     <None Remove="View\IssuesView.xaml" />
@@ -256,6 +257,11 @@
   </ItemGroup>
   <ItemGroup>
     <Page Update="View\IssuesView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="View\ApplicationWindowServicePanel.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
