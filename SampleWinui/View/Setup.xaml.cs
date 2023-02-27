@@ -41,25 +41,27 @@ namespace SampleWinui.View
                 var window = new ChildWindow();
                 if (item.HeaderText == "Instances")
                 {
-                    
+                    window.SetSize(1250, 400);
                     window.SetContent(new ApplicationInstances());
-                   
+                    
+
                 }
                 else if (item.HeaderText == "Service")
                 {
-                  
+                    window.SetSize(600, 800);
                     window.SetContent(new ApplicationWindowServicePanel());
-                   
+                    
+
                 }
                 else if (item.HeaderText == "PMMS")
                 {
-                   
+                    window.SetSize(950, 500);
                     window.SetContent(new PMMSSetup());
                  
                 }
                 else
                 {
-                  
+                    window.SetSize(1000, 1200);
                     window.SetContent(new EmailSetup());
                   
                 }
@@ -70,5 +72,7 @@ namespace SampleWinui.View
             
            
         }
+
+
     }
 }

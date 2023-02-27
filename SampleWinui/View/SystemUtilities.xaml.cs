@@ -39,36 +39,37 @@ namespace SampleWinui.View
                 var window = new ChildWindow();
                 if (item.HeaderText == "Backup")
                 {
-                    
+                    window.SetSize(850, 650);
                     window.SetContent(new Backup());
                    
                 }
                 else if (item.HeaderText == "Show Schedule")
                 {
-                   
+                    window.SetSize(600, 800);
                     window.SetContent(new ApplicationWindowServicePanel());
                   
                 }
                 else if (item.HeaderText == "Show Status")
                 {
-                  
+                    window.SetSize(950, 500);
                     window.SetContent(new PMMSSetup());
                
                 }
                 else if (item.HeaderText == "Validate Modules")
                 {
-                
+                    window.SetSize(350, 800);
                     window.SetContent(new Module_Validation());
                   
                 }
                 else if (item.HeaderText == "Show Objects")
                 {
+                    window.SetSize(550, 650);
                     window.SetContent(new Objects());
                    
                 }
                 else
                 {
-                 
+                    window.SetSize(1000, 1000);
                     window.SetContent(new EmailSetup());
                   
                 }
