@@ -1,0 +1,95 @@
+﻿<UserControl
+    x:Class="SampleWinui.View.PMMSSetup"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="using:SampleWinui.View"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Margin="0,20,0,0">
+            <TextBlock
+                Margin="5"
+                FontSize="15"
+                Text="Security Database Connection" />
+
+            <Border
+                Grid.Column="2"
+                Width="800"
+                Height="30"
+                Margin="10"
+                HorizontalAlignment="Left"
+                BorderBrush="#99afb8"
+                BorderThickness="1"
+                CornerRadius="17">
+
+                <Grid Background="White">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="40" />
+                        <ColumnDefinition Width="AUTO" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <SymbolIcon
+                        Width="20"
+                        Height="20"
+                        Symbol="Find" />
+                    <Border
+                        Grid.Column="1"
+                        Margin="0,0,0,0"
+                        BorderBrush="#99afb8"
+                        BorderThickness="1" />
+                    <TextBox
+                        Grid.Column="2"
+                        VerticalAlignment="Center"
+                        HorizontalContentAlignment="Center" />
+                </Grid>
+            </Border>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Margin="0,100,0,0">
+            <TextBlock
+                Margin="5"
+                FontSize="15"
+                Text="Practice Database Connection String Template" />
+
+            <Border
+                Grid.Column="2"
+                Width="800"
+                Height="30"
+                Margin="10"
+                HorizontalAlignment="Left"
+                BorderBrush="#99afb8"
+                BorderThickness="1"
+                CornerRadius="17">
+
+                <Grid Background="White">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="40" />
+                        <ColumnDefinition Width="AUTO" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <SymbolIcon
+                        Width="20"
+                        Height="20"
+                        Symbol="Find" />
+                    <Border
+                        Grid.Column="1"
+                        Margin="0,0,0,0"
+                        BorderBrush="#99afb8"
+                        BorderThickness="1" />
+                    <TextBox
+                        Grid.Column="2"
+                        VerticalAlignment="Center"
+                        HorizontalContentAlignment="Center" />
+                </Grid>
+            </Border>
+        </StackPanel>
+
+    </Grid>
+</UserControl>
