@@ -56,9 +56,12 @@
     <None Remove="Image\__MACOSX\._Icon_Show Schedule.svg" />
     <None Remove="Image\__MACOSX\._Icon_Succeeded_S.svg" />
     <None Remove="Image\__MACOSX\._Path 1854.svg" />
+    <None Remove="View\FileView.xaml" />
     <None Remove="View\JobsView.xaml" />
     <None Remove="View\ListJobsView.xaml" />
     <None Remove="View\LogView.xaml" />
+    <None Remove="View\Setup.xaml" />
+    <None Remove="View\SystemUtilities.xaml" />
     <None Remove="View\TaskList.xaml" />
   </ItemGroup>
   <ItemGroup>
@@ -218,6 +221,21 @@
   -->
   <ItemGroup Condition="'$(DisableMsixProjectCapabilityAddedByProject)'!='true' and '$(EnableMsixTooling)'=='true'">
     <ProjectCapability Include="Msix" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="View\SystemUtilities.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="View\Setup.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="View\FileView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Page Update="View\JobsView.xaml">
