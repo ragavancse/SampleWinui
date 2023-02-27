@@ -14,6 +14,9 @@
             <!--  Other app resources here  -->
             <SolidColorBrush x:Key="WindowCaptionForeground">white</SolidColorBrush>
             <SolidColorBrush x:Key="WindowCaptionForegroundDisabled">white</SolidColorBrush>
+            <SolidColorBrush x:Key="NavigationViewItemBackgroundSelected" Color="#6593a4" />
+            <SolidColorBrush x:Key="NavigationViewItemBackgroundSelectedPointerOver" Color="#bdbdbd" />
+            <SolidColorBrush x:Key="TitleBarBackground" Color="#3871CA" />
 
 
             <Style x:Key="ComboBoxStyle" TargetType="ComboBox">

@@ -8,6 +8,9 @@
     <Page Update="CommonControls\PaginationControl.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="View\Module Validation.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="ChildWindowControls\ChildWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
