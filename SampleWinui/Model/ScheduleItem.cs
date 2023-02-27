@@ -23,12 +23,14 @@ namespace SampleWinui.Model
             set { name = value; }
         }
 
-        private ObservableCollection<string> items;
+        private ObservableCollection<string> child
+            ;
 
-        public ObservableCollection<string> Items
+        public ObservableCollection<string> Child
+
         {
-            get { return items; }
-            set { items = value; }
+            get { return child; }
+            set { child = value; }
         }
 
         private int key;
