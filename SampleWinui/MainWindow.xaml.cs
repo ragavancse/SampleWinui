@@ -30,7 +30,7 @@ namespace SampleWinui
         {
             this.InitializeComponent();
             ExtendsContentIntoTitleBar = true;
-            SetTitleBar(AppTitleBar);
+            //SetTitleBar(AppTitleBar);
         }
     }
 }

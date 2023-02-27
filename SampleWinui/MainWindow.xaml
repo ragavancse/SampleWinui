@@ -14,7 +14,7 @@
             <RowDefinition />
         </Grid.RowDefinitions>
 
-        <Grid x:Name="AppTitleBar" Background="{StaticResource TitleBarBackground}" />
+        <!--<Grid x:Name="AppTitleBar" Background="{StaticResource TitleBarBackground}" />-->
         <Grid Grid.Row="1" HorizontalAlignment="Left">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto" />
@@ -64,10 +64,14 @@
                         </Grid>
                     </PivotItem>
                     <PivotItem Background="#D9E4E8" Header="Issues">
-                        <TextBlock Text="flagged emails go here." />
+                        <Grid>
+                            <view:IssuesView />
+                        </Grid>
                     </PivotItem>
                     <PivotItem Background="#D9E4E8" Header="Mointer">
-                        <TextBlock Text="urgent emails go here." />
+                        <Grid>
+                            <view:MonitorView />
+                        </Grid>
                     </PivotItem>
                     <PivotItem Background="#D9E4E8" Header="Schedule">
                         <TextBlock Text="urgent emails go here." />

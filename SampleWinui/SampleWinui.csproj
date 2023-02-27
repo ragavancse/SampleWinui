@@ -12,6 +12,9 @@
     <EnableMsixTooling>true</EnableMsixTooling>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Remove="View\UserControl1.xaml.cs" />
+  </ItemGroup>
+  <ItemGroup>
     <None Remove="ButtonStyle.xaml" />
     <None Remove="ChildWindowControls\ChildWindow.xaml" />
     <None Remove="Image\Group 1560.svg" />
@@ -57,17 +60,25 @@
     <None Remove="Image\__MACOSX\._Icon_Show Schedule.svg" />
     <None Remove="Image\__MACOSX\._Icon_Succeeded_S.svg" />
     <None Remove="Image\__MACOSX\._Path 1854.svg" />
+    <None Remove="View\IssuesView.xaml" />
     <None Remove="View\ApplicationInstances.xaml" />
     <None Remove="View\EmailSetup.xaml" />
     <None Remove="View\FileView.xaml" />
+    <None Remove="View\IssuesSubVIew.xaml" />
+    <None Remove="View\IssuesView.xaml" />
     <None Remove="View\JobsView.xaml" />
     <None Remove="View\ListJobsView.xaml" />
     <None Remove="View\LogView.xaml" />
+    <None Remove="View\MonitorView.xaml" />
     <None Remove="View\Objects.xaml" />
     <None Remove="View\Setup.xaml" />
     <None Remove="View\SystemUtilities.xaml" />
     <None Remove="View\PMMSSetup.xaml" />
     <None Remove="View\TaskList.xaml" />
+    <None Remove="View\UserControl1.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Remove="View\UserControl1.xaml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Image\__MACOSX\._Group 1560.svg">
@@ -227,6 +238,26 @@
   -->
   <ItemGroup Condition="'$(DisableMsixProjectCapabilityAddedByProject)'!='true' and '$(EnableMsixTooling)'=='true'">
     <ProjectCapability Include="Msix" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="View\MonitorView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="View\IssuesSubVIew.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="View\IssuesView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="View\IssuesView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Page Update="View\SystemUtilities.xaml">

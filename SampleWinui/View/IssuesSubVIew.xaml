@@ -1,0 +1,68 @@
+<!-- Copyright (c) Microsoft Corporation and Contributors. -->
+<!-- Licensed under the MIT License. -->
+
+<UserControl
+    x:Class="SampleWinui.View.IssuesSubVIew"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SampleWinui.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:controls="using:CommunityToolkit.WinUI.UI.Controls"
+    xmlns:viewmodel="using:SampleWinui.ViewModel"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <UserControl.Resources>
+        <viewmodel:IssuesViewModel x:Key="IssuesViewModel"/>
+    </UserControl.Resources>
+
+    <Grid DataContext="{StaticResource IssuesViewModel}">
+        <controls:DataGrid
+            x:Name="gridView"
+            Grid.Row="1"
+            AutoGenerateColumns="False"
+            Background="White"
+            Foreground="Black"
+            ItemsSource="{Binding SelectedItemsList}"
+            GridLinesVisibility="All"
+            HorizontalGridLinesBrush="#bdbdbd"
+            VerticalGridLinesBrush="#bdbdbd">
+            <controls:DataGrid.CellStyle>
+                <Style TargetType="controls:DataGridCell">
+                    <Setter Property="Height" Value="50" />
+                </Style>
+            </controls:DataGrid.CellStyle>
+
+            <controls:DataGrid.Columns>
+                <controls:DataGridTextColumn
+                    Width="180"
+                    Binding="{Binding JobName}"
+                    Header="Job Name" />
+                <controls:DataGridTextColumn
+                    Width="180"
+                    Binding="{Binding TaskName}"
+                    Header="Task Name" />
+                <controls:DataGridTextColumn
+                    Width="120"
+                    Binding="{Binding ErrorDate}"
+                    Header="Error Date" />
+                <controls:DataGridTextColumn
+                    Width="480"
+                    Binding="{Binding ErrorMessage}"
+                    Header="Error Message" />
+                <controls:DataGridTextColumn
+                    Width="140"
+                    Binding="{Binding Status}"
+                    Header="Status" />
+                <controls:DataGridTextColumn
+                    Width="200"
+                    Binding="{Binding WorkedOn}"
+                    Header="WorkedOn" />
+                <controls:DataGridTextColumn
+                    Width="200"
+                    Binding="{Binding WorkedBy}"
+                    Header="Worked By" />
+            </controls:DataGrid.Columns>
+        </controls:DataGrid>
+        
+    </Grid>
+</UserControl>

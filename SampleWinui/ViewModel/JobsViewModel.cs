@@ -10,7 +10,6 @@ namespace SampleWinui.ViewModel
     public class JobsViewModel
     {
         public List<Job> Jobs => GetJobs().ToList();
-
         public List<Job> GetJobs()
         {
             return new List<Job>
@@ -48,7 +47,7 @@ namespace SampleWinui.ViewModel
 
 
             };
-        }
+        }    
 
     }
 }
