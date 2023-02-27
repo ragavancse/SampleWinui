@@ -11,6 +11,18 @@
     <None Update="Package.appxmanifest">
       <SubType>Designer</SubType>
     </None>
+    <Page Update="View\SystemUtilities.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Setup.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\FileView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\JobsView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="View\EmailSetup.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -29,7 +41,7 @@
     <Page Update="View\TaskList.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="View\JobsView.xaml">
+    <Page Update="View\ListJobsView.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

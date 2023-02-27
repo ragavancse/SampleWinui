@@ -21,9 +21,9 @@ using Windows.Foundation.Collections;
 
 namespace SampleWinui.View
 {
-    public sealed partial class JobsView : UserControl
+    public sealed partial class SystemUtilities : UserControl
     {
-        public JobsView()
+        public SystemUtilities()
         {
             this.InitializeComponent();
         }

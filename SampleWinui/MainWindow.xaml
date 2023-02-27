@@ -15,161 +15,17 @@
         </Grid.RowDefinitions>
 
         <Grid x:Name="AppTitleBar" Background="#3871CA" />
-        <Grid Grid.Row="1">
+        <Grid Grid.Row="1" HorizontalAlignment="Left">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto" />
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
-            <Grid Background="#FFFFFF">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="50" />
-                    <RowDefinition Height="50" />
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
-                </Grid.RowDefinitions>
-                <Image
-                    Grid.Row="0"
-                    Margin="10,5,0,5"
-                    HorizontalAlignment="Left"
-                    Source="ms-appx:///Image/windowsCopy.jpg" />
-                <TextBlock
-                    Grid.Row="1"
-                    Padding="15,10,0,0"
-                    FontSize="20"
-                    FontWeight="bold"
-                    Foreground="#6593a4"
-                    Text="Filter" />
-                <NavigationView
-                    x:Name="nvSample8"
-                    Grid.Row="2"
-                    IsBackButtonVisible="Collapsed"
-                    IsPaneToggleButtonVisible="False"
-                    IsSettingsVisible="False"
-                    IsTabStop="False"
-                    PaneDisplayMode="Left">
-                    <NavigationView.MenuItems>
-                        <NavigationViewItem
-                            Content="STANDARD GROUPS"
-                            FontSize="16"
-                            FontWeight="bold"
-                            Icon="Contact"
-                            IsExpanded="True"
-                            Tag="SamplePage2"
-                            ToolTipService.ToolTip="STANDARD GROUPS">
-                            <NavigationViewItem.MenuItems>
-                                <NavigationViewItem
-                                    Content="All Jobs"
-                                    FontWeight="SemiBold"
-                                    Tag="SamplePage3"
-                                    ToolTipService.ToolTip="All Jobs" />
-                                <NavigationViewItem
-                                    Content="Running jobs"
-                                    FontWeight="SemiBold"
-                                    Tag="SamplePage4"
-                                    ToolTipService.ToolTip="Running jobs" />
-                                <NavigationViewItem
-                                    Content="Failed jobs"
-                                    FontWeight="SemiBold"
-                                    Tag="SamplePage4"
-                                    ToolTipService.ToolTip="Failed jobs" />
-                            </NavigationViewItem.MenuItems>
-                        </NavigationViewItem>
-                        <NavigationViewItem
-                            Content="SHARED GROUPS"
-                            FontSize="16"
-                            FontWeight="bold"
-                            Icon="ReShare"
-                            IsExpanded="True"
-                            SelectsOnInvoked="False"
-                            ToolTipService.ToolTip="SHARED GROUPS">
-                            <NavigationViewItem.MenuItems>
-                                <NavigationViewItem
-                                    Content="ImaginePay"
-                                    FontWeight="SemiBold"
-                                    Tag="SamplePage5"
-                                    ToolTipService.ToolTip="ImaginePay" />
-                                <NavigationViewItem
-                                    Content="Statement Extracts"
-                                    FontWeight="SemiBold"
-                                    Tag="SamplePage6"
-                                    ToolTipService.ToolTip="Statement Extracts" />
-                                <NavigationViewItem
-                                    Content="QA Jobs"
-                                    FontWeight="SemiBold"
-                                    Tag="SamplePage6"
-                                    ToolTipService.ToolTip="QA Jobs" />
-                            </NavigationViewItem.MenuItems>
-                        </NavigationViewItem>
-                        <NavigationViewItem
-                            Content="MY FAVORITES"
-                            FontSize="16"
-                            FontWeight="bold"
-                            Icon="OutlineStar"
-                            IsExpanded="True" />
-                    </NavigationView.MenuItems>
-                </NavigationView>
-                <Grid Grid.Row="3" VerticalAlignment="Top">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="40" />
-                        <RowDefinition Height="40" />
-                        <RowDefinition Height="40" />
-                        <RowDefinition Height="40" />
-                    </Grid.RowDefinitions>
-                    <TextBlock
-                        Grid.Row="0"
-                        Padding="15,10,0,0"
-                        FontSize="20"
-                        FontWeight="bold"
-                        Foreground="#6593a4"
-                        Text="View" />
-                    <CheckBox
-                        Grid.Row="1"
-                        Margin="15,0,0,0"
-                        Padding="130,0,0,0"
-                        VerticalAlignment="Center"
-                        HorizontalContentAlignment="Left"
-                        VerticalContentAlignment="Center"
-                        FlowDirection="RightToLeft"
-                        FontWeight="SemiBold">
-                        <CheckBox.Content>
-                            <TextBlock Text="Include sub-groups" TextTrimming="CharacterEllipsis" />
-                        </CheckBox.Content>
-                    </CheckBox>
-                    <CheckBox
-                        Grid.Row="2"
-                        Margin="15,0,0,0"
-                        Padding="138,0,0,0"
-                        VerticalAlignment="Center"
-                        HorizontalContentAlignment="Left"
-                        VerticalContentAlignment="Center"
-                        FlowDirection="RightToLeft"
-                        FontWeight="SemiBold">
-                        <CheckBox.Content>
-                            <TextBlock Text="Include duplicates" TextTrimming="CharacterEllipsis" />
-                        </CheckBox.Content>
-                    </CheckBox>
-                    <CheckBox
-                        Grid.Row="3"
-                        Margin="15,0,0,0"
-                        Padding="64,0,0,0"
-                        VerticalAlignment="Center"
-                        HorizontalContentAlignment="Left"
-                        VerticalContentAlignment="Center"
-                        FlowDirection="RightToLeft"
-                        FontWeight="SemiBold">
-                        <CheckBox.Content>
-                            <TextBlock Text="Select running task on refresh" TextTrimming="CharacterEllipsis" />
-                        </CheckBox.Content>
-                    </CheckBox>
-
-                </Grid>
-            </Grid>
             <Grid Grid.Column="1">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition />
                     <ColumnDefinition Width="Auto" />
                 </Grid.ColumnDefinitions>
-                <Pivot Grid.ColumnSpan="2">
+                <Pivot Grid.ColumnSpan="3">
                     <Pivot.HeaderTemplate>
                         <DataTemplate>
                             <Border
@@ -186,24 +42,25 @@
                             </Border>
                         </DataTemplate>
                     </Pivot.HeaderTemplate>
+                    <Pivot.LeftHeaderTemplate>
+                        <DataTemplate>
+                            <Image
+                                Width="200"
+                                Height="50"
+                                Margin="50,5,80,5"
+                                HorizontalAlignment="Center"
+                                Source="ms-appx:///Image/windowsCopy.jpg" />
+
+                        </DataTemplate>
+                    </Pivot.LeftHeaderTemplate>
                     <PivotItem Background="#D9E4E8" Header="File">
-                        <TextBlock Text="File." />
+                        <Grid>
+                            <view:FileView />
+                        </Grid>
                     </PivotItem>
                     <PivotItem Background="#D9E4E8" Header="Jobs">
                         <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition />
-                                <RowDefinition />
-                            </Grid.RowDefinitions>
                             <view:JobsView />
-                            <Grid Grid.Row="1">
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition />
-                                    <ColumnDefinition />
-                                </Grid.ColumnDefinitions>
-                                <view:TaskList />
-                                <view:LogView Grid.Column="1" />
-                            </Grid>
                         </Grid>
                     </PivotItem>
                     <PivotItem Background="#D9E4E8" Header="Issues">
