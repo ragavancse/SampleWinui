@@ -15,26 +15,17 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
-using Windows.UI;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
 
 namespace SampleWinui.View
 {
-    public sealed partial class Setup : UserControl
+    public sealed partial class Backup : UserControl
     {
-        public Setup()
+        public Backup()
         {
             this.InitializeComponent();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            var window = new Window { Content = new Backup() };
-            window.ExtendsContentIntoTitleBar = true;
-           // window.SetTitleBar(new Grid { Background= new SolidColorBrush(Colors.) });
-            window.Activate();
         }
     }
 }

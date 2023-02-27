@@ -23,6 +23,12 @@
     <Page Update="View\JobsView.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="View\Objects.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Backup.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Theme\ButtonStyle.xaml">
       <SubType>Designer</SubType>
     </Page>

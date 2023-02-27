@@ -38,7 +38,7 @@
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
                         <Grid>
-                            <Button
+                            <Button Click="Button_Click"
                                 Grid.Column="0"
                                 Margin="20,20,0,0"
                                 BorderThickness="0">

@@ -15,26 +15,25 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
-using Windows.UI;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
 
-namespace SampleWinui.View
+namespace viewWinui
 {
-    public sealed partial class Setup : UserControl
+    /// <summary>
+    /// An empty window that can be used on its own or navigated to within a Frame.
+    /// </summary>
+    public sealed partial class MainWindow : Window
     {
-        public Setup()
+        public MainWindow()
         {
             this.InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void myButton_Click(object sender, RoutedEventArgs e)
         {
-            var window = new Window { Content = new Backup() };
-            window.ExtendsContentIntoTitleBar = true;
-           // window.SetTitleBar(new Grid { Background= new SolidColorBrush(Colors.) });
-            window.Activate();
+            myButton.Content = "Clicked";
         }
     }
 }

@@ -60,6 +60,7 @@
     <None Remove="View\JobsView.xaml" />
     <None Remove="View\ListJobsView.xaml" />
     <None Remove="View\LogView.xaml" />
+    <None Remove="View\Objects.xaml" />
     <None Remove="View\Setup.xaml" />
     <None Remove="View\SystemUtilities.xaml" />
     <None Remove="View\TaskList.xaml" />
