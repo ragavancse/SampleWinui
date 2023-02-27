@@ -28,7 +28,9 @@ namespace SampleWinui.ViewModel
         public ObservableCollection<Job> Jobs
         {
             get { return _jobs; }
-            set { _jobs = value; }
+            set { _jobs = value;
+                RaisePropertyChanged(nameof(Jobs));
+            }
         }
 
         private ObservableCollection<Job> _jobsUnFiltered;
@@ -117,7 +119,7 @@ namespace SampleWinui.ViewModel
 
         private void RunPageSizeUpdateCommand()
         {
-            if (Jobs.Count() > 0)
+            if (JobsUnFiltered.Count() > 0)
                 UpdateTotalPageCount();
         }
 
@@ -134,6 +136,7 @@ namespace SampleWinui.ViewModel
 
         public void UpdateTotalPageCount()
         {
+            CurrentPageIndex = 0;
             TotalPage = JobsUnFiltered.Count() % ItemPerPage == 0 ? JobsUnFiltered.Count() / ItemPerPage : JobsUnFiltered.Count() / ItemPerPage + 1;
             ShowCurrentPageIndex();
 
