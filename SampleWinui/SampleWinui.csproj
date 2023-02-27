@@ -13,10 +13,75 @@
   </PropertyGroup>
   <ItemGroup>
     <None Remove="ButtonStyle.xaml" />
+    <None Remove="Image\Group 1560.svg" />
+    <None Remove="Image\Icon_About.svg" />
+    <None Remove="Image\Icon_Account.svg" />
+    <None Remove="Image\Icon_AddNewJob.svg" />
+    <None Remove="Image\Icon_AP.svg" />
+    <None Remove="Image\Icon_Backup.svg" />
+    <None Remove="Image\Icon_Close.svg" />
+    <None Remove="Image\Icon_E-mail.svg" />
+    <None Remove="Image\Icon_Failed_S.svg" />
+    <None Remove="Image\Icon_Filter_mobile.svg" />
+    <None Remove="Image\Icon_Hamburguer.svg" />
+    <None Remove="Image\Icon_Iddle_S.svg" />
+    <None Remove="Image\Icon_Instances.svg" />
+    <None Remove="Image\Icon_Minimize.svg" />
+    <None Remove="Image\Icon_PMMS.svg" />
+    <None Remove="Image\Icon_Refresh.svg" />
+    <None Remove="Image\Icon_RestoreDown.svg" />
+    <None Remove="Image\Icon_service.svg" />
+    <None Remove="Image\Icon_Show Schedule.svg" />
+    <None Remove="Image\Icon_Succeeded_S.svg" />
+    <None Remove="Image\Path 1854.svg" />
     <None Remove="Image\windowsCopy.jpg" />
+    <None Remove="Image\__MACOSX\._Group 1560.svg" />
+    <None Remove="Image\__MACOSX\._Icon_About.svg" />
+    <None Remove="Image\__MACOSX\._Icon_Account.svg" />
+    <None Remove="Image\__MACOSX\._Icon_AddNewJob.svg" />
+    <None Remove="Image\__MACOSX\._Icon_AP.svg" />
+    <None Remove="Image\__MACOSX\._Icon_Backup.svg" />
+    <None Remove="Image\__MACOSX\._Icon_Close.svg" />
+    <None Remove="Image\__MACOSX\._Icon_E-mail.svg" />
+    <None Remove="Image\__MACOSX\._Icon_Failed_S.svg" />
+    <None Remove="Image\__MACOSX\._Icon_Filter_mobile.svg" />
+    <None Remove="Image\__MACOSX\._Icon_Hamburguer.svg" />
+    <None Remove="Image\__MACOSX\._Icon_Iddle_S.svg" />
+    <None Remove="Image\__MACOSX\._Icon_Instances.svg" />
+    <None Remove="Image\__MACOSX\._Icon_Minimize.svg" />
+    <None Remove="Image\__MACOSX\._Icon_PMMS.svg" />
+    <None Remove="Image\__MACOSX\._Icon_Refresh.svg" />
+    <None Remove="Image\__MACOSX\._Icon_RestoreDown.svg" />
+    <None Remove="Image\__MACOSX\._Icon_service.svg" />
+    <None Remove="Image\__MACOSX\._Icon_Show Schedule.svg" />
+    <None Remove="Image\__MACOSX\._Icon_Succeeded_S.svg" />
+    <None Remove="Image\__MACOSX\._Path 1854.svg" />
     <None Remove="View\JobsView.xaml" />
     <None Remove="View\LogView.xaml" />
     <None Remove="View\TaskList.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Image\__MACOSX\._Group 1560.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\__MACOSX\._Icon_About.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\__MACOSX\._Icon_Account.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\__MACOSX\._Icon_AddNewJob.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\__MACOSX\._Icon_AP.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\__MACOSX\._Icon_Backup.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\__MACOSX\._Icon_Close.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
   <ItemGroup>
@@ -27,7 +92,112 @@
     <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
     <Content Include="Assets\StoreLogo.png" />
     <Content Include="Assets\Wide310x150Logo.scale-200.png" />
+    <Content Include="Image\Group 1560.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\Icon_About.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\Icon_Account.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\Icon_AddNewJob.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\Icon_AP.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\Icon_Backup.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\Icon_Close.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\Icon_E-mail.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\Icon_Failed_S.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\Icon_Filter_mobile.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\Icon_Hamburguer.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\Icon_Iddle_S.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\Icon_Instances.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\Icon_Minimize.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\Icon_PMMS.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\Icon_Refresh.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\Icon_RestoreDown.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\Icon_service.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\Icon_Show Schedule.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\Icon_Succeeded_S.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\Path 1854.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Image\windowsCopy.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\__MACOSX\._Icon_E-mail.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\__MACOSX\._Icon_Failed_S.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\__MACOSX\._Icon_Filter_mobile.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\__MACOSX\._Icon_Hamburguer.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\__MACOSX\._Icon_Iddle_S.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\__MACOSX\._Icon_Instances.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\__MACOSX\._Icon_Minimize.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\__MACOSX\._Icon_PMMS.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\__MACOSX\._Icon_Refresh.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\__MACOSX\._Icon_RestoreDown.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\__MACOSX\._Icon_service.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\__MACOSX\._Icon_Show Schedule.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\__MACOSX\._Icon_Succeeded_S.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\__MACOSX\._Path 1854.svg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
