@@ -14,7 +14,7 @@
             <RowDefinition />
         </Grid.RowDefinitions>
 
-        <!--<Grid x:Name="AppTitleBar" Background="{StaticResource TitleBarBackground}" />-->
+        <Grid x:Name="AppTitleBar" Background="{StaticResource TitleBarBackground}" />
         <Grid Grid.Row="1" HorizontalAlignment="Left">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto" />
