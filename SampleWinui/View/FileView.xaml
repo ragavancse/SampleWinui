@@ -26,7 +26,6 @@
         <Grid Grid.Column="0" Background="#FFFFFF">
             <NavigationView
                 x:Name="nvSample8"
-                Grid.Row="1"
                 IsBackButtonVisible="Collapsed"
                 IsPaneToggleButtonVisible="False"
                 IsSettingsVisible="False"
@@ -58,12 +57,8 @@
                     </NavigationViewItem>
                 </NavigationView.MenuItems>
             </NavigationView>
-            <Frame x:Name="ContentFrame" />
 
         </Grid>
-        <!--<Grid Grid.Column="1">
-            <local:SystemUtilities />
-            <local:Setup />
-        </Grid>-->
+        <Frame x:Name="ContentFrame" Grid.Column="1" />
     </Grid>
 </UserControl>

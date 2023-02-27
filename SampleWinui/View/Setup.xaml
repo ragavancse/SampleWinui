@@ -5,6 +5,7 @@
     x:Class="SampleWinui.View.Setup"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:controls="using:CommunityToolkit.WinUI.UI.Controls"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="using:SampleWinui.View"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
@@ -31,7 +32,7 @@
                 ItemsSource="{Binding SetupCollections}">
                 <ItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>
-                        <ItemsWrapGrid MaximumRowsOrColumns="4" Orientation="Horizontal" />
+                        <controls:WrapPanel Orientation="Horizontal" />
                     </ItemsPanelTemplate>
                 </ItemsControl.ItemsPanel>
                 <ItemsControl.ItemTemplate>

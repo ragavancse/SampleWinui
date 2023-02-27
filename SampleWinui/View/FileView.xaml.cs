@@ -24,6 +24,9 @@ namespace SampleWinui.View
 {
     public sealed partial class FileView : UserControl
     {
+        private SystemUtilities systemUtilities;
+
+        private Setup setup;
         public FileView()
         {
             this.InitializeComponent();
@@ -35,10 +38,25 @@ namespace SampleWinui.View
             switch (selectedItem.Tag)
             {
                 case "SystemUtilities":
-                    ContentFrame.Content = new SystemUtilities();
+                    if(systemUtilities == null)
+                    {
+                        ContentFrame.Content = new SystemUtilities();
+                    } else
+                    {
+                        ContentFrame.Content = systemUtilities;
+                    }
+                    
                     break;
                 case "Setup":
-                    ContentFrame.Content = new Setup();
+                    if(setup== null)
+                    {
+                        ContentFrame.Content = new Setup();
+                    }
+                    else
+                    {
+                        ContentFrame.Content = setup;
+                    }
+                  
                     break;
               
             }
