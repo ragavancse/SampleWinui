@@ -55,7 +55,7 @@
                     </Pivot.LeftHeaderTemplate>
                     <PivotItem Background="#D9E4E8" Header="File">
                         <Grid>
-                            <view:FileView />
+                            <view:Objects />
                         </Grid>
                     </PivotItem>
                     <PivotItem Background="#D9E4E8" Header="Jobs">
