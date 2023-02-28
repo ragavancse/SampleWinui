@@ -95,23 +95,23 @@
 
             <controls:DataGrid.Columns>
                 <controls:DataGridTextColumn
-                    Width="140"
+                    Width="*"
                     Binding="{Binding JobType}"
                     Header="Job Type" />
                 <controls:DataGridTextColumn
-                    Width="100"
+                    Width="*"
                     Binding="{Binding JobId}"
                     Header="Job ID" />
                 <controls:DataGridTextColumn
-                    Width="900"
+                    Width="3*"
                     Binding="{Binding Descripton}"
                     Header="Descripton" />
                 <controls:DataGridTextColumn
-                    Width="180"
+                    Width="*"
                     Binding="{Binding Status}"
                     Header="Status" />
                 <controls:DataGridTextColumn
-                    Width="300"
+                    Width="*"
                     Binding="{Binding LastMessage}"
                     Header="Last Message" />
             </controls:DataGrid.Columns>

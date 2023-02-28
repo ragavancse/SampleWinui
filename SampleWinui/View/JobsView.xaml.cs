@@ -27,5 +27,28 @@ namespace SampleWinui.View
         {
             this.InitializeComponent();
         }
+
+        private void Grid_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            var mg = MainGrid.ActualWidth;
+            var tl = TaskList.ActualWidth;
+            var lv = logView.ActualWidth;
+           if (MainGrid.ActualWidth < 1500)
+            {
+                Grid.SetRow(logView, 1);
+                Grid.SetColumn(logView, 0);
+                Grid.SetColumnSpan(logView, 2);
+                Grid.SetColumnSpan(TaskList, 2);
+            }
+            else
+            {
+                Grid.SetRow(TaskList, 0);
+                Grid.SetColumn(TaskList, 0);
+                Grid.SetColumnSpan(TaskList, 1);
+                Grid.SetRow(logView, 0);
+                Grid.SetColumn(logView, 1);
+                Grid.SetColumnSpan(logView, 1);
+            }
+        }
     }
 }
