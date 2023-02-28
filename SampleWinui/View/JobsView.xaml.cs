@@ -30,10 +30,7 @@ namespace SampleWinui.View
 
         private void Grid_SizeChanged(object sender, SizeChangedEventArgs e)
         {
-            var mg = MainGrid.ActualWidth;
-            var tl = TaskList.ActualWidth;
-            var lv = logView.ActualWidth;
-           if (MainGrid.ActualWidth < 1500)
+            if (MainGrid.ActualWidth < 700)
             {
                 Grid.SetRow(logView, 1);
                 Grid.SetColumn(logView, 0);

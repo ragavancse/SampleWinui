@@ -20,12 +20,16 @@
                 <ColumnDefinition Width="Auto" />
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
-            <Grid Grid.Column="1">
+            <Grid Grid.Column="1" SizeChanged="Grid_SizeChanged">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition />
                     <ColumnDefinition Width="Auto" />
                 </Grid.ColumnDefinitions>
-                <Pivot Grid.ColumnSpan="3">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Pivot Grid.Row="1" Grid.ColumnSpan="3">
                     <Pivot.HeaderTemplate>
                         <DataTemplate>
                             <Border
@@ -74,12 +78,14 @@
                         </Grid>
                     </PivotItem>
                     <PivotItem Background="#D9E4E8" Header="Schedule">
-                        <view:ScheduleView/>
+                        <view:ScheduleView />
                     </PivotItem>
                 </Pivot>
                 <StackPanel
+                    x:Name="rightPanel"
                     Grid.Column="1"
                     Margin="10"
+                    HorizontalAlignment="Right"
                     Orientation="Horizontal">
                     <TextBlock Margin="5" Text="Instance" />
                     <ComboBox Width="150" SelectedIndex="0">

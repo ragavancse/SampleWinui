@@ -32,6 +32,21 @@ namespace SampleWinui
             ExtendsContentIntoTitleBar = true;
             SetTitleBar(AppTitleBar);
         }
+
+        private void Grid_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            if (sender is Grid grid && grid.ActualWidth < 1200)
+            {
+                Grid.SetRow(rightPanel, 0);
+                Grid.SetColumn(rightPanel, 0);
+
+            }
+            else
+            {
+                Grid.SetRow(rightPanel, 1);
+                Grid.SetColumn(rightPanel, 1);
+            }
+        }
     }
 }
 
