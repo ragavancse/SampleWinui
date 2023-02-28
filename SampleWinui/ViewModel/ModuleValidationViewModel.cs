@@ -10,32 +10,33 @@ namespace SampleWinui.ViewModel
 {
     public class ModuleValidationViewModel
     {
-        public ObservableCollection<ScheduleItem> Items { get; set; }
-        public ModuleValidationViewModel() 
+        public ObservableCollection<ValidationModel> Items { get; set; }
+        public ModuleValidationViewModel()
         {
-            Items = new ObservableCollection<ScheduleItem>()
+            Items = new ObservableCollection<ValidationModel>()
                         {
-                            new ScheduleItem() { Key = 1, Name = "Task Modules", Child = new ObservableCollection<string>() { "Episode:60", "Episode:59", "Episode:58", "Episode:57", "Episode:56", "Episode:55" } },
-                            new ScheduleItem() { Key = 1, Name = "Interface Processing", Child = new ObservableCollection<string>() { "Episode:60", "Episode:59", "Episode:58", "Episode:57", "Episode:56", "Episode:55" } },
-                            new ScheduleItem() { Key = 1, Name = "Advanced Zip", Child = new ObservableCollection<string>() { "Episode:60", "Episode:59", "Episode:58", "Episode:57", "Episode:56", "Episode:55" } },
-                            new ScheduleItem() { Key = 1, Name = "Appliance Maintaince", Child = new ObservableCollection<string>() { "Episode:60", "Episode:59", "Episode:58", "Episode:57", "Episode:56", "Episode:55" } },
-                            new ScheduleItem() { Key = 1, Name = "Auto.Faxing", Child = new ObservableCollection<string>() { "Episode:60", "Episode:59", "Episode:58", "Episode:57", "Episode:56", "Episode:55" } },
-                            new ScheduleItem() { Key = 1, Name = "Claim Status", Child = new ObservableCollection<string>() { "Episode:60", "Episode:59", "Episode:58", "Episode:57", "Episode:56", "Episode:55" } },
-                            new ScheduleItem() { Key = 1, Name = "Collection Write Off", Child = new ObservableCollection<string>() { "Episode:60", "Episode:59", "Episode:58", "Episode:57", "Episode:56", "Episode:55" } },
-                            new ScheduleItem() { Key = 1, Name = "Data Export", Child = new ObservableCollection<string>() { "Episode:60", "Episode:59", "Episode:58", "Episode:57", "Episode:56", "Episode:55" } },
-                            new ScheduleItem() { Key = 1, Name = "Data Media", Child = new ObservableCollection<string>() { "Episode:60", "Episode:59", "Episode:58", "Episode:57", "Episode:56", "Episode:55" } },
-                            new ScheduleItem() { Key = 1, Name = "Download ", Child = new ObservableCollection<string>() { "Episode:60", "Episode:59", "Episode:58", "Episode:57", "Episode:56", "Episode:55" } },
-                            new ScheduleItem() { Key = 1, Name = "Electronics Claims", Child = new ObservableCollection<string>() { "Episode:60", "Episode:59", "Episode:58", "Episode:57", "Episode:56", "Episode:55" } },
-                            new ScheduleItem() { Key = 1, Name = "Electroni Claim Generation", Child = new ObservableCollection<string>() { "Episode:60", "Episode:59", "Episode:58", "Episode:57", "Episode:56", "Episode:55" } },
-                            new ScheduleItem() { Key = 1, Name = "Electroni Remittance", Child = new ObservableCollection<string>() { "Episode:60", "Episode:59", "Episode:58", "Episode:57", "Episode:56", "Episode:55" } },
-                            new ScheduleItem() { Key = 1, Name = "Eligibility", Child = new ObservableCollection<string>() { "Episode:60", "Episode:59", "Episode:58", "Episode:57", "Episode:56", "Episode:55" } },
-                            new ScheduleItem() { Key = 1, Name = "Email", Child = new ObservableCollection<string>() { "Episode:60", "Episode:59", "Episode:58", "Episode:57", "Episode:56", "Episode:55" } },
-                             new ScheduleItem() { Key = 1, Name = "File Transfer", Child = new ObservableCollection<string>() { "Episode:60", "Episode:59", "Episode:58", "Episode:57", "Episode:56", "Episode:55" } },
-                              new ScheduleItem() { Key = 1, Name = "GlobalSync", Child = new ObservableCollection<string>() { "Episode:60", "Episode:59", "Episode:58", "Episode:57", "Episode:56", "Episode:55" } },
-                               new ScheduleItem() { Key = 1, Name = "Group Appeal", Child = new ObservableCollection<string>() { "Episode:60", "Episode:59", "Episode:58", "Episode:57", "Episode:56", "Episode:55" } },
-                                new ScheduleItem() { Key = 1, Name = "Image Import", Child = new ObservableCollection<string>() { "Episode:60", "Episode:59", "Episode:58", "Episode:57", "Episode:56", "Episode:55" } },
-                                 new ScheduleItem() { Key = 1, Name = "Image Processing", Child = new ObservableCollection<string>() { "Episode:60", "Episode:59", "Episode:58", "Episode:57", "Episode:56", "Episode:55" } },
-                                  new ScheduleItem() { Key = 1, Name = "Insurance Building", Child = new ObservableCollection<string>() { "Episode:60", "Episode:59", "Episode:58", "Episode:57", "Episode:56", "Episode:55" } },
+                            new ValidationModel() { Key = 1, Name = "Task Modules", Children = new ObservableCollection<ValidationModel>() { new ValidationModel { Name = "Episode:60" }, new ValidationModel { Name ="Episode:59"}, new ValidationModel { Name ="Episode:58", } } },
+                             new ValidationModel() { Key = 2, Name = "Interfacing Processing", Children = new ObservableCollection<ValidationModel>() { new ValidationModel { Name = "Episode:60" }, new ValidationModel { Name ="Episode:59"}, new ValidationModel { Name ="Episode:58", } } },
+                              new ValidationModel() { Key = 3, Name = "Advanced Zip", Children = new ObservableCollection<ValidationModel>() { new ValidationModel { Name = "Episode:60" }, new ValidationModel { Name ="Episode:59"}, new ValidationModel { Name ="Episode:58", } } },
+                               new ValidationModel() { Key = 4, Name = "Appliance Maintaince", Children = new ObservableCollection<ValidationModel>() { new ValidationModel { Name = "Episode:60" }, new ValidationModel { Name ="Episode:59"}, new ValidationModel { Name ="Episode:58", } } },
+                                new ValidationModel() { Key = 5, Name = "Auto.Faxing", Children = new ObservableCollection<ValidationModel>() { new ValidationModel { Name = "Episode:60" }, new ValidationModel { Name ="Episode:59"}, new ValidationModel { Name ="Episode:58", } } },
+                                 new ValidationModel() { Key = 6, Name = "Claim Status", Children = new ObservableCollection<ValidationModel>() { new ValidationModel { Name = "Episode:60" }, new ValidationModel { Name ="Episode:59"}, new ValidationModel { Name ="Episode:58", } } },
+                                  new ValidationModel() { Key = 7, Name = "Collection Write Off", Children = new ObservableCollection<ValidationModel>() { new ValidationModel { Name = "Episode:60" }, new ValidationModel { Name ="Episode:59"}, new ValidationModel { Name ="Episode:58", } } },
+                                   new ValidationModel() { Key = 8, Name = "Data Export", Children = new ObservableCollection<ValidationModel>() { new ValidationModel { Name = "Episode:60" }, new ValidationModel { Name ="Episode:59"}, new ValidationModel { Name ="Episode:58", } } },
+                                    new ValidationModel() { Key = 9, Name = "Data Media", Children = new ObservableCollection<ValidationModel>() { new ValidationModel { Name = "Episode:60" }, new ValidationModel { Name ="Episode:59"}, new ValidationModel { Name ="Episode:58", } } },
+                                     new ValidationModel() { Key = 10, Name = "Download", Children = new ObservableCollection<ValidationModel>() { new ValidationModel { Name = "Episode:60" }, new ValidationModel { Name ="Episode:59"}, new ValidationModel { Name ="Episode:58", } } },
+                                      new ValidationModel() { Key = 11, Name = "Electronics Claims", Children = new ObservableCollection<ValidationModel>() { new ValidationModel { Name = "Episode:60" }, new ValidationModel { Name ="Episode:59"}, new ValidationModel { Name ="Episode:58", } } },
+                                       new ValidationModel() { Key = 12, Name = "Electroni Claim Generation", Children = new ObservableCollection<ValidationModel>() { new ValidationModel { Name = "Episode:60" }, new ValidationModel { Name ="Episode:59"}, new ValidationModel { Name ="Episode:58", } } },
+                                        new ValidationModel() { Key = 13, Name = "Electroni Remittance", Children = new ObservableCollection<ValidationModel>() { new ValidationModel { Name = "Episode:60" }, new ValidationModel { Name ="Episode:59"}, new ValidationModel { Name ="Episode:58", } } },
+                                         new ValidationModel() { Key = 14, Name = "Eligibility", Children = new ObservableCollection<ValidationModel>() { new ValidationModel { Name = "Episode:60" }, new ValidationModel { Name ="Episode:59"}, new ValidationModel { Name ="Episode:58", } } },
+                                          new ValidationModel() { Key = 15, Name = "Email", Children = new ObservableCollection<ValidationModel>() { new ValidationModel { Name = "Episode:60" }, new ValidationModel { Name ="Episode:59"}, new ValidationModel { Name ="Episode:58", } } },
+                                           new ValidationModel() { Key = 16, Name = "File Transfer", Children = new ObservableCollection<ValidationModel>() { new ValidationModel { Name = "Episode:60" }, new ValidationModel { Name ="Episode:59"}, new ValidationModel { Name ="Episode:58", } } },
+                                            new ValidationModel() { Key = 17, Name = "GlobalSync", Children = new ObservableCollection<ValidationModel>() { new ValidationModel { Name = "Episode:60" }, new ValidationModel { Name ="Episode:59"}, new ValidationModel { Name ="Episode:58", } } },
+                                             new ValidationModel() { Key = 18, Name = "Group Appeal", Children = new ObservableCollection<ValidationModel>() { new ValidationModel { Name = "Episode:60" }, new ValidationModel { Name ="Episode:59"}, new ValidationModel { Name ="Episode:58", } } },
+                                              new ValidationModel() { Key = 19, Name = "Image Import", Children = new ObservableCollection<ValidationModel>() { new ValidationModel { Name = "Episode:60" }, new ValidationModel { Name ="Episode:59"}, new ValidationModel { Name ="Episode:58", } } },
+                                              new ValidationModel() { Key = 20, Name = "Image Processing", Children = new ObservableCollection<ValidationModel>() { new ValidationModel { Name = "Episode:60" }, new ValidationModel { Name ="Episode:59"}, new ValidationModel { Name ="Episode:58", } } },
+                                              new ValidationModel() { Key = 21, Name = "Insurance Building", Children = new ObservableCollection<ValidationModel>() { new ValidationModel { Name = "Episode:60" }, new ValidationModel { Name ="Episode:59"}, new ValidationModel { Name ="Episode:58", } } },
+
 
 
             };

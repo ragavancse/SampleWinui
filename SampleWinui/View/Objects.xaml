@@ -27,7 +27,6 @@
                     <DataTemplate>
                         <TreeViewItem ItemsSource="{Binding Child}">
 
-
                             <TextBlock Foreground="Blue" Text="{Binding Name}" />
 
                         </TreeViewItem>

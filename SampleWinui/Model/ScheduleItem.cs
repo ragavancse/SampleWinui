@@ -23,10 +23,10 @@ namespace SampleWinui.Model
             set { name = value; }
         }
 
-        private ObservableCollection<string> child
+        private ObservableCollection<ScheduleItem> child
             ;
 
-        public ObservableCollection<string> Child
+        public ObservableCollection<ScheduleItem> Child
 
         {
             get { return child; }

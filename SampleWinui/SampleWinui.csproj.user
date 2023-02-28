@@ -8,7 +8,6 @@
     <Page Update="CommonControls\PaginationControl.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="View\Module Validation.xaml">
     <Page Update="View\Module_Validation.xaml">
       <SubType>Designer</SubType>
     </Page>

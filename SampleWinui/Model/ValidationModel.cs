@@ -17,14 +17,14 @@ namespace SampleWinui.Model
             set { name = value; }
         }
 
-        private ObservableCollection<string> child
-            ;
+        private ObservableCollection<ValidationModel> children;
+            
 
-        public ObservableCollection<string> Child
+        public ObservableCollection<ValidationModel> Children
 
         {
-            get { return child; }
-            set { child = value; }
+            get { return children; }
+            set { children = value; }
         }
 
         private int key;
