@@ -1,4 +1,5 @@
-﻿using SampleWinui.Helpers;
+﻿using Microsoft.UI.Xaml.Controls;
+using SampleWinui.Helpers;
 using SampleWinui.Model;
 using System;
 using System.Collections.Generic;
@@ -28,12 +29,51 @@ namespace SampleWinui.ViewModel
         public ObservableCollection<Job> Jobs
         {
             get { return _jobs; }
-            set { _jobs = value;
+            set
+            {
+                _jobs = value;
                 RaisePropertyChanged(nameof(Jobs));
             }
         }
 
+        public string SearchText
+        {
+            get => searchText;
+            set
+            {
+                searchText = value;
+                Jobs = new ObservableCollection<Job>(GetJobs().Where(a => a.JobId.Contains(value) || a.Descripton.ToLower().Contains(searchText.ToLower())));
+            }
+        }
+
+        public object SelectedItem
+        {
+            get => selectedItem;
+            set
+            {
+                selectedItem = value;
+                if (value is NavigationViewItem item)
+                {
+                    switch (item.Content.ToString())
+                    {
+                        case "All Jobs":
+                            Jobs = GetJobs();
+                            break;
+                        case "Running jobs":
+                            Jobs = new ObservableCollection<Job>(GetJobs().Where(a => a.Status == "Complete"));
+                            break;
+                        case "Failed jobs":
+                            Jobs = new ObservableCollection<Job>(GetJobs().Where(a => a.Status == "Failed"));
+                            break;
+                    }
+
+                }
+            }
+        }
+
         private ObservableCollection<Job> _jobsUnFiltered;
+        private object selectedItem;
+        private string searchText;
 
         public ObservableCollection<Job> JobsUnFiltered
         {
@@ -46,13 +86,13 @@ namespace SampleWinui.ViewModel
             return new ObservableCollection<Job>
             {
                 new Job{ JobId="2955", JobType= "Multi-Task", Descripton="10- Honor Care Payment Processing (Client) ", Status="Complete" , LastMessage="Succeeded"},
-                new Job{ JobId="2955", JobType= "Multi-Task", Descripton="11- Honor Care Payment Processing (Client) ", Status="Complete" , LastMessage="Succeeded"},
+                new Job{ JobId="2955", JobType= "Multi-Task", Descripton="11- Honor Care Payment Processing (Client) ", Status="Failed" , LastMessage="Succeeded"},
                 new Job{ JobId="2954", JobType= "Multi-Task", Descripton="10- Address Update ", Status="Idle" , LastMessage="Succeeded"},
-                new Job{ JobId="2952", JobType= "Multi-Task", Descripton="10- BackFill Compression ", Status="Idle" , LastMessage="Succeeded"},
+                new Job{ JobId="2952", JobType= "Multi-Task", Descripton="10- BackFill Compression ", Status="Idle" , LastMessage="Failed"},
                 new Job{ JobId="2951", JobType= "Multi-Task", Descripton="Chad Image Test", Status="Complete" , LastMessage="Succeeded"},
                 new Job{ JobId="2952", JobType= "Multi-Task", Descripton="Charge Export ", Status="Complete" , LastMessage="Succeeded"},
                  new Job{ JobId="2955", JobType= "Multi-Task", Descripton="10- Honor Care Payment Processing (Client) ", Status="Complete" , LastMessage="Succeeded"},
-                new Job{ JobId="2955", JobType= "Multi-Task", Descripton="11- Honor Care Payment Processing (Client) ", Status="Complete" , LastMessage="Succeeded"},
+                new Job{ JobId="2955", JobType= "Multi-Task", Descripton="11- Honor Care Payment Processing (Client) ", Status="Failed" , LastMessage="Succeeded"},
                 new Job{ JobId="2954", JobType= "Multi-Task", Descripton="10- Address Update ", Status="Idle" , LastMessage="Succeeded"},
                 new Job{ JobId="2952", JobType= "Multi-Task", Descripton="10- BackFill Compression ", Status="Idle" , LastMessage="Succeeded"},
                 new Job{ JobId="2951", JobType= "Multi-Task", Descripton="Chad Image Test", Status="Complete" , LastMessage="Succeeded"},
@@ -66,7 +106,7 @@ namespace SampleWinui.ViewModel
                 new Job{ JobId="2955", JobType= "Multi-Task", Descripton="10- Honor Care Payment Processing (Client) ", Status="Complete" , LastMessage="Succeeded"},
                 new Job{ JobId="2955", JobType= "Multi-Task", Descripton="11- Honor Care Payment Processing (Client) ", Status="Complete" , LastMessage="Succeeded"},
                 new Job{ JobId="2954", JobType= "Multi-Task", Descripton="10- Address Update ", Status="Idle" , LastMessage="Succeeded"},
-                new Job{ JobId="2952", JobType= "Multi-Task", Descripton="10- BackFill Compression ", Status="Idle" , LastMessage="Succeeded"},
+                new Job{ JobId="2952", JobType= "Multi-Task", Descripton="10- BackFill Compression ", Status="Idle" , LastMessage="Failed"},
                 new Job{ JobId="2951", JobType= "Multi-Task", Descripton="Chad Image Test", Status="Complete" , LastMessage="Succeeded"},
                 new Job{ JobId="2952", JobType= "Multi-Task", Descripton="Charge Export ", Status="Complete" , LastMessage="Succeeded"},
                 new Job{ JobId="2955", JobType= "Multi-Task", Descripton="10- Honor Care Payment Processing (Client) ", Status="Complete" , LastMessage="Succeeded"},
@@ -78,7 +118,7 @@ namespace SampleWinui.ViewModel
 
 
             };
-        }    
+        }
 
         private void RunFirstPageCommand()
         {

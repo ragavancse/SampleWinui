@@ -2,21 +2,15 @@
     x:Class="SampleWinui.View.ListJobsView"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:common="using:SampleWinui.CommonControls"
     xmlns:controls="using:CommunityToolkit.WinUI.UI.Controls"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="using:SampleWinui.View"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:viewmodel="using:SampleWinui.ViewModel"
-    xmlns:common="using:SampleWinui.CommonControls"
     mc:Ignorable="d">
-    <UserControl.Resources>
-        <viewmodel:JobsViewModel x:Key="JobsViewModel" />
-    </UserControl.Resources>
 
-    <Grid
-        Margin="15"
-        CornerRadius="6"
-        DataContext="{StaticResource JobsViewModel}">
+    <Grid Margin="15" CornerRadius="6">
         <Grid.RowDefinitions>
             <RowDefinition Height="60" />
             <RowDefinition />
@@ -73,7 +67,8 @@
                     <TextBox
                         Grid.Column="2"
                         VerticalAlignment="Center"
-                        PlaceholderText="Search" />
+                        PlaceholderText="Search"
+                        Text="{Binding SearchText, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" />
                 </Grid>
             </Border>
 
@@ -123,18 +118,19 @@
         </controls:DataGrid>
 
         <!--  Pagination Control for NG data  -->
-        <common:PaginationControl x:Name="PagingControl"
-                                  Grid.Row="2"                                  
-                                  PageSize="{Binding PageSize, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-                                  PageSizeList="{Binding PageSizeList, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-                                  CurrentPage="{Binding CurrentPage, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"                                  
-                                  TotalPage="{Binding TotalPage, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-                                  CurrentPageStart="{Binding CurrentPageStart, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
-                                  CurrentPageEnd="{Binding CurrentPageEnd, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
-                                  TotalItems="{Binding TotalItems, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
-                                  FirstPageCommand="{Binding FirstPageCommand, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-                                  LastPageCommand="{Binding LastPageCommand, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-                                  NextPageCommand="{Binding NextPageCommand, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-                                  PrevPageCommand="{Binding PrevPageCommand, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+        <common:PaginationControl
+            x:Name="PagingControl"
+            Grid.Row="2"
+            CurrentPage="{Binding CurrentPage, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+            CurrentPageEnd="{Binding CurrentPageEnd, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+            CurrentPageStart="{Binding CurrentPageStart, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+            FirstPageCommand="{Binding FirstPageCommand, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+            LastPageCommand="{Binding LastPageCommand, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+            NextPageCommand="{Binding NextPageCommand, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+            PageSize="{Binding PageSize, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+            PageSizeList="{Binding PageSizeList, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+            PrevPageCommand="{Binding PrevPageCommand, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+            TotalItems="{Binding TotalItems, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+            TotalPage="{Binding TotalPage, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
     </Grid>
 </UserControl>

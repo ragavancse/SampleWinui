@@ -8,9 +8,13 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="using:SampleWinui.View"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewmodel="using:SampleWinui.ViewModel"
     mc:Ignorable="d">
+    <UserControl.Resources>
+        <viewmodel:JobsViewModel x:Key="JobsViewModel" />
+    </UserControl.Resources>
 
-    <Grid>
+    <Grid DataContext="{StaticResource JobsViewModel}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto" />
             <ColumnDefinition Width="*" />
@@ -35,7 +39,8 @@
                 IsPaneToggleButtonVisible="False"
                 IsSettingsVisible="False"
                 IsTabStop="False"
-                PaneDisplayMode="Left">
+                PaneDisplayMode="Left"
+                SelectedItem="{Binding SelectedItem, Mode=TwoWay}">
                 <NavigationView.MenuItems>
                     <NavigationViewItem
                         Content="STANDARD GROUPS"
