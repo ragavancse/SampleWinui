@@ -118,7 +118,9 @@
         </controls:DataGrid>
 
         <!--  Pagination Control for NG data  -->
-        <common:PaginationControl x:Name="PagingControl"
-                                  Grid.Row="2" Source="{Binding Jobs}" />
+        <common:PaginationControl
+            x:Name="PagingControl"
+            Grid.Row="2"
+            Source="{Binding Jobs}" />
     </Grid>
 </UserControl>
