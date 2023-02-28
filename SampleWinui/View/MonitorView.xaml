@@ -15,112 +15,82 @@
 
     <Grid DataContext="{StaticResource MonitorViewModel}">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="2*" />
-            <ColumnDefinition Width="12*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="5*" />
         </Grid.ColumnDefinitions>
 
-        <Grid Background="#FFFFFF" Margin="5,10,5,0">
-
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
+        <Grid Background="#FFFFFF">
+            <Grid  Margin="5,10,5,0">
+                <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
                 <RowDefinition Height="2*"/>
             </Grid.RowDefinitions>
 
-            <Grid  Grid.Row="0">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="5*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                <TextBlock Text="Include Succeeded Items:" FontWeight="SemiBold" VerticalAlignment="Center"/>
-                <CheckBox  Width="50"  Grid.Column="1"   IsChecked="True"/>
-            </Grid>
+                <CheckBox
+                    Grid.Row="0"
+                    Margin="0,10,0,0"
+                    
+                      Padding="100,0,0,0"
+                    VerticalAlignment="Center"
+                    IsChecked="True"
+                    HorizontalContentAlignment="Left"
+                    VerticalContentAlignment="Center"
+                    FlowDirection="RightToLeft"
+                    FontWeight="SemiBold">
+                    <CheckBox.Content>
+                        <TextBlock Text="Include Succeeded Items:" />
+                    </CheckBox.Content>
+                </CheckBox>
 
-            <Grid Grid.Row="1">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="5*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                <TextBlock Text="Include Running Items:" FontWeight="SemiBold" VerticalAlignment="Center"/>
-                <CheckBox  Width="50"  Grid.Column="1"   IsChecked="True"/>
-            </Grid>
+                <CheckBox
+                    Grid.Row="1"
+                    Margin="0,10,0,0"
+                      Padding="114,0,0,0"
+                    VerticalAlignment="Center"
+                    IsChecked="True"
+                    HorizontalContentAlignment="Left"
+                    VerticalContentAlignment="Center"
+                    FlowDirection="RightToLeft"
+                    FontWeight="SemiBold">
+                    <CheckBox.Content>
+                        <TextBlock Text="Include Running Items:"  />
+                    </CheckBox.Content>
+                </CheckBox>
 
-            <Grid Grid.Row="2">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="5*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                <TextBlock Text="Include Future Jobs:" FontWeight="SemiBold" VerticalAlignment="Center"/>
-                <CheckBox  Width="50"  Grid.Column="1" />
-            </Grid>
+                <CheckBox
+                    Grid.Row="2"
+                    Margin="0,10,0,0"
+                      Padding="134,0,0,0"
+                    VerticalAlignment="Center"
+                    HorizontalContentAlignment="Left"
+                    VerticalContentAlignment="Center"
+                    FlowDirection="RightToLeft"
+                    FontWeight="SemiBold">
+                    <CheckBox.Content>
+                        <TextBlock Text="Include Future Jobs:"  />
+                    </CheckBox.Content>
+                </CheckBox>
 
-            <TextBlock
-                    Padding="5,10,0,0"
+
+                <TextBlock
+                    Padding="0,10,0,0"  Margin="0,10,0,0"
                     FontSize="20" Grid.Row="3"
                     FontWeight="bold"
                     Foreground="#6593a4"
                     Text="Dates" />
 
-            <Grid Grid.Row="4">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="90*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                <TextBox Text="None" Grid.Column="1" Width="200"  Height="700" Margin="5,20,5,0" HorizontalAlignment="Left"/>
-            </Grid>
-
-            <!--<StackPanel Orientation="Vertical" >
-
-                <Grid Margin="5,10,5,0">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="5*"/>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
-                    <TextBlock Text="Include Succeeded Items:" FontWeight="SemiBold" VerticalAlignment="Center"/>
-                    <CheckBox  Width="50"  Grid.Column="1"   IsChecked="True"/>
-                </Grid>
-
-                <Grid Margin="5,10,5,0">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="5*"/>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
-                    <TextBlock Text="Include Running Items:" FontWeight="SemiBold" VerticalAlignment="Center"/>
-                    <CheckBox  Width="50"  Grid.Column="1"   IsChecked="True"/>
-                </Grid>
-
-                <Grid Margin="5,10,5,0">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="5*"/>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
-                    <TextBlock Text="Include Future Jobs:" FontWeight="SemiBold" VerticalAlignment="Center"/>
-                    <CheckBox  Width="50"  Grid.Column="1" />
-                </Grid>
-
-                <TextBlock
-                    Padding="5,10,0,0"
-                    FontSize="20"
-                    FontWeight="bold"
-                    Foreground="#6593a4"
-                    Text="Dates" />
-
-                <Grid>
+                <Grid Grid.Row="4" Margin="0,10,0,0">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="90*"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
-                    <TextBox Text="None" Grid.Column="1" Width="200"  Height="700" Margin="5,20,5,0" HorizontalAlignment="Left"/>
+                    <TextBox Text="None" Grid.Column="1" Width="200"  Height="800" Margin="5,20,5,0" HorizontalAlignment="Left"/>
                 </Grid>
-              
-            </StackPanel>-->
-
-
-
+            </Grid>
         </Grid>
 
         <Grid Grid.Column="1">
