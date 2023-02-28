@@ -1,0 +1,741 @@
+﻿<UserControl
+    x:Class="SampleWinui.View.ScheduleListItems"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:controls="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:controls1="using:CommunityToolkit.WinUI.UI.Controls"
+    xmlns:converter="using:SampleWinui.Converter"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="using:SampleWinui.View"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <UserControl.Resources>
+        <converter:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+    </UserControl.Resources>
+    <Grid
+        Width="800"
+        Margin="20,20,0,0"
+        Background="White">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height=".2*" />
+            <RowDefinition Height=".3*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid
+            Grid.Row="0"
+            Margin="10,12,10,10"
+            BorderBrush="#bdbdbd"
+            BorderThickness="1"
+            CornerRadius="6">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0" Margin="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <RadioButton
+                    x:Name="dayOnly"
+                    Grid.Row="0"
+                    Margin="10,5,5,5"
+                    VerticalAlignment="Center"
+                    Command="{Binding Filter}"
+                    CommandParameter="dayOnly"
+                    Content="One day only"
+                    FlowDirection="LeftToRight"
+                    IsChecked="True" />
+
+                <RadioButton
+                    x:Name="dayOfWeek"
+                    Grid.Row="1"
+                    Margin="10,5,5,5"
+                    VerticalAlignment="Center"
+                    Command="{Binding Filter}"
+                    CommandParameter="dayOfWeek"
+                    Content="By day of week"
+                    FlowDirection="LeftToRight" />
+                <RadioButton
+                    x:Name="dayOfMonth"
+                    Grid.Row="2"
+                    Margin="10,5,5,5"
+                    VerticalAlignment="Center"
+                    Command="{Binding Filter}"
+                    CommandParameter="dayOfMonth"
+                    Content="By day of month"
+                    FlowDirection="LeftToRight" />
+                <CheckBox
+                    Grid.Row="3"
+                    Margin="10,5,5,5"
+                    Content="Enabled"
+                    FlowDirection="LeftToRight" />
+            </Grid>
+            <Grid Grid.Column="1" Margin="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <CalendarDatePicker
+                    x:Name="MyCalendarDatePicker"
+                    Width="200"
+                    Margin="0,10,5,5"
+                    BorderBrush="#bdbdbd"
+                    BorderThickness="1"
+                    CalendarIdentifier="GregorianCalendar"
+                    CornerRadius="15"
+                    DateFormat="{}{month.abbreviated} {day.integer}, {year.full}"
+                    Visibility="{Binding DatePickEnable, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                <Grid Grid.Row="2">
+                    <TextBox
+                        Width="40"
+                        Margin="0,50,0,0"
+                        Padding="20,4,0,0"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Center"
+                        BorderBrush="#bdbdbd"
+                        BorderThickness="1"
+                        CornerRadius="12"
+                        Text="28"
+                        Visibility="{Binding DayOfMonthEnable, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                </Grid>
+            </Grid>
+            <Grid
+                Grid.Column="2"
+                Margin="10"
+                HorizontalAlignment="Right"
+                Visibility="{Binding EnableWeeks, Converter={StaticResource BooleanToVisibilityConverter}}">
+                <ListView ItemsSource="{Binding WeekCollection}">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <CheckBox Content="{Binding Day}" FlowDirection="LeftToRight" />
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                    <ListView.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <ItemsWrapGrid MaximumRowsOrColumns="4" Orientation="Vertical" />
+                        </ItemsPanelTemplate>
+                    </ListView.ItemsPanel>
+                </ListView>
+            </Grid>
+
+        </Grid>
+        <Grid
+            Grid.Row="0"
+            Margin="30,0,0,0"
+            Padding="5,0,5,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Background="#fff">
+            <TextBlock Text="Date" />
+        </Grid>
+        <Grid
+            Grid.Row="1"
+            Height="180"
+            Margin="10,12,10,10"
+            BorderBrush="#bdbdbd"
+            BorderThickness="1"
+            CornerRadius="6">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0" Margin="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <RadioButton
+                    x:Name="specificTime"
+                    Grid.Row="0"
+                    Margin="10,5,5,5"
+                    VerticalAlignment="Center"
+                    Command="{Binding TimeFilter}"
+                    CommandParameter="specificTime"
+                    Content="Specific time"
+                    FlowDirection="LeftToRight" />
+
+                <RadioButton
+                    x:Name="autoRecurring"
+                    Grid.Row="1"
+                    Margin="10,5,5,5"
+                    VerticalAlignment="Center"
+                    Command="{Binding TimeFilter}"
+                    CommandParameter="autoRecurring"
+                    Content="Auto recurring"
+                    FlowDirection="LeftToRight" />
+            </Grid>
+            <Grid
+                Grid.Column="1"
+                Height="30"
+                Margin="10,15,10,10"
+                VerticalAlignment="Top"
+                BorderBrush="#bdbdbd"
+                BorderThickness="1"
+                CornerRadius="12"
+                Visibility="{Binding LeftTimePanel, Converter={StaticResource BooleanToVisibilityConverter}}">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <TimePicker
+                    x:Name="MyTimePicker"
+                    Grid.Column="0"
+                    Width="130"
+                    Margin="8,10,0,0"
+                    VerticalAlignment="Top"
+                    BorderThickness="0" />
+                <Grid
+                    Grid.Column="1"
+                    Margin="0,8,0,0"
+                    HorizontalAlignment="Left">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <RepeatButton
+                        Name="btnPrev"
+                        HorizontalContentAlignment="Left"
+                        Background="Transparent"
+                        BorderThickness="0"
+                        Click="IncrementButton_Click">
+                        <Path
+                            Width="10"
+                            Height="10"
+                            Margin="0,0,0,0"
+                            Data="M0,10 L5,0 L10,10 Z"
+                            Fill="Black"
+                            RenderTransformOrigin="0.5,0.5"
+                            Stretch="Uniform" />
+                    </RepeatButton>
+                    <RepeatButton
+                        Grid.Row="1"
+                        Background="Transparent"
+                        BorderThickness="0"
+                        Click="DecrementButton_Click">
+                        <Path
+                            Width="10"
+                            Height="10"
+                            Margin="0,0,0,0"
+                            Data="M0,0 L5,10 L10,0 Z"
+                            Fill="Black"
+                            RenderTransformOrigin="0.5,0.5"
+                            Stretch="Uniform" />
+                    </RepeatButton>
+                </Grid>
+            </Grid>
+            <Grid
+                Grid.Column="2"
+                HorizontalAlignment="Right"
+                Visibility="{Binding RightTimePanel, Converter={StaticResource BooleanToVisibilityConverter}}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid Margin="10" HorizontalAlignment="Right">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Margin="8" Text="Every" />
+                        <TextBox
+                            Width="30"
+                            Height="5"
+                            Padding="20,4,0,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Center"
+                            BorderBrush="#bdbdbd"
+                            BorderThickness="1"
+                            CornerRadius="12"
+                            HorizontalTextAlignment="Center"
+                            Text="28" />
+                        <TextBlock Margin="8" Text="Minutes" />
+                    </StackPanel>
+                </Grid>
+                <Grid Grid.Row="1">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Margin="8" Text="Starting at" />
+                        <Grid
+                            Height="30"
+                            Margin="10,10,15,10"
+                            BorderBrush="#bdbdbd"
+                            BorderThickness="1"
+                            CornerRadius="12">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <TimePicker
+                                x:Name="StartingAtTimePicker"
+                                Grid.Column="0"
+                                Width="130"
+                                Margin="8,10,0,0"
+                                VerticalAlignment="Top"
+                                HorizontalContentAlignment="Center"
+                                BorderThickness="0" />
+                            <Grid
+                                Grid.Column="1"
+                                Margin="0,8,0,0"
+                                HorizontalAlignment="Left">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                <RepeatButton
+                                    HorizontalContentAlignment="Left"
+                                    Background="Transparent"
+                                    BorderThickness="0"
+                                    Click="StartingAtIncrementButton_Click">
+                                    <Path
+                                        Width="10"
+                                        Height="10"
+                                        Margin="0,0,0,0"
+                                        Data="M0,10 L5,0 L10,10 Z"
+                                        Fill="Black"
+                                        RenderTransformOrigin="0.5,0.5"
+                                        Stretch="Uniform" />
+                                </RepeatButton>
+                                <RepeatButton
+                                    Grid.Row="1"
+                                    Background="Transparent"
+                                    BorderThickness="0"
+                                    Click="StartingAtDecrementButton_Click">
+                                    <Path
+                                        Width="10"
+                                        Height="10"
+                                        Margin="0,0,0,0"
+                                        Data="M0,0 L5,10 L10,0 Z"
+                                        Fill="Black"
+                                        RenderTransformOrigin="0.5,0.5"
+                                        Stretch="Uniform" />
+                                </RepeatButton>
+                            </Grid>
+                        </Grid>
+                    </StackPanel>
+                </Grid>
+                <Grid Grid.Row="2">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Margin="8" Text="Ending at" />
+                        <Grid
+                            Height="30"
+                            Margin="15,10,15,10"
+                            BorderBrush="#bdbdbd"
+                            BorderThickness="1"
+                            CornerRadius="12">
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <TimePicker
+                                x:Name="EndingAtTimePicker"
+                                Grid.Column="0"
+                                Width="130"
+                                Margin="8,10,0,0"
+                                VerticalAlignment="Top"
+                                HorizontalContentAlignment="Center"
+                                BorderThickness="0" />
+                            <Grid
+                                Grid.Column="1"
+                                Margin="0,8,0,0"
+                                HorizontalAlignment="Left">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                <RepeatButton
+                                    HorizontalContentAlignment="Left"
+                                    Background="Transparent"
+                                    BorderThickness="0"
+                                    Click="EndingAtIncrementButton_Click">
+                                    <Path
+                                        Width="10"
+                                        Height="10"
+                                        Margin="0,0,0,0"
+                                        Data="M0,10 L5,0 L10,10 Z"
+                                        Fill="Black"
+                                        RenderTransformOrigin="0.5,0.5"
+                                        Stretch="Uniform" />
+                                </RepeatButton>
+                                <RepeatButton
+                                    Grid.Row="1"
+                                    Background="Transparent"
+                                    BorderThickness="0"
+                                    Click="EndingAtDecrementButton_Click">
+                                    <Path
+                                        Width="10"
+                                        Height="10"
+                                        Margin="0,0,0,0"
+                                        Data="M0,0 L5,10 L10,0 Z"
+                                        Fill="Black"
+                                        RenderTransformOrigin="0.5,0.5"
+                                        Stretch="Uniform" />
+                                </RepeatButton>
+                            </Grid>
+                        </Grid>
+                    </StackPanel>
+                </Grid>
+            </Grid>
+        </Grid>
+        <Grid
+            Grid.Row="1"
+            Margin="30,0,0,0"
+            Padding="5,0,5,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Background="#fff">
+            <TextBlock Text="Time" />
+        </Grid>
+        <Grid Grid.Row="2" Margin="10,50,10,10">
+            <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
+                <Button
+                    Width="150"
+                    Height="30"
+                    HorizontalAlignment="Right"
+                    HorizontalContentAlignment="Center"
+                    Background="#25c1f3"
+                    Content="Done"
+                    CornerRadius="17"
+                    FontSize="10"
+                    Foreground="#FFFFFF"
+                    Style="{StaticResource ButtonStyle}" />
+                <Button
+                    Width="150"
+                    Height="30"
+                    Margin="10,0,10,0"
+                    HorizontalContentAlignment="Center"
+                    Background="#6692a5"
+                    Content="Cancel"
+                    CornerRadius="17"
+                    FontSize="15"
+                    Foreground="#FFFFFF"
+                    Style="{StaticResource ButtonStyle}" />
+            </StackPanel>
+        </Grid>
+
+    </Grid>
+    <!--<Border
+                            Grid.Column="2"
+                            Width="250"
+                            Height="30"
+                            Margin="50,0,0,0"
+                            BorderBrush="Gray"
+                            BorderThickness="1"
+                            CornerRadius="17">
+                            <CalendarDatePicker Grid.Column="2" DateChanged="dateText_DateChanged" />
+                        </Border>-->
+
+
+
+    <!--<StackPanel Grid.Row="1" Margin="0,20,0,0">
+                        <StackPanel Orientation="Horizontal">
+                            <RadioButton
+                                x:Name="Week1"
+                                MinWidth="20"
+                                Margin="10,0,0,0"
+                                VerticalAlignment="Center"
+                                GroupName="options" />
+                            <TextBlock
+                                Margin="3,0,0,0"
+                                VerticalAlignment="Center"
+                                Text="By day of Week" />
+                        </StackPanel>
+                    </StackPanel>-->
+
+
+    <!--<Grid Grid.Row="2" Margin="0,20,0,0">
+                        <StackPanel Orientation="Horizontal">
+                            <RadioButton
+                                x:Name="Month1"
+                                MinWidth="20"
+                                Margin="10,0,0,0"
+                                VerticalAlignment="Center"
+                                GroupName="options" />
+                            <TextBlock
+                                Margin="3,0,0,0"
+                                VerticalAlignment="Center"
+                                Text="By day of month" />
+                        </StackPanel>
+                    </Grid>-->
+
+
+    <!--<Grid Grid.Row="3" Margin="8,20,0,0">
+                        <CheckBox Margin="3,0,0,0" Content="Enabled" />
+                    </Grid>-->
+
+
+    <!--<Grid Grid.Row="1" Margin="20,50,10,10">
+            <StackPanel>
+                <TextBlock Margin="10,30,10,10" Text="Date" />
+                <StackPanel Orientation="Horizontal">
+                    <RadioButton MinWidth="20" GroupName="option" />
+                    <TextBlock
+                        Margin="10,0,0,0"
+                        VerticalAlignment="Center"
+                        Text="specific time" />
+                    <Border Margin="20,0,0,0" BorderBrush="Gray">
+                        <Border
+                            Width="250"
+                            Height="30"
+                            Margin="40,0,0,0"
+                            VerticalAlignment="Center"
+                            BorderBrush="Gray"
+                            BorderThickness="1"
+                            CornerRadius="17">
+                            <TimePicker ClockIdentifier="24HourClock" />
+                        </Border>
+
+                    </Border>
+                </StackPanel>
+
+                <StackPanel Margin="0,10,0,0" Orientation="Horizontal">
+                    <RadioButton MinWidth="20" GroupName="option" />
+                    <TextBlock
+                        Margin="10,0,0,0"
+                        VerticalAlignment="Center"
+                        Text="Auto recurring" />
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+
+        <Grid Grid.Row="2" Margin="10,50,10,10">
+            <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
+                <Button
+                    Width="150"
+                    Height="30"
+                    HorizontalAlignment="Right"
+                    HorizontalContentAlignment="Center"
+                    Background="#25c1f3"
+                    Content="Done"
+                    CornerRadius="17"
+                    FontSize="10"
+                    Foreground="#FFFFFF"
+                    Style="{StaticResource ButtonStyle}" />
+                <Button
+                    Width="150"
+                    Height="30"
+                    Margin="10,0,10,0"
+                    HorizontalContentAlignment="Center"
+                    Background="#6692a5"
+                    Content="Cancel"
+                    CornerRadius="17"
+                    FontSize="15"
+                    Foreground="#FFFFFF"
+                    Style="{StaticResource ButtonStyle}" />
+            </StackPanel>
+        </Grid>
+
+
+    -->
+    <!--  2page  -->
+    <!--
+
+        <Grid
+            x:Name="OneDay"
+            Background="White"
+            Visibility="Collapsed">
+
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+
+            <Grid Grid.Row="0" Background="Green">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <TextBlock
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    Margin="20,0,0,0"
+                    Text="Date" />
+                <Grid Grid.Column="0">
+                    <Grid Margin="10,30,10,10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+
+                        <Grid Grid.Row="0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+
+                            <RadioButton
+                                x:Name="day"
+                                Width="10"
+                                MinWidth="20"
+                                Margin="10,0,0,0"
+                                VerticalAlignment="Center"
+                                GroupName="options" />
+
+                            <TextBlock
+                                Grid.Column="1"
+                                Margin="10,0,0,0"
+                                VerticalAlignment="Center"
+                                Text="One day only" />
+
+                            <Border
+                                Grid.Column="2"
+                                Width="250"
+                                Height="30"
+                                Margin="50,0,0,0"
+                                BorderBrush="Gray"
+                                BorderThickness="1"
+                                CornerRadius="17">
+                                <CalendarDatePicker
+                                    x:Name="dataText"
+                                    Grid.Column="2"
+                                    DateChanged="dateText_DateChanged" />
+                            </Border>
+
+                        </Grid>
+
+                        <StackPanel Grid.Row="1" Margin="0,20,0,0">
+                            <StackPanel Orientation="Horizontal">
+                                <RadioButton
+                                    x:Name="Week"
+                                    MinWidth="20"
+                                    Margin="10,0,0,0"
+                                    VerticalAlignment="Center"
+                                    GroupName="options" />
+                                <TextBlock
+                                    Margin="3,0,0,0"
+                                    VerticalAlignment="Center"
+                                    Text="By day of Week" />
+                            </StackPanel>
+                        </StackPanel>
+
+
+                        <Grid Grid.Row="2" Margin="0,20,0,0">
+                            <StackPanel Orientation="Horizontal">
+                                <RadioButton
+                                    x:Name="Month"
+                                    MinWidth="20"
+                                    Margin="10,0,0,0"
+                                    VerticalAlignment="Center"
+                                    GroupName="options" />
+                                <TextBlock
+                                    Margin="3,0,0,0"
+                                    VerticalAlignment="Center"
+                                    Text="By day of month" />
+                            </StackPanel>
+                        </Grid>
+
+
+                        <Grid Grid.Row="3" Margin="8,20,0,0">
+                            <CheckBox Margin="3,0,0,0" Content="Enabled" />
+                        </Grid>
+                    </Grid>
+
+                </Grid>
+
+                <Grid
+                    x:Name="CheckBoxDays"
+                    Grid.Column="1"
+                    Background="Yellow">
+                    <controls:ItemsControl ItemsSource="{Binding MyItems}">
+                        <controls:ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <controls1:WrapPanel Orientation="Horizontal" />
+                            </ItemsPanelTemplate>
+                        </controls:ItemsControl.ItemsPanel>
+                        <controls:ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <Grid Margin="5">
+                                    <CheckBox />
+                                    <TextBlock FontSize="20" Text="{Binding Datacontext.days, ElementName=CheckBoxDays}" />
+                                </Grid>
+                            </DataTemplate>
+                        </controls:ItemsControl.ItemTemplate>
+                    </controls:ItemsControl>
+
+
+
+
+                </Grid>
+            </Grid>
+
+            <Grid Grid.Row="1" Margin="20,50,10,10">
+                <StackPanel>
+                    <TextBlock Margin="10,30,10,10" Text="Date" />
+                    <StackPanel Orientation="Horizontal">
+                        <RadioButton MinWidth="20" GroupName="option" />
+                        <TextBlock
+                            Margin="10,0,0,0"
+                            VerticalAlignment="Center"
+                            Text="specific time" />
+                        <Border Margin="20,0,0,0" BorderBrush="Gray">
+                            <Border
+                                Width="250"
+                                Height="30"
+                                Margin="40,0,0,0"
+                                VerticalAlignment="Center"
+                                BorderBrush="Gray"
+                                BorderThickness="1"
+                                CornerRadius="17">
+                                <TimePicker ClockIdentifier="24HourClock" />
+                            </Border>
+
+                        </Border>
+                    </StackPanel>
+
+                    <StackPanel Margin="0,10,0,0" Orientation="Horizontal">
+                        <RadioButton MinWidth="20" GroupName="option" />
+                        <TextBlock
+                            Margin="10,0,0,0"
+                            VerticalAlignment="Center"
+                            Text="Auto recurring" />
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+
+            <Grid Grid.Row="2" Margin="10,50,10,10">
+                <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
+                    <Button
+                        Width="150"
+                        Height="30"
+                        HorizontalAlignment="Right"
+                        HorizontalContentAlignment="Center"
+                        Background="#25c1f3"
+                        Content="Done"
+                        CornerRadius="17"
+                        FontSize="10"
+                        Foreground="#FFFFFF"
+                        Style="{StaticResource ButtonStyle}" />
+                    <Button
+                        Width="150"
+                        Height="30"
+                        Margin="10,0,10,0"
+                        HorizontalContentAlignment="Center"
+                        Background="#6692a5"
+                        Content="Cancel"
+                        CornerRadius="17"
+                        FontSize="15"
+                        Foreground="#FFFFFF"
+                        Style="{StaticResource ButtonStyle}" />
+                </StackPanel>
+            </Grid>
+        </Grid>-->
+
+
+
+
+
+</UserControl>

@@ -73,6 +73,7 @@
     <None Remove="View\Module_Validation.xaml" />
     <None Remove="View\MonitorView.xaml" />
     <None Remove="View\Objects.xaml" />
+    <None Remove="View\ScheduleListItems.xaml" />
     <None Remove="View\ScheduleView.xaml" />
     <None Remove="View\Setup.xaml" />
     <None Remove="View\SystemUtilities.xaml" />
@@ -244,6 +245,11 @@
   </ItemGroup>
   <ItemGroup>
     <Page Update="View\ScheduleView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="View\ScheduleListItems.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>

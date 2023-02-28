@@ -25,14 +25,27 @@
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="auto" />
                 <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="auto" />
             </Grid.ColumnDefinitions>
             <TextBlock
                 Margin="20,15,15,15"
                 FontWeight="Bold"
                 Text="Task List" />
+            <Button
+                Grid.Column="1"
+                Width="150"
+                Height="30"
+                Margin="15"
+                HorizontalContentAlignment="Center"
+                Background="#25c1f3"
+                Click="ScheduleButton_Click"
+                Content="Schedule"
+                FontSize="10"
+                Foreground="#FFFFFF"
+                Style="{StaticResource ButtonStyle}" />
             <ComboBox
                 Name="MyComboBox"
-                Grid.Column="1"
+                Grid.Column="2"
                 Width="150"
                 Height="30"
                 Margin="15"
@@ -48,7 +61,7 @@
                 <ComboBoxItem Content="Exit" />
             </ComboBox>
             <Button
-                Grid.Column="2"
+                Grid.Column="3"
                 Width="150"
                 Height="30"
                 Margin="15"

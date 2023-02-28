@@ -16,7 +16,11 @@
 
         </Grid.RowDefinitions>
         <StackPanel Margin="10">
-            <StackPanel Orientation="Horizontal">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
                 <TextBlock
                     Width="150"
                     Height="30"
@@ -24,7 +28,7 @@
                     FontSize="15"
                     Text="From Address" />
                 <TextBox
-                    Width="800"
+                    Grid.Column="1"
                     Height="30"
                     Margin="10"
                     HorizontalContentAlignment="Center"
@@ -33,9 +37,13 @@
                     CornerRadius="17"
                     PlaceholderForeground="Gray"
                     PlaceholderText="Enter Job Name" />
-            </StackPanel>
+            </Grid>
 
-            <StackPanel Margin="0,10,0,0" Orientation="Horizontal">
+            <Grid Margin="0,10,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
                 <TextBlock
                     Width="150"
                     Height="30"
@@ -43,7 +51,7 @@
                     FontSize="15"
                     Text="SMTP Server" />
                 <TextBox
-                    Width="800"
+                    Grid.Column="1"
                     Height="30"
                     Margin="10"
                     HorizontalContentAlignment="Center"
@@ -52,7 +60,7 @@
                     CornerRadius="17"
                     PlaceholderForeground="Gray"
                     PlaceholderText="Enter Job Name" />
-            </StackPanel>
+            </Grid>
 
             <Grid Margin="0,10,0,0">
                 <Grid>
@@ -60,6 +68,7 @@
                         <ColumnDefinition Width="Auto" />
                         <ColumnDefinition Width="Auto" />
                         <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
                     </Grid.ColumnDefinitions>
 
                     <TextBlock
@@ -72,44 +81,51 @@
 
                     <Grid Grid.Column="1">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="30" />
-                            <ColumnDefinition Width="70" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
                         </Grid.ColumnDefinitions>
+
 
                         <RadioButton
                             Grid.Column="0"
-                            Width="10"
+                            MinWidth="10"
                             Margin="0,5,0,15"
                             IsChecked="True" />
                         <TextBlock
                             Grid.Column="1"
+                            MinWidth="100"
                             Margin="0,5,0,15"
                             HorizontalAlignment="Center"
                             VerticalAlignment="Center"
                             FontSize="15"
                             Text="Default" />
+
                     </Grid>
 
 
-
-                    <Grid Grid.Column="2" Margin="20,0,0,8">
+                    <Grid
+                        Grid.Column="2"
+                        Margin="0,0,0,8"
+                        HorizontalAlignment="Center">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="80" />
                             <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
+
                         <RadioButton
                             Grid.Column="0"
-                            Width="20"
-                            Margin="40,0,0,0" />
+                            MinWidth="10"
+                            Margin="20,0,0,0" />
+
                         <TextBox
                             Grid.Column="1"
-                            Width="200"
                             Height="30"
-                            Margin="0,0,0,0"
-                            HorizontalAlignment="Center"
-                            VerticalAlignment="Center"
+                            MinWidth="50"
                             BorderBrush="Gray"
                             CornerRadius="17" />
+
+
                     </Grid>
                 </Grid>
             </Grid>
@@ -161,8 +177,8 @@
                 <StackPanel Margin="30,30,10,10">
                     <Grid Margin="0,5,0,0">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition />
-                            <ColumnDefinition />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
                         <RadioButton />
                         <TextBlock Margin="40,0,0,2" Text="None" />
@@ -170,8 +186,8 @@
 
                     <Grid Margin="0,5,0,0">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition />
-                            <ColumnDefinition />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
                         <RadioButton />
                         <TextBlock Margin="40,0,0,2" Text="Default" />
@@ -180,8 +196,8 @@
 
                     <Grid Margin="0,5,0,0">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition />
-                            <ColumnDefinition />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
                         <RadioButton />
                         <TextBlock Margin="40,0,0,2" Text="Default Application Credential" />
@@ -189,8 +205,8 @@
 
                     <Grid Margin="0,5,0,0">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition />
-                            <ColumnDefinition />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
                         <RadioButton />
                         <TextBlock Margin="40,0,0,2" Text="Default Network Credentials" />
@@ -198,43 +214,55 @@
 
                     <Grid Margin="0,5,0,0">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition />
-                            <ColumnDefinition />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
                         <RadioButton />
                         <TextBlock Margin="40,0,0,2" Text="Explicit NetWork Credentials" />
                     </Grid>
 
 
-                    <StackPanel Margin="10" Orientation="Horizontal">
+                    <Grid Margin="10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
                         <TextBlock Margin="33,0,0,0" Text="Username*" />
                         <TextBox
-                            Width="800"
+                            Grid.Column="1"
                             Height="30"
                             Margin="15,0,0,0"
                             BorderBrush="Gray"
                             CornerRadius="17" />
-                    </StackPanel>
+                    </Grid>
 
-                    <StackPanel Margin="10" Orientation="Horizontal">
+                    <Grid Margin="10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
                         <TextBlock Margin="33,0,0,0" Text="Password*" />
                         <TextBox
-                            Width="800"
+                            Grid.Column="1"
                             Height="30"
                             Margin="15,0,0,0"
                             BorderBrush="Gray"
                             CornerRadius="17" />
-                    </StackPanel>
+                    </Grid>
 
-                    <StackPanel Margin="10" Orientation="Horizontal">
+                    <Grid Margin="10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
                         <TextBlock Margin="33,0,0,0" Text="Domain(Optional)" />
                         <TextBox
-                            Width="750"
+                            Grid.Column="1"
                             Height="30"
                             Margin="15,0,0,0"
                             BorderBrush="Gray"
                             CornerRadius="17" />
-                    </StackPanel>
+                    </Grid>
 
 
                 </StackPanel>
@@ -263,8 +291,8 @@
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="150" />
-                        <ColumnDefinition />
-                        <ColumnDefinition />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
                     </Grid.ColumnDefinitions>
 
                     <TextBlock
@@ -273,7 +301,6 @@
                         Text="To Address" />
                     <TextBox
                         Grid.Column="1"
-                        Width="700"
                         Height="30"
                         BorderBrush="Gray"
                         CornerRadius="17" />

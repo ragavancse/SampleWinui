@@ -5,6 +5,7 @@ using Microsoft.UI.Xaml.Data;
 using Microsoft.UI.Xaml.Input;
 using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Navigation;
+using SampleWinui.ChildWindowControls;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -23,6 +24,15 @@ namespace SampleWinui.View
         public TaskList()
         {
             this.InitializeComponent();
+        }
+
+
+        private void ScheduleButton_Click(object sender, RoutedEventArgs e)
+        {
+            var window = new ChildWindow();
+            window.SetSize(900, 700);
+            window.SetContent(new ScheduleListItems());
+            window.Activate();
         }
     }
 }

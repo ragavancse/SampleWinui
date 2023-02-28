@@ -119,7 +119,7 @@
                 <CheckBox
                     Grid.Row="1"
                     Margin="15,0,0,0"
-                    Padding="130,0,0,0"
+                    Padding="125,0,0,0"
                     VerticalAlignment="Center"
                     HorizontalContentAlignment="Left"
                     VerticalContentAlignment="Center"
@@ -132,7 +132,7 @@
                 <CheckBox
                     Grid.Row="2"
                     Margin="15,0,0,0"
-                    Padding="138,0,0,0"
+                    Padding="135,0,0,0"
                     VerticalAlignment="Center"
                     HorizontalContentAlignment="Left"
                     VerticalContentAlignment="Center"
@@ -145,7 +145,7 @@
                 <CheckBox
                     Grid.Row="3"
                     Margin="15,0,0,0"
-                    Padding="64,0,0,0"
+                    Padding="43,0,0,0"
                     VerticalAlignment="Center"
                     HorizontalContentAlignment="Left"
                     VerticalContentAlignment="Center"
