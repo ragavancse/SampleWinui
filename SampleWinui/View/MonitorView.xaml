@@ -33,7 +33,7 @@
                     Grid.Row="0"
                     Margin="0,10,0,0"
                     
-                      Padding="100,0,0,0"
+                      Padding="80,0,0,0"
                     VerticalAlignment="Center"
                     IsChecked="True"
                     HorizontalContentAlignment="Left"
@@ -41,14 +41,14 @@
                     FlowDirection="RightToLeft"
                     FontWeight="SemiBold">
                     <CheckBox.Content>
-                        <TextBlock Text="Include Succeeded Items:" />
+                        <TextBlock Text="Include Succeeded Items:" TextTrimming="CharacterEllipsis"  />
                     </CheckBox.Content>
                 </CheckBox>
 
                 <CheckBox
                     Grid.Row="1"
                     Margin="0,10,0,0"
-                      Padding="114,0,0,0"
+                      Padding="95,0,0,0"
                     VerticalAlignment="Center"
                     IsChecked="True"
                     HorizontalContentAlignment="Left"
@@ -56,21 +56,21 @@
                     FlowDirection="RightToLeft"
                     FontWeight="SemiBold">
                     <CheckBox.Content>
-                        <TextBlock Text="Include Running Items:"  />
+                        <TextBlock Text="Include Running Items:" TextTrimming="CharacterEllipsis" />
                     </CheckBox.Content>
                 </CheckBox>
 
                 <CheckBox
                     Grid.Row="2"
                     Margin="0,10,0,0"
-                      Padding="134,0,0,0"
+                      Padding="115,0,0,0"
                     VerticalAlignment="Center"
                     HorizontalContentAlignment="Left"
                     VerticalContentAlignment="Center"
                     FlowDirection="RightToLeft"
                     FontWeight="SemiBold">
                     <CheckBox.Content>
-                        <TextBlock Text="Include Future Jobs:"  />
+                        <TextBlock Text="Include Future Jobs:" TextTrimming="CharacterEllipsis" />
                     </CheckBox.Content>
                 </CheckBox>
 
