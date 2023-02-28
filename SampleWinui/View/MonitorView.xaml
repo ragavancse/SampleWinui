@@ -147,7 +147,7 @@
                 <common:PaginationControl
                     x:Name="PagingControl"
                     Grid.Row="2"
-                    Source="{Binding Monitor}" />
+                    Source="{Binding monitors}" />
 
                 <Grid Grid.Row="3" Margin="0,10,0,0">
                     <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
@@ -216,7 +216,7 @@
                     Foreground="Black"
                     GridLinesVisibility="All"
                     HorizontalGridLinesBrush="#bdbdbd"
-                    ItemsSource="{Binding monitorsub}"
+                    ItemsSource="{Binding ElementName=PagingControl1, Path=FilteredSource}"
                     VerticalGridLinesBrush="#bdbdbd">
                     <controls:DataGrid.CellStyle>
                         <Style TargetType="controls:DataGridCell">
@@ -258,10 +258,10 @@
 
                 <!--  Pagination Control for NG data  -->
 
-                <!--<common:PaginationControl
-                    x:Name="PagingControl"
+                <common:PaginationControl
+                    x:Name="PagingControl1"
                     Grid.Row="2"
-                    Source="{Binding Monitor}" />-->
+                    Source="{Binding monitorsub}" />
 
             </Grid>
         </Grid>

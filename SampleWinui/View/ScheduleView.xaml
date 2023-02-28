@@ -83,7 +83,7 @@
             <common:PaginationControl
                 x:Name="PagingControl"
                 Grid.Row="2"
-                Source="{Binding Monitor}" />
+                Source="{Binding Schedules}" />
 
         </Grid>
 
