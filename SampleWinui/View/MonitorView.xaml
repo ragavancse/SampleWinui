@@ -15,39 +15,91 @@
 
     <Grid DataContext="{StaticResource MonitorViewModel}">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="7*" />
+            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="12*" />
         </Grid.ColumnDefinitions>
 
-        <Grid Background="#FFFFFF">
-            <StackPanel Margin="0,20,0,0">
-                <StackPanel Margin="5,10,0,10" Orientation="Horizontal">
-                    <TextBlock
-                        VerticalAlignment="Center"
-                        FontWeight="SemiBold"
-                        Text="Include Succeeded Items:" />
-                    <CheckBox
-                        Width="50"
-                        Margin="40,0,0,0"
-                        IsChecked="True" />
-                </StackPanel>
-                <StackPanel Margin="5,10,0,10" Orientation="Horizontal">
-                    <TextBlock
-                        VerticalAlignment="Center"
-                        FontWeight="SemiBold"
-                        Text="Include Running Items:" />
-                    <CheckBox
-                        Width="50"
-                        Margin="53,0,0,0"
-                        IsChecked="True" />
-                </StackPanel>
-                <StackPanel Margin="5,10,0,10" Orientation="Horizontal">
-                    <TextBlock
-                        VerticalAlignment="Center"
-                        FontWeight="SemiBold"
-                        Text="Include Future Jobs:" />
-                    <CheckBox Width="50" Margin="72,0,0,0" />
-                </StackPanel>
+        <Grid Background="#FFFFFF" Margin="5,10,5,0">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="2*"/>
+            </Grid.RowDefinitions>
+
+            <Grid  Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="5*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="Include Succeeded Items:" FontWeight="SemiBold" VerticalAlignment="Center"/>
+                <CheckBox  Width="50"  Grid.Column="1"   IsChecked="True"/>
+            </Grid>
+
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="5*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="Include Running Items:" FontWeight="SemiBold" VerticalAlignment="Center"/>
+                <CheckBox  Width="50"  Grid.Column="1"   IsChecked="True"/>
+            </Grid>
+
+            <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="5*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="Include Future Jobs:" FontWeight="SemiBold" VerticalAlignment="Center"/>
+                <CheckBox  Width="50"  Grid.Column="1" />
+            </Grid>
+
+            <TextBlock
+                    Padding="5,10,0,0"
+                    FontSize="20" Grid.Row="3"
+                    FontWeight="bold"
+                    Foreground="#6593a4"
+                    Text="Dates" />
+
+            <Grid Grid.Row="4">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="90*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <TextBox Text="None" Grid.Column="1" Width="200"  Height="700" Margin="5,20,5,0" HorizontalAlignment="Left"/>
+            </Grid>
+
+            <!--<StackPanel Orientation="Vertical" >
+
+                <Grid Margin="5,10,5,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="5*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="Include Succeeded Items:" FontWeight="SemiBold" VerticalAlignment="Center"/>
+                    <CheckBox  Width="50"  Grid.Column="1"   IsChecked="True"/>
+                </Grid>
+
+                <Grid Margin="5,10,5,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="5*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="Include Running Items:" FontWeight="SemiBold" VerticalAlignment="Center"/>
+                    <CheckBox  Width="50"  Grid.Column="1"   IsChecked="True"/>
+                </Grid>
+
+                <Grid Margin="5,10,5,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="5*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="Include Future Jobs:" FontWeight="SemiBold" VerticalAlignment="Center"/>
+                    <CheckBox  Width="50"  Grid.Column="1" />
+                </Grid>
 
                 <TextBlock
                     Padding="5,10,0,0"
@@ -56,13 +108,19 @@
                     Foreground="#6593a4"
                     Text="Dates" />
 
-                <TextBox
-                    Width="210"
-                    Height="700"
-                    Margin="5,20,0,0"
-                    HorizontalAlignment="Left"
-                    Text="None" />
-            </StackPanel>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="90*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBox Text="None" Grid.Column="1" Width="200"  Height="700" Margin="5,20,5,0" HorizontalAlignment="Left"/>
+                </Grid>
+              
+            </StackPanel>-->
+
+
+
         </Grid>
 
         <Grid Grid.Column="1">
@@ -73,13 +131,13 @@
 
             <Grid Margin="30,30,30,10" CornerRadius="5">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="60" />
-                    <RowDefinition />
-                    <RowDefinition Height="50" />
-                    <RowDefinition Height="80" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="7*"/>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto"/>
                 </Grid.RowDefinitions>
 
-                <Grid Background="White">
+                <Grid Background="White" Height="60">
                     <TextBlock
                         Margin="15,0,0,0"
                         VerticalAlignment="Center"
@@ -106,41 +164,41 @@
 
                     <controls:DataGrid.Columns>
                         <controls:DataGridTextColumn
-                            Width="150"
-                            Binding="{Binding RunningProcessId}"
-                            Header="Running Process ID" />
+                    Width="*"
+                        Binding="{Binding RunningProcessId}"
+                    Header="Running Process ID" />
                         <controls:DataGridTextColumn
-                            Width="150"
-                            Binding="{Binding RunningActivity}"
-                            Header="Running Activity" />
+                    Width="*"
+                         Binding="{Binding RunningActivity}"
+                    Header="Running Activity" />
                         <controls:DataGridTextColumn
-                            Width="180"
-                            Binding="{Binding Started}"
-                            Header="Started" />
+                    Width="*"
+                         Binding="{Binding Started}"
+                    Header="Started" />
                         <controls:DataGridTextColumn
-                            Width="150"
-                            Binding="{Binding Ended}"
-                            Header="Ended" />
+                    Width="*"
+                         Binding="{Binding Ended}"
+                    Header="Ended" />
                         <controls:DataGridTextColumn
-                            Width="100"
-                            Binding="{Binding Type}"
-                            Header="Type" />
+                    Width="*"
+                         Binding="{Binding Type}"
+                    Header="Type" />
                         <controls:DataGridTextColumn
-                            Width="100"
-                            Binding="{Binding Id}"
-                            Header="ID" />
+                    Width="*"
+                         Binding="{Binding Id}"
+                    Header="ID" />
                         <controls:DataGridTextColumn
-                            Width="300"
-                            Binding="{Binding Description}"
-                            Header="Description" />
+                    Width="2*"
+                         Binding="{Binding Description}"
+                    Header="Description" />
                         <controls:DataGridTextColumn
-                            Width="80"
-                            Binding="{Binding FailedTask}"
-                            Header="Failed Task" />
+                    Width="*"
+                         Binding="{Binding FailedTask}"
+                    Header="Failed Task" />
                         <controls:DataGridTextColumn
-                            Width="400"
-                            Binding="{Binding Status}"
-                            Header="Status" />
+                    Width="3*"
+                         Binding="{Binding Status}"
+                    Header="Status" />
                     </controls:DataGrid.Columns>
                 </controls:DataGrid>
 
@@ -191,17 +249,15 @@
                 </Grid>
             </Grid>
 
-            <Grid
-                Grid.Row="1"
-                Margin="30,0,30,0"
-                CornerRadius="5">
+            <Grid Margin="30,15,30,0"
+        CornerRadius="5" Grid.Row="1">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="60" />
-                    <RowDefinition />
-                    <RowDefinition Height="50" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="3*"/>
+                    <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
 
-                <Grid Background="White">
+                <Grid Background="White" Height="60">
                     <TextBlock
                         Margin="15,0,0,0"
                         VerticalAlignment="Center"
@@ -226,33 +282,33 @@
 
                     <controls:DataGrid.Columns>
                         <controls:DataGridTextColumn
-                            Width="150"
-                            Binding="{Binding Groups}"
-                            Header="Groups" />
+                    Width="*"
+                        Binding="{Binding Groups}"
+                    Header="Groups" />
                         <controls:DataGridTextColumn
-                            Width="150"
-                            Binding="{Binding Started}"
-                            Header="Started" />
+                    Width="*"
+                         Binding="{Binding Started}"
+                    Header="Started" />
                         <controls:DataGridTextColumn
-                            Width="180"
-                            Binding="{Binding Enabled}"
-                            Header="Enabled" />
+                    Width="*"
+                         Binding="{Binding Enabled}"
+                    Header="Enabled" />
                         <controls:DataGridTextColumn
-                            Width="150"
-                            Binding="{Binding TaskId}"
-                            Header="TaskId" />
+                    Width="*"
+                         Binding="{Binding TaskId}"
+                    Header="TaskId" />
                         <controls:DataGridTextColumn
-                            Width="300"
-                            Binding="{Binding TaskDescription}"
-                            Header="TaskDescription" />
+                    Width="2*"
+                         Binding="{Binding TaskDescription}"
+                    Header="TaskDescription" />
                         <controls:DataGridTextColumn
-                            Width="500"
-                            Binding="{Binding Status}"
-                            Header="Status" />
+                    Width="3*"
+                         Binding="{Binding Status}"
+                    Header="Status" />
                         <controls:DataGridTextColumn
-                            Width="300"
-                            Binding="{Binding TaskModule}"
-                            Header="TaskModule" />
+                    Width="*"
+                         Binding="{Binding TaskModule}"
+                    Header="TaskModule" />
                     </controls:DataGrid.Columns>
                 </controls:DataGrid>
 

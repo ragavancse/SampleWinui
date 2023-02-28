@@ -12,12 +12,12 @@
 
     <Grid Margin="15" CornerRadius="6">
         <Grid.RowDefinitions>
-            <RowDefinition Height="60" />
-            <RowDefinition />
-            <RowDefinition Height="50" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto" />
         </Grid.RowDefinitions>
 
-        <Grid Background="White">
+        <Grid Background="White" Height="60">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="AUTO" />

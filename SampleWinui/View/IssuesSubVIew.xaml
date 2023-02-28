@@ -33,31 +33,31 @@
 
             <controls:DataGrid.Columns>
                 <controls:DataGridTextColumn
-                    Width="180"
+                    Width="*"
                     Binding="{Binding JobName}"
                     Header="Job Name" />
                 <controls:DataGridTextColumn
-                    Width="180"
+                    Width="*"
                     Binding="{Binding TaskName}"
                     Header="Task Name" />
                 <controls:DataGridTextColumn
-                    Width="120"
+                    Width="*"
                     Binding="{Binding ErrorDate}"
                     Header="Error Date" />
                 <controls:DataGridTextColumn
-                    Width="480"
+                    Width="2*"
                     Binding="{Binding ErrorMessage}"
                     Header="Error Message" />
                 <controls:DataGridTextColumn
-                    Width="140"
+                    Width="*"
                     Binding="{Binding Status}"
                     Header="Status" />
                 <controls:DataGridTextColumn
-                    Width="200"
+                    Width="*"
                     Binding="{Binding WorkedOn}"
                     Header="WorkedOn" />
                 <controls:DataGridTextColumn
-                    Width="200"
+                    Width="*"
                     Binding="{Binding WorkedBy}"
                     Header="Worked By" />
             </controls:DataGrid.Columns>
