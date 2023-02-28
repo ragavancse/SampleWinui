@@ -8,40 +8,53 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:controls="using:CommunityToolkit.WinUI.UI.Controls"
     mc:Ignorable="d">
-    <UserControl.Resources>
-        <viewmodel:IssuesViewModel x:Key="IssuesViewModel"/>
-    </UserControl.Resources>
+
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="auto" />
             <ColumnDefinition Width="7*" />
         </Grid.ColumnDefinitions>
 
         <Grid Background="#FFFFFF" >
-            <StackPanel Margin="0,20,0,0">
-                <StackPanel Margin="5,15,0,15" Orientation="Horizontal">
-                    <TextBlock Text="Status:" FontWeight="SemiBold"/>
-                    <ComboBox Margin="20,0,0,0" Width="150" CornerRadius="15" SelectedIndex="0">
-                        <ComboBoxItem>Open</ComboBoxItem>
-                    </ComboBox>
-                </StackPanel>
-                <StackPanel Margin="5,15,0,15" Orientation="Horizontal">
-                    <TextBlock Text="Type:" FontWeight="SemiBold"/>
-                    <ComboBox Margin="28,0,0,0" Width="150" CornerRadius="15" SelectedIndex="0">
+            
+            <StackPanel Margin="10,20,10,10" VerticalAlignment="Top">
+             
+              
+                    <Grid Margin="5,10,0,10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                    <TextBlock Text="Status:" FontWeight="SemiBold" VerticalAlignment="Center"/>
+                        <ComboBox Grid.Column="1" Width="100" Margin="10,0,0,0" CornerRadius="15" SelectedIndex="0">
+                            <ComboBoxItem>Open</ComboBoxItem>
+                        </ComboBox>
+                    </Grid>
+
+                <Grid Margin="5,10,0,10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="Type:" FontWeight="SemiBold" VerticalAlignment="Center"/>
+                    <ComboBox Grid.Column="1" Width="100" Margin="10,0,0,0" CornerRadius="15" SelectedIndex="0">
                         <ComboBoxItem>All</ComboBoxItem>
                     </ComboBox>
-                </StackPanel>
-                <StackPanel Margin="5,15,0,15" Orientation="Horizontal">
-                    <TextBlock Text="Date:" FontWeight="SemiBold"/>
-                    <ComboBox Margin="28,0,0,0" Width="150" CornerRadius="15" SelectedIndex="0">
+                </Grid>
+                <Grid Margin="5,10,0,10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="Date:" FontWeight="SemiBold" VerticalAlignment="Center"/>
+                    <ComboBox  Grid.Column="1" Width="100" Margin="10,0,0,0" CornerRadius="15" SelectedIndex="0">
                         <ComboBoxItem>Last 24H</ComboBoxItem>
                     </ComboBox>
-                </StackPanel>
+                </Grid>
             </StackPanel>
         </Grid>
-        <Grid Margin="30"
-        CornerRadius="5" Grid.Column="1"
-        DataContext="{StaticResource IssuesViewModel}">
+        <Grid  Margin="30"
+        CornerRadius="5" Grid.Column="1">
             <Grid.RowDefinitions>
                 <RowDefinition Height="60" />
                 <RowDefinition />
@@ -83,8 +96,8 @@
                 </controls:DataGrid.CellStyle>
 
                 <controls:DataGrid.Columns>
-                    <controls:DataGridCheckBoxColumn
-                        Binding="{Binding IsSelected,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" 
+                    <controls:DataGridCheckBoxColumn IsThreeState="False" 
+                        Binding="{Binding IsSelected,Mode=TwoWay}" 
                     Width="50">
                     </controls:DataGridCheckBoxColumn>
                     <controls:DataGridTextColumn
@@ -186,12 +199,12 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
 
-                <Button Background="#25c1f3" Content="Select All" Style="{StaticResource ButtonStyle1}"
-                    VerticalAlignment="Center" HorizontalAlignment="Left"/>
-                <Button Background="#99afb8" Content="DisSelect All" Style="{StaticResource ButtonStyle1}"
-                  Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left"/>
-                <Button Background="#25c1f3" Content="Mark As Worked" Style="{StaticResource ButtonStyle1}"
-                   Grid.Column="2"  VerticalAlignment="Center" HorizontalAlignment="Right" Click="Button_Click">
+                <Button Background="#25c1f3" Content="Select All" Style="{StaticResource ButtonStyle}"
+                    VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="10" Width="150" Height="30" Foreground="#FFFFFF" HorizontalContentAlignment="Center"/>
+                <Button Background="#99afb8" Content="DisSelect All" Style="{StaticResource ButtonStyle}"
+                  Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="10" Width="150" Height="30" Foreground="#FFFFFF" HorizontalContentAlignment="Center"/>
+                <Button Background="#25c1f3" Content="Mark As Worked" Style="{StaticResource ButtonStyle}"
+                   Grid.Column="2"  VerticalAlignment="Center" HorizontalAlignment="Right" Click="Button_Click" FontSize="10" Width="150" Height="30" Foreground="#FFFFFF" HorizontalContentAlignment="Center">
                   
                 </Button>
                 

@@ -73,6 +73,7 @@
     <None Remove="View\Module_Validation.xaml" />
     <None Remove="View\MonitorView.xaml" />
     <None Remove="View\Objects.xaml" />
+    <None Remove="View\ScheduleView.xaml" />
     <None Remove="View\Setup.xaml" />
     <None Remove="View\SystemUtilities.xaml" />
     <None Remove="View\PMMSSetup.xaml" />
@@ -240,6 +241,11 @@
   -->
   <ItemGroup Condition="'$(DisableMsixProjectCapabilityAddedByProject)'!='true' and '$(EnableMsixTooling)'=='true'">
     <ProjectCapability Include="Msix" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="View\ScheduleView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Page Update="View\Module_Validation.xaml">

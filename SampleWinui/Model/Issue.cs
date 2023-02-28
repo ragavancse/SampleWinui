@@ -9,8 +9,7 @@ namespace SampleWinui.Model
 {
     public class Issue : ViewModelBase
     {
-        private bool isSelected=false;
-
+      
         public string JobName { get; set; }
         public string TaskName { get; set; }
         public string ErrorDate { get; set; }
@@ -18,11 +17,13 @@ namespace SampleWinui.Model
         public string Status { get; set; }
         public string WorkedOn { get; set; }
         public string WorkedBy { get; set; }
+
+        private bool isSelected;
         public bool IsSelected
         {
-            get => isSelected;
+            get =>  isSelected;
             set
-            {
+               {
                 isSelected = value;
                 OnPropertyChanged();
             }

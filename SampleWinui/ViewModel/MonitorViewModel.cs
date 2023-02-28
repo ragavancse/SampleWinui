@@ -48,9 +48,18 @@ namespace SampleWinui.ViewModel
         {
             return new List<MonitorSub>
             {
-                new MonitorSub{Groups="",Started="",Enabled="",TaskId="",TaskDescription="",Status="",TaskModule="" },
-                new MonitorSub{Groups="",Started="",Enabled="",TaskId="",TaskDescription="",Status="",TaskModule="" },
-                new MonitorSub{Groups="",Started="",Enabled="",TaskId="",TaskDescription="",Status="",TaskModule="" }
+               new MonitorSub{Groups="44756",Started="01/01/2021",Enabled="True",TaskId="4659",TaskDescription="Downloads SAPA-Project EG",Status="Running Download-BAYLOR ST LUKE EMERG CTR CONROE(BSLECC)",TaskModule="1" },
+                new MonitorSub{Groups="44756",Started="01/01/2021",Enabled="True",TaskId="4659",TaskDescription="Downloads SAPA-Project EG",Status="Running Download-BAYLOR ST LUKE EMERG CTR CONROE(BSLECC)",TaskModule="2" },
+                new MonitorSub{Groups="44756",Started="01/01/2021",Enabled="True",TaskId="4659",TaskDescription="Downloads SAPA-Project EG",Status="Running Download-BAYLOR ST LUKE EMERG CTR CONROE(BSLECC)",TaskModule="3" },
+                 new MonitorSub{Groups="44756",Started="01/01/2021",Enabled="True",TaskId="4659",TaskDescription="Downloads SAPA-Project EG",Status="Running Download-BAYLOR ST LUKE EMERG CTR CONROE(BSLECC)",TaskModule="1" },
+                new MonitorSub{Groups="44756",Started="01/01/2021",Enabled="True",TaskId="4659",TaskDescription="Downloads SAPA-Project EG",Status="Running Download-BAYLOR ST LUKE EMERG CTR CONROE(BSLECC)",TaskModule="2" },
+                new MonitorSub{Groups="44756",Started="01/01/2021",Enabled="True",TaskId="4659",TaskDescription="Downloads SAPA-Project EG",Status="Running Download-BAYLOR ST LUKE EMERG CTR CONROE(BSLECC)",TaskModule="3" },
+                 new MonitorSub{Groups="44756",Started="01/01/2021",Enabled="True",TaskId="4659",TaskDescription="Downloads SAPA-Project EG",Status="Running Download-BAYLOR ST LUKE EMERG CTR CONROE(BSLECC)",TaskModule="1" },
+                new MonitorSub{Groups="44756",Started="01/01/2021",Enabled="True",TaskId="4659",TaskDescription="Downloads SAPA-Project EG",Status="Running Download-BAYLOR ST LUKE EMERG CTR CONROE(BSLECC)",TaskModule="2" },
+                new MonitorSub{Groups="44756",Started="01/01/2021",Enabled="True",TaskId="4659",TaskDescription="Downloads SAPA-Project EG",Status="Running Download-BAYLOR ST LUKE EMERG CTR CONROE(BSLECC)",TaskModule="3" },
+                 new MonitorSub{Groups="44756",Started="01/01/2021",Enabled="True",TaskId="4659",TaskDescription="Downloads SAPA-Project EG",Status="Running Download-BAYLOR ST LUKE EMERG CTR CONROE(BSLECC)",TaskModule="1" },
+                new MonitorSub{Groups="44756",Started="01/01/2021",Enabled="True",TaskId="4659",TaskDescription="Downloads SAPA-Project EG",Status="Running Download-BAYLOR ST LUKE EMERG CTR CONROE(BSLECC)",TaskModule="2" },
+                new MonitorSub{Groups="44756",Started="01/01/2021",Enabled="True",TaskId="4659",TaskDescription="Downloads SAPA-Project EG",Status="Running Download-BAYLOR ST LUKE EMERG CTR CONROE(BSLECC)",TaskModule="3" }
             };
         }
 

@@ -1,6 +1,8 @@
-﻿using SampleWinui.Model;
+﻿using SampleWinui.Common;
+using SampleWinui.Model;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
@@ -8,14 +10,24 @@ using System.Threading.Tasks;
 
 namespace SampleWinui.ViewModel
 {
-    public class IssuesViewModel 
+    public class IssuesViewModel : ViewModelBase
     {
-        public List<Issue> Issues => GetIssues().ToList();
-        public List<Issue> GetIssues()
+        private ObservableCollection<Issue> issues;
+        public ObservableCollection<Issue> Issues
         {
-            return new List<Issue>()
+            get { return issues; }
+            set
             {
-                new Issue{JobName="Job Name",TaskName="Task Name",ErrorDate="1/1/2022",ErrorMessage="Error Message",Status="Completed",WorkedOn="Worked On",WorkedBy="John Doe"},
+                issues = value;
+                OnPropertyChanged(nameof(Issues));
+            }
+        }
+
+        public IssuesViewModel()
+        {
+            Issues = new ObservableCollection<Issue>()
+            {
+                 new Issue{JobName="Job Name",TaskName="Task Name",ErrorDate="1/1/2022",ErrorMessage="Error Message",Status="Completed",WorkedOn="Worked On",WorkedBy="John Doe"},
                 new Issue{JobName="Job Name",TaskName="Task Name",ErrorDate="1/1/2022",ErrorMessage="Error Message",Status="Idle",WorkedOn="Worked On",WorkedBy="John Doe"},
                 new Issue{JobName="Job Name",TaskName="Task Name",ErrorDate="1/1/2022",ErrorMessage="Error Message",Status="Running",WorkedOn="Worked On",WorkedBy="John Doe"},
                   new Issue{JobName="Job Name",TaskName="Task Name",ErrorDate="1/1/2022",ErrorMessage="Error Message",Status="Completed",WorkedOn="Worked On",WorkedBy="John Doe"},
@@ -45,7 +57,42 @@ namespace SampleWinui.ViewModel
             };
         }
 
-        public List<Issue> SelectedItemsList => Issues.Where(item => item.IsSelected).ToList();
+        //public ObservableCollection<Issue> Issues => GetIssues();
+        //public ObservableCollection<Issue> GetIssues()
+        //{
+        //    return new ObservableCollection<Issue>()
+        //    {
+        //        new Issue{JobName="Job Name",TaskName="Task Name",ErrorDate="1/1/2022",ErrorMessage="Error Message",Status="Completed",WorkedOn="Worked On",WorkedBy="John Doe"},
+        //        new Issue{JobName="Job Name",TaskName="Task Name",ErrorDate="1/1/2022",ErrorMessage="Error Message",Status="Idle",WorkedOn="Worked On",WorkedBy="John Doe"},
+        //        new Issue{JobName="Job Name",TaskName="Task Name",ErrorDate="1/1/2022",ErrorMessage="Error Message",Status="Running",WorkedOn="Worked On",WorkedBy="John Doe"},
+        //          new Issue{JobName="Job Name",TaskName="Task Name",ErrorDate="1/1/2022",ErrorMessage="Error Message",Status="Completed",WorkedOn="Worked On",WorkedBy="John Doe"},
+        //        new Issue{JobName="Job Name",TaskName="Task Name",ErrorDate="1/1/2022",ErrorMessage="Error Message",Status="Idle",WorkedOn="Worked On",WorkedBy="John Doe"},
+        //        new Issue{JobName="Job Name",TaskName="Task Name",ErrorDate="1/1/2022",ErrorMessage="Error Message",Status="Running",WorkedOn="Worked On",WorkedBy="John Doe"},
+        //          new Issue{JobName="Job Name",TaskName="Task Name",ErrorDate="1/1/2022",ErrorMessage="Error Message",Status="Completed",WorkedOn="Worked On",WorkedBy="John Doe"},
+        //        new Issue{JobName="Job Name",TaskName="Task Name",ErrorDate="1/1/2022",ErrorMessage="Error Message",Status="Idle",WorkedOn="Worked On",WorkedBy="John Doe"},
+        //        new Issue{JobName="Job Name",TaskName="Task Name",ErrorDate="1/1/2022",ErrorMessage="Error Message",Status="Running",WorkedOn="Worked On",WorkedBy="John Doe"},
+        //          new Issue{JobName="Job Name",TaskName="Task Name",ErrorDate="1/1/2022",ErrorMessage="Error Message",Status="Completed",WorkedOn="Worked On",WorkedBy="John Doe"},
+        //        new Issue{JobName="Job Name",TaskName="Task Name",ErrorDate="1/1/2022",ErrorMessage="Error Message",Status="Idle",WorkedOn="Worked On",WorkedBy="John Doe"},
+        //        new Issue{JobName="Job Name",TaskName="Task Name",ErrorDate="1/1/2022",ErrorMessage="Error Message",Status="Running",WorkedOn="Worked On",WorkedBy="John Doe"},
+        //        new Issue{JobName="Job Name",TaskName="Task Name",ErrorDate="1/1/2022",ErrorMessage="Error Message",Status="Completed",WorkedOn="Worked On",WorkedBy="John Doe"},
+        //        new Issue{JobName="Job Name",TaskName="Task Name",ErrorDate="1/1/2022",ErrorMessage="Error Message",Status="Idle",WorkedOn="Worked On",WorkedBy="John Doe"},
+        //        new Issue{JobName="Job Name",TaskName="Task Name",ErrorDate="1/1/2022",ErrorMessage="Error Message",Status="Running",WorkedOn="Worked On",WorkedBy="John Doe"},
+        //        new Issue{JobName="Job Name",TaskName="Task Name",ErrorDate="1/1/2022",ErrorMessage="Error Message",Status="Completed",WorkedOn="Worked On",WorkedBy="John Doe"},
+        //        new Issue{JobName="Job Name",TaskName="Task Name",ErrorDate="1/1/2022",ErrorMessage="Error Message",Status="Idle",WorkedOn="Worked On",WorkedBy="John Doe"},
+        //        new Issue{JobName="Job Name",TaskName="Task Name",ErrorDate="1/1/2022",ErrorMessage="Error Message",Status="Running",WorkedOn="Worked On",WorkedBy="John Doe"},
+        //        new Issue{JobName="Job Name",TaskName="Task Name",ErrorDate="1/1/2022",ErrorMessage="Error Message",Status="Completed",WorkedOn="Worked On",WorkedBy="John Doe"},
+        //        new Issue{JobName="Job Name",TaskName="Task Name",ErrorDate="1/1/2022",ErrorMessage="Error Message",Status="Idle",WorkedOn="Worked On",WorkedBy="John Doe"},
+        //        new Issue{JobName="Job Name",TaskName="Task Name",ErrorDate="1/1/2022",ErrorMessage="Error Message",Status="Completed",WorkedOn="Worked On",WorkedBy="John Doe"},
+        //        new Issue{JobName="Job Name",TaskName="Task Name",ErrorDate="1/1/2022",ErrorMessage="Error Message",Status="Idle",WorkedOn="Worked On",WorkedBy="John Doe"},
+        //        new Issue{JobName="Job Name",TaskName="Task Name",ErrorDate="1/1/2022",ErrorMessage="Error Message",Status="Completed",WorkedOn="Worked On",WorkedBy="John Doe"},
+        //        new Issue{JobName="Job Name",TaskName="Task Name",ErrorDate="1/1/2022",ErrorMessage="Error Message",Status="Idle",WorkedOn="Worked On",WorkedBy="John Doe"},
+        //        new Issue{JobName="Job Name",TaskName="Task Name",ErrorDate="1/1/2022",ErrorMessage="Error Message",Status="Running",WorkedOn="Worked On",WorkedBy="John Doe"},
+        //        new Issue{JobName="Job Name",TaskName="Task Name",ErrorDate="1/1/2022",ErrorMessage="Error Message",Status="Running",WorkedOn="Worked On",WorkedBy="John Doe"},
+        //        new Issue{JobName="Job Name",TaskName="Task Name",ErrorDate="1/1/2022",ErrorMessage="Error Message",Status="Running",WorkedOn="Worked On",WorkedBy="John Doe"},
+        //    };
+        //}
 
+        public List<Issue> SelectedItemsList => Issues.Where(item => item.IsSelected).ToList();
+  
     }
 }
