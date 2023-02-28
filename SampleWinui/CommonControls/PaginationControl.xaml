@@ -19,8 +19,8 @@
                     Margin="15,10,0,0"
                     Orientation="Horizontal">
             <ComboBox Name="PageSizeComboBox"
-                      ItemsSource="{Binding PageSizeList}"
-                      SelectedItem="{Binding PageSize, Mode=TwoWay}" />
+                      ItemsSource="{x:Bind PageSizeList}"
+                      SelectedItem="{x:Bind PageSize, Mode=TwoWay}" />
         </StackPanel>
         <StackPanel HorizontalAlignment="Center"
             Grid.Column="1"
@@ -48,9 +48,9 @@
                     Stretch="Uniform" />
             </Button>
             <TextBlock Height="20">
-                <Run Text="{Binding CurrentPage}" />
+                <Run Text="{x:Bind CurrentPage, Mode=OneWay}" />
                 <Run Text="of" />
-                <Run Text="{Binding TotalPage}" />
+                <Run Text="{x:Bind TotalPage, Mode=OneWay}" />
             </TextBlock>
             <Button Background="Transparent" Name="btnNext" 
                     Click="btnNext_Click">
@@ -85,11 +85,11 @@
                        HorizontalAlignment="Right"
                        VerticalAlignment="Top"
                        >
-                <Run Text="{Binding CurrentPageStart}"/>
+                <Run Text="{x:Bind CurrentPageStart,Mode=OneWay}"/>
                 <Run Text=" - "/>
-                <Run Text="{Binding CurrentPageEnd}"/>
+                <Run Text="{x:Bind CurrentPageEnd,Mode=OneWay}"/>
                 <Run Text=" of "/>
-                <Run Text="{Binding TotalItems}"/>
+                <Run Text="{x:Bind TotalItems,Mode=OneWay}"/>
                 <Run Text=" items"/>
             </TextBlock>
         </StackPanel>

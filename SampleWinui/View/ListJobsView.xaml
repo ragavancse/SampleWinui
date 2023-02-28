@@ -85,7 +85,7 @@
             Foreground="Black"
             GridLinesVisibility="All"
             HorizontalGridLinesBrush="#bdbdbd"
-            ItemsSource="{Binding Jobs}"
+            ItemsSource="{Binding ElementName=PagingControl, Path=FilteredSource}"
             VerticalGridLinesBrush="#bdbdbd">
             <controls:DataGrid.CellStyle>
                 <Style TargetType="controls:DataGridCell">
@@ -118,19 +118,7 @@
         </controls:DataGrid>
 
         <!--  Pagination Control for NG data  -->
-        <common:PaginationControl
-            x:Name="PagingControl"
-            Grid.Row="2"
-            CurrentPage="{Binding CurrentPage, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-            CurrentPageEnd="{Binding CurrentPageEnd, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-            CurrentPageStart="{Binding CurrentPageStart, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-            FirstPageCommand="{Binding FirstPageCommand, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-            LastPageCommand="{Binding LastPageCommand, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-            NextPageCommand="{Binding NextPageCommand, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-            PageSize="{Binding PageSize, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-            PageSizeList="{Binding PageSizeList, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-            PrevPageCommand="{Binding PrevPageCommand, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-            TotalItems="{Binding TotalItems, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-            TotalPage="{Binding TotalPage, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+        <common:PaginationControl x:Name="PagingControl"
+                                  Grid.Row="2" Source="{Binding Jobs}" />
     </Grid>
 </UserControl>
