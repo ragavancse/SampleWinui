@@ -40,7 +40,6 @@ namespace SampleWinui.View
                 XamlRoot = this.XamlRoot,
                 CloseButtonText = "NO",
                 Title = "By saving you will mark " + viewModel.SelectedItemsList.Count() + " item to as worked.Are you sure?",
-                Style = Application.Current.Resources["ButtonStyle1"] as Style,
                 DataContext = this.DataContext
             }; 
             await contentDialog.ShowAsync();

@@ -1,0 +1,136 @@
+<UserControl
+    x:Class="SampleWinui.View.ScheduleView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SampleWinui.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="using:CommunityToolkit.WinUI.UI.Controls"
+    xmlns:viewmodel="using:SampleWinui.ViewModel"
+    mc:Ignorable="d">
+
+    <UserControl.Resources>
+        <viewmodel:ScheduleViewModel x:Key="ScheduleViewModel"/>
+    </UserControl.Resources>
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Schedule" FontSize="35" FontWeight="Bold" HorizontalAlignment="Left" Margin="30"/>
+
+        <Grid Grid.Row="1" Margin="30,0,30,30" DataContext="{StaticResource ScheduleViewModel}" CornerRadius="5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="11*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid Background="White">
+                <TextBlock
+                Margin="15,0,0,0"
+                VerticalAlignment="Center" FontSize="18"
+                Style="{StaticResource TextFontColor}"
+                Text="Jobs" />
+            </Grid>
+            
+            
+            <controls:DataGrid
+            x:Name="gridView"
+            Grid.Row="1"
+            AutoGenerateColumns="False"
+            Background="White"
+            Foreground="Black"
+            GridLinesVisibility="All"
+            HorizontalGridLinesBrush="#bdbdbd"
+            ItemsSource="{Binding Schedules}"
+            VerticalGridLinesBrush="#bdbdbd">
+                <controls:DataGrid.CellStyle>
+                    <Style TargetType="controls:DataGridCell">
+                        <Setter Property="Height" Value="50" />
+                    </Style>
+                </controls:DataGrid.CellStyle>
+
+                <controls:DataGrid.Columns>
+                    <controls:DataGridTextColumn
+                    Width="300"
+                    Binding="{Binding StartDate}"
+                    Header="Start Date" />
+                    <controls:DataGridTextColumn
+                    Width="200"
+                    Binding="{Binding StartTime}"
+                    Header="Start Time" />
+                    <controls:DataGridTextColumn
+                    Width="1500"
+                    Binding="{Binding JobName}"
+                    Header="Job Name" />
+                   
+                </controls:DataGrid.Columns>
+            </controls:DataGrid>
+
+            <StackPanel
+            Grid.Row="2" 
+            Background="White"
+            Orientation="Horizontal">
+                <Button Background="Transparent">
+                    <Path
+                    Width="10"
+                    Height="10"
+                    Margin="0,0,0,0"
+                    Data="M0,0L9.5450122,0 9.5450122,12.075989 16.878019,8 31.271999,0 31.271999,16 31.271999,32 16.878019,24 9.5450122,19.924011 9.5450122,32 0,32z"
+                    Fill="Black"
+                    RenderTransformOrigin="0.5,0.5"
+                    Stretch="Uniform" />
+                </Button>
+                <Button Background="Transparent">
+                    <Path
+                    Width="10"
+                    Height="10"
+                    Margin="0,0,0,0"
+                    Data="M27.519981,0L27.519981,31.999999 0,16z"
+                    Fill="Black"
+                    RenderTransformOrigin="0.5,0.5"
+                    Stretch="Uniform" />
+                </Button>
+                <TextBlock Height="20">
+                <Run Text="1" />
+                <Run Text="of" />
+                <Run Text="3" />
+                </TextBlock>
+                <Button Background="Transparent">
+                    <Path
+                    Width="10"
+                    Height="10"
+                    Margin="0,0,0,0"
+                    Data="M0,0L27.519999,16 0,32z"
+                    Fill="Black"
+                    RenderTransformOrigin="0.5,0.5"
+                    Stretch="Uniform" />
+                </Button>
+                <Button Background="Transparent">
+                    <Path
+                    Width="10"
+                    Height="10"
+                    Margin="0,0,0,0"
+                    Data="M0,0.74398804L18.548009,16.001984 0,31.259003 0,16.001984z M18.548009,0L25.370002,0 25.370002,32 18.548009,32 18.548009,16.001984z"
+                    Fill="Black"
+                    RenderTransformOrigin="0.5,0.5"
+                    Stretch="Uniform" />
+                </Button>
+                <TextBlock Height="20">
+                <Run Text="1" />
+                <Run Text="-" />
+                <Run Text="30" />
+                <Run Text="of" />
+                <Run Text="90" />
+                <Run Text="items" />
+
+                </TextBlock>
+
+            </StackPanel>
+
+        </Grid>
+       
+    </Grid>
+</UserControl>
