@@ -15,8 +15,7 @@
     </UserControl.Resources>
 
     <Grid DataContext="{StaticResource FileViewModel}">
-        <Grid.Resources>
-        </Grid.Resources>
+        <Grid.Resources />
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto" />
             <ColumnDefinition Width="*" />
@@ -37,6 +36,7 @@
                         FontSize="16"
                         FontWeight="SemiBold"
                         IsExpanded="True"
+                        IsSelected="True"
                         Tag="SystemUtilities">
                         <NavigationViewItem.Icon>
                             <ImageIcon Foreground="#6593a4" Source="/Image/Icon_service.svg" />

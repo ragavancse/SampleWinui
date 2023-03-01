@@ -15,10 +15,13 @@
             <SolidColorBrush x:Key="WindowCaptionForeground">white</SolidColorBrush>
             <SolidColorBrush x:Key="WindowCaptionForegroundDisabled">white</SolidColorBrush>
             <SolidColorBrush x:Key="NavigationViewItemBackgroundSelected" Color="#6593a4" />
-            <SolidColorBrush x:Key="NavigationViewItemBackgroundSelectedPointerOver" Color="#bdbdbd" />
+            <SolidColorBrush x:Key="NavigationViewItemBackgroundSelectedPointerOver" Color="#6593a4" />
+            <SolidColorBrush x:Key="NavigationViewItemForegroundSelected" Color="#fff" />
+            <SolidColorBrush x:Key="NavigationViewItemForegroundSelectedPointerOver" Color="#fff" />
+            <SolidColorBrush x:Key="NavigationViewItemBackgroundPointerOver" Color="#bdbdbd" />
             <SolidColorBrush x:Key="JobsViewTextForeground" Color="#6593a4" />
             <SolidColorBrush x:Key="TitleBarBackground" Color="#3871CA" />
-            <SolidColorBrush x:Key="IssueViewButtonBackground" Color="#25c1f3" /> 
+            <SolidColorBrush x:Key="IssueViewButtonBackground" Color="#25c1f3" />
             <SolidColorBrush x:Key="IssueViewDisselectButtonBackground" Color="#99afb8" />
             <SolidColorBrush x:Key="IssueSubViewButtonBackground" Color="#6593a4" />
             <SolidColorBrush x:Key="MonitorViewTextForeground" Color="#6593a4" />
@@ -48,18 +51,24 @@
             </Style>
 
             <Style x:Key="MainFontStyle" TargetType="TextBlock">
-                <Setter Property="FontFamily" Value="Source Sans Pro"/>
-                <Setter Property="Foreground" Value="Black"/>
+                <Setter Property="FontFamily" Value="Source Sans Pro" />
+                <Setter Property="Foreground" Value="Black" />
             </Style>
 
-            <Style x:Key="SubHeaderFontStyle" TargetType="TextBlock" BasedOn="{StaticResource MainFontStyle}">
-                <Setter Property="FontSize" Value="14"/>
-                <Setter Property="FontWeight" Value="SemiBold"/>
+            <Style
+                x:Key="SubHeaderFontStyle"
+                BasedOn="{StaticResource MainFontStyle}"
+                TargetType="TextBlock">
+                <Setter Property="FontSize" Value="14" />
+                <Setter Property="FontWeight" Value="SemiBold" />
             </Style>
 
-            <Style x:Key="HeaderFontStyle" TargetType="TextBlock" BasedOn="{StaticResource MainFontStyle}">
-                <Setter Property="FontWeight" Value="Bold"/>
-                <Setter Property="FontSize" Value="18"/>
+            <Style
+                x:Key="HeaderFontStyle"
+                BasedOn="{StaticResource MainFontStyle}"
+                TargetType="TextBlock">
+                <Setter Property="FontWeight" Value="Bold" />
+                <Setter Property="FontSize" Value="18" />
             </Style>
 
         </ResourceDictionary>
