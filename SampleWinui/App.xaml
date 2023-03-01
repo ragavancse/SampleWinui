@@ -12,7 +12,7 @@
                 <ResourceDictionary Source="Theme/ButtonStyle.xaml" />
             </ResourceDictionary.MergedDictionaries>
             <!--  Other app resources here  -->
-            <FontFamily x:Key="Source_Sans_Pro">ms-appx:///SampleWinui/Fonts/SourceSansPro-Black.ttf#Source Sans Pro Black</FontFamily>
+            <FontFamily x:Key="Source_Sans_Pro_Black">ms-appx:///SampleWinui/Fonts/SourceSansPro-Black.ttf#Source Sans Pro Black</FontFamily>
             <SolidColorBrush x:Key="WindowCaptionForeground">white</SolidColorBrush>
             <SolidColorBrush x:Key="WindowCaptionForegroundDisabled">white</SolidColorBrush>
             <SolidColorBrush x:Key="NavigationViewItemBackgroundSelected" Color="#6593a4" />
@@ -40,7 +40,7 @@
             <SolidColorBrush x:Key="FilesViewChildrenWindowGrayBackground" Color="#99afb8" />
 
             <Style TargetType="TextBlock">
-                <Setter Property="FontFamily" Value="{StaticResource Source_Sans_Pro}" />
+                <Setter Property="FontFamily" Value="{ThemeResource Source_Sans_Pro_Black}" />
             </Style>
 
             <Style x:Key="ComboBoxStyle" TargetType="ComboBox">
