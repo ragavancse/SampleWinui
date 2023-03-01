@@ -15,7 +15,7 @@
 
         <StackPanel Grid.Row="0" Margin="0,20,0,0">
             <TextBlock
-                Margin="5"
+                Margin="20,5,0,0"
                 FontSize="15"
                 Text="Security Database Connection" />
 
@@ -23,7 +23,7 @@
                 Grid.Column="2"
                 Width="800"
                 Height="30"
-                Margin="10"
+                Margin="20,10,0,0"
                 HorizontalAlignment="Left"
                 BorderBrush="#99afb8"
                 BorderThickness="1"
@@ -54,7 +54,7 @@
 
         <StackPanel Grid.Row="1" Margin="0,100,0,0">
             <TextBlock
-                Margin="5"
+                Margin="20,5,0,0"
                 FontSize="15"
                 Text="Practice Database Connection String Template" />
 
@@ -62,7 +62,7 @@
                 Grid.Column="2"
                 Width="800"
                 Height="30"
-                Margin="10"
+                Margin="20,10,0,0"
                 HorizontalAlignment="Left"
                 BorderBrush="#99afb8"
                 BorderThickness="1"
