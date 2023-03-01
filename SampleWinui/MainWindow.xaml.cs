@@ -37,14 +37,17 @@ namespace SampleWinui
         {
             if (sender is Grid grid && grid.ActualWidth < 1200)
             {
-                Grid.SetRow(rightPanel, 0);
                 Grid.SetColumn(rightPanel, 0);
+                rightPanel.Margin= new Thickness(0,50, 0, 0);
+                (pivot.SelectedItem as PivotItem).Margin = new Thickness(0, 35, 0, 0);
 
             }
             else
             {
-                Grid.SetRow(rightPanel, 1);
                 Grid.SetColumn(rightPanel, 1);
+                rightPanel.Margin = new Thickness(10);
+                HeaderGrid.Height = double.NaN;
+                (pivot.SelectedItem as PivotItem).Margin = new Thickness(0, 0, 0, 0);
             }
         }
     }

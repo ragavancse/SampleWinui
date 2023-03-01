@@ -20,16 +20,18 @@
                 <ColumnDefinition Width="Auto" />
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
-            <Grid Grid.Column="1" SizeChanged="Grid_SizeChanged">
+            <Grid
+                x:Name="HeaderGrid"
+                Grid.Column="1"
+                SizeChanged="Grid_SizeChanged">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition />
                     <ColumnDefinition Width="Auto" />
                 </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="*" />
-                </Grid.RowDefinitions>
-                <Pivot Grid.Row="1" Grid.ColumnSpan="3">
+                <Pivot
+                    x:Name="pivot"
+                    Grid.Row="1"
+                    Grid.ColumnSpan="3">
                     <Pivot.HeaderTemplate>
                         <DataTemplate>
                             <Border
@@ -83,7 +85,6 @@
                 </Pivot>
                 <StackPanel
                     x:Name="rightPanel"
-                    Grid.Column="1"
                     Margin="10"
                     HorizontalAlignment="Right"
                     Orientation="Horizontal">
@@ -91,7 +92,7 @@
                     <ComboBox Width="150" SelectedIndex="0">
                         <ComboBoxItem>Primary</ComboBoxItem>
                     </ComboBox>
-                    <TextBlock Margin="5" Text="AccuntName" />
+                    <TextBlock Margin="5" Text="AccountName" />
                     <Grid Margin="0,0,20,0" VerticalAlignment="Top">
                         <Grid
                             Name="backgroundGrid"

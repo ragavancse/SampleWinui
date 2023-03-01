@@ -102,7 +102,10 @@
                         IsExpanded="True" />
                 </NavigationView.MenuItems>
             </NavigationView>
-            <Grid Grid.Row="2" VerticalAlignment="Top">
+            <Grid
+                Grid.Row="2"
+                Margin="15"
+                VerticalAlignment="Top">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="40" />
                     <RowDefinition Height="40" />
@@ -116,46 +119,57 @@
                     FontWeight="bold"
                     Foreground="#6593a4"
                     Text="View" />
-                <CheckBox
-                    Grid.Row="1"
-                    Margin="15,0,0,0"
-                    Padding="125,0,0,0"
-                    VerticalAlignment="Center"
-                    HorizontalContentAlignment="Left"
-                    VerticalContentAlignment="Center"
-                    FlowDirection="RightToLeft"
-                    FontWeight="SemiBold">
-                    <CheckBox.Content>
-                        <TextBlock Text="Include sub-groups" TextTrimming="CharacterEllipsis" />
-                    </CheckBox.Content>
-                </CheckBox>
-                <CheckBox
-                    Grid.Row="2"
-                    Margin="15,0,0,0"
-                    Padding="135,0,0,0"
-                    VerticalAlignment="Center"
-                    HorizontalContentAlignment="Left"
-                    VerticalContentAlignment="Center"
-                    FlowDirection="RightToLeft"
-                    FontWeight="SemiBold">
-                    <CheckBox.Content>
-                        <TextBlock Text="Include duplicates" TextTrimming="CharacterEllipsis" />
-                    </CheckBox.Content>
-                </CheckBox>
-                <CheckBox
-                    Grid.Row="3"
-                    Margin="15,0,0,0"
-                    Padding="43,0,0,0"
-                    VerticalAlignment="Center"
-                    HorizontalContentAlignment="Left"
-                    VerticalContentAlignment="Center"
-                    FlowDirection="RightToLeft"
-                    FontWeight="SemiBold">
-                    <CheckBox.Content>
-                        <TextBlock Text="Select running task on refresh" TextTrimming="CharacterEllipsis" />
-                    </CheckBox.Content>
-                </CheckBox>
-
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Center"
+                        FontWeight="SemiBold"
+                        Text="Include sub-groups"
+                        TextTrimming="CharacterEllipsis" />
+                    <CheckBox
+                        Grid.Column="1"
+                        Margin="0,0,-100,0"
+                        HorizontalAlignment="Right"
+                        VerticalAlignment="Center" />
+                </Grid>
+                <Grid Grid.Row="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Center"
+                        FontWeight="SemiBold"
+                        Text="Include duplicates"
+                        TextTrimming="CharacterEllipsis" />
+                    <CheckBox
+                        Grid.Column="1"
+                        Margin="0,0,-100,0"
+                        HorizontalAlignment="Right"
+                        VerticalAlignment="Center" />
+                </Grid>
+                <Grid Grid.Row="3">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Center"
+                        FontWeight="SemiBold"
+                        Text="Select running task on refresh"
+                        TextTrimming="CharacterEllipsis" />
+                    <CheckBox
+                        Grid.Column="1"
+                        Margin="0,0,-100,0"
+                        HorizontalAlignment="Right"
+                        VerticalAlignment="Center" />
+                </Grid>
             </Grid>
         </Grid>
         <Grid x:Name="MainGrid" Grid.Column="1">
