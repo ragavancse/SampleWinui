@@ -35,6 +35,10 @@ namespace SampleWinui.ChildWindowControls
             content.Content = userControl;
         }
 
+        public void SetTitle(string title)
+        {
+            AppTitleTextBlock.Text = title;
+        }
         public void SetSize(int width, int height)
         {
             IntPtr hWnd = WinRT.Interop.WindowNative.GetWindowHandle(this);

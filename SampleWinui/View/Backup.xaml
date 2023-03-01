@@ -7,7 +7,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="using:SampleWinui.View"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
     mc:Ignorable="d">
 
     <Grid>
@@ -27,7 +27,7 @@
                 HorizontalContentAlignment="Center"
                 Background="#25c1f3"
                 Content="Backup Now"
-                FontSize="10"
+                FontSize="15"
                 Foreground="#FFFFFF"
                 Style="{StaticResource ButtonStyle}" />
 
@@ -40,12 +40,14 @@
                 Text="Task Sequence" />
 
         </Grid>
-
-        <Grid
+ 
+        <TextBox
             Grid.Row="2"
-            Width="800"
-            Height="400"
-            Margin="10"
+            Width="600"
+            Height="285"
+            Margin="20,0,0,0"
+            AcceptsReturn="True"
+            TextWrapping="Wrap"
             BorderBrush="#bdbdbd"
             BorderThickness="1" />
 
@@ -58,7 +60,7 @@
                 HorizontalContentAlignment="Center"
                 Background="#6692a5"
                 Content="Close"
-                FontSize="10"
+                FontSize="15"
                 Foreground="#FFFFFF"
                 Style="{StaticResource ButtonStyle}" />
 

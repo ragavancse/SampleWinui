@@ -36,7 +36,7 @@
                     <DataTemplate>
                         <Grid
                             Grid.Column="0"
-                            Margin="20,20,0,0"
+                            Margin="20"
                             BorderThickness="0">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="50" />

@@ -39,11 +39,12 @@ namespace SampleWinui.View
             {
                 var item = gridView.SelectedItem as FileModel;
                 var window = new ChildWindow();
+                window.SetTitle(item.HeaderText);
                 if (item.HeaderText == "Instances")
                 {
                     window.SetSize(1250, 400);
                     window.SetContent(new ApplicationInstances());
-                    
+
 
                 }
                 else if (item.HeaderText == "Service")

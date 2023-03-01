@@ -37,6 +37,7 @@ namespace SampleWinui.View
             {
                 var item = gridView.SelectedItem as FileModel;
                 var window = new ChildWindow();
+                window.SetTitle(item.HeaderText);
                 if (item.HeaderText == "Backup")
                 {
                     window.SetSize(850, 650);
