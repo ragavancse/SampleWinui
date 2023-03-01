@@ -244,24 +244,24 @@
                 </Grid.RowDefinitions>
                 <Grid Margin="10" HorizontalAlignment="Right">
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock Margin="8" Text="Every" />
+                        <TextBlock Margin="8" Text="Every"  Style="{StaticResource MainFontStyle}"/>
                         <TextBox
                             Width="30"
                             Height="5"
                             Padding="20,4,0,0"
                             HorizontalAlignment="Left"
                             VerticalAlignment="Center"
-                            BorderBrush="#bdbdbd"
+                            BorderBrush="#bdbdbd" 
                             BorderThickness="1"
                             CornerRadius="12"
                             HorizontalTextAlignment="Center"
                             Text="28" />
-                        <TextBlock Margin="8" Text="Minutes" />
+                        <TextBlock Margin="8" Text="Minutes" Style="{StaticResource MainFontStyle}" />
                     </StackPanel>
                 </Grid>
                 <Grid Grid.Row="1">
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock Margin="8" Text="Starting at" />
+                        <TextBlock Margin="8" Text="Starting at" Style="{StaticResource MainFontStyle}" />
                         <Grid
                             Height="30"
                             Margin="10,10,15,10"
@@ -322,7 +322,7 @@
                 </Grid>
                 <Grid Grid.Row="2">
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock Margin="8" Text="Ending at" />
+                        <TextBlock Margin="8" Text="Ending at" Style="{StaticResource MainFontStyle}" />
                         <Grid
                             Height="30"
                             Margin="15,10,15,10"
@@ -400,7 +400,7 @@
                     Height="30"
                     HorizontalAlignment="Right"
                     HorizontalContentAlignment="Center"
-                    Background="#25c1f3"
+                    Background="{StaticResource ScheduleListItemBlueButtonBackGround}"
                     Content="Done"
                     CornerRadius="17"
                     FontSize="10"
@@ -411,7 +411,7 @@
                     Height="30"
                     Margin="10,0,10,0"
                     HorizontalContentAlignment="Center"
-                    Background="#6692a5"
+                    Background="{StaticResource ScheduleListItemGreenButtonBackGround}"
                     Content="Cancel"
                     CornerRadius="17"
                     FontSize="15"

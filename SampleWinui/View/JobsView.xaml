@@ -30,7 +30,7 @@
                 Padding="15,10,0,0"
                 FontSize="20"
                 FontWeight="bold"
-                Foreground="#6593a4"
+                Foreground="{StaticResource JobsViewTextForeground}"
                 Text="Filter" />
             <NavigationView
                 x:Name="nvSample8"
@@ -117,7 +117,7 @@
                     Padding="0,10,0,0"
                     FontSize="20"
                     FontWeight="bold"
-                    Foreground="#6593a4"
+                    Foreground="{StaticResource JobsViewTextForeground}"
                     Text="View" />
                 <Grid Grid.Row="1">
                     <Grid.ColumnDefinitions>
@@ -127,8 +127,7 @@
                     <TextBlock
                         HorizontalAlignment="Left"
                         VerticalAlignment="Center"
-                        FontWeight="SemiBold"
-                        Text="Include sub-groups"
+                        Text="Include sub-groups" Style="{StaticResource SubHeaderFontStyle}"
                         TextTrimming="CharacterEllipsis" />
                     <CheckBox
                         Grid.Column="1"
@@ -144,8 +143,7 @@
                     <TextBlock
                         HorizontalAlignment="Left"
                         VerticalAlignment="Center"
-                        FontWeight="SemiBold"
-                        Text="Include duplicates"
+                        Text="Include duplicates" Style="{StaticResource SubHeaderFontStyle}"
                         TextTrimming="CharacterEllipsis" />
                     <CheckBox
                         Grid.Column="1"
@@ -160,8 +158,7 @@
                     </Grid.ColumnDefinitions>
                     <TextBlock
                         HorizontalAlignment="Left"
-                        VerticalAlignment="Center"
-                        FontWeight="SemiBold"
+                        VerticalAlignment="Center" Style="{StaticResource SubHeaderFontStyle}"
                         Text="Select running task on refresh"
                         TextTrimming="CharacterEllipsis" />
                     <CheckBox

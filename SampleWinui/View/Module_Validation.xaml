@@ -20,7 +20,7 @@
                     <TreeViewItem ItemsSource="{Binding Children}">
 
 
-                        <TextBlock Foreground="#000000" Text="{Binding Name}" />
+                        <TextBlock  Text="{Binding Name}" Style="{StaticResource MainFontStyle}" />
 
                     </TreeViewItem>
                 </DataTemplate>

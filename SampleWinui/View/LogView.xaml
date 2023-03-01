@@ -21,9 +21,8 @@
                 <DataTemplate>
                     <Border>
                         <TextBlock
-                            FontSize="18"
-                            FontWeight="Bold"
-                            Text="{Binding}" />
+                            Style="{StaticResource HeaderFontStyle}"                            
+                            Text="{Binding}"  />
                     </Border>
                 </DataTemplate>
             </Pivot.HeaderTemplate>
@@ -44,7 +43,7 @@
                     Height="30"
                     Margin="10,10,10,15"
                     HorizontalContentAlignment="Center"
-                    Background="#25c1f3"
+                    Background="{StaticResource LogViewBlueButtonBackGround}"
                     Content="Save As"
                     FontSize="10"
                     Foreground="#FFFFFF"
@@ -54,7 +53,7 @@
                     Height="30"
                     Margin="10,10,10,15"
                     HorizontalContentAlignment="Center"
-                    Background="#99afb8"
+                    Background="{StaticResource LogViewGrayButtonBackGround}"
                     Content="Clear"
                     FontSize="10"
                     Foreground="#FFFFFF"
