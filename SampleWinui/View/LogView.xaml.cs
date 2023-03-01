@@ -1,7 +1,7 @@
 ﻿using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Controls.Primitives;
-using Microsoft.UI.Xaml.Data;
+using Microsoft.UI.Xaml.Data;  
 using Microsoft.UI.Xaml.Input;
 using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Navigation;
@@ -23,6 +23,17 @@ namespace SampleWinui.View
         public LogView()
         {
             this.InitializeComponent();
+            List<string> strings = new List<string>() { new string("01/13/2015 01:59:01 678 PM: configuration saved by [DTear]"),
+                 new string("01/13/2015 01:59:01 678 PM: configuration saved by [DTear]"),
+                new string("01/13/2015 01:59:01 678 PM: configuration saved by [DTear]"),
+                 new string("01/13/2015 01:59:01 678 PM: configuration saved by [DTear]"),
+                 new string("01/13/2015 01:59:01 678 PM: configuration saved by [DTear]"),
+                 new string("01/13/2015 01:59:01 678 PM: configuration saved by [DTear]"),
+                 new string("01/13/2015 01:59:01 678 PM: configuration saved by [DTear]"),
+                 
+
+            };
+            LogViewCollection.ItemsSource= strings;
         }
     }
 }

@@ -14,6 +14,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="auto" />
             <RowDefinition Height="*" />
+            <RowDefinition Height="auto" />
 
         </Grid.RowDefinitions>
         <Pivot Margin="10,0,0,0">
@@ -29,9 +30,17 @@
             </Pivot.HeaderTemplate>
             <PivotItem Padding="10" Header="Job Log" />
             <PivotItem Padding="10" Header="Task Log" />
+
+
         </Pivot>
 
-        <Grid Grid.Row="1" VerticalAlignment="Bottom">
+        <Grid
+            Grid.Row="1"
+            BorderBrush="#bdbdbd"
+            BorderThickness="0,1,0,0" Margin="0,0,0,20">
+            <ListView x:Name="LogViewCollection"  />
+        </Grid>
+        <Grid Grid.Row="2" VerticalAlignment="Bottom">
             <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
                 <Button
                     Width="150"
