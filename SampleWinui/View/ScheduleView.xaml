@@ -42,7 +42,7 @@
                     Margin="15,0,0,0"
                     VerticalAlignment="Center"
                     FontSize="18"
-                    Style="{StaticResource TextFontColor}"
+                    Style="{StaticResource HeaderFontStyle}"
                     Text="Jobs" />
             </Grid>
 

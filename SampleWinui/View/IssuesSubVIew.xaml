@@ -9,15 +9,15 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid CornerRadius="5">
+    <Grid CornerRadius="5" >
         <Grid.RowDefinitions>
             <RowDefinition Height="8*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        
-        <controls:DataGrid
+
+        <Grid Margin="30">
+            <controls:DataGrid
             x:Name="gridView"
-            Grid.Row="0"
             AutoGenerateColumns="False"
             Background="White"
             Foreground="Black"
@@ -25,43 +25,45 @@
             GridLinesVisibility="All"
             HorizontalGridLinesBrush="#bdbdbd"
             VerticalGridLinesBrush="#bdbdbd">
-            <controls:DataGrid.CellStyle>
-                <Style TargetType="controls:DataGridCell">
-                    <Setter Property="Height" Value="50" />
-                </Style>
-            </controls:DataGrid.CellStyle>
+                <controls:DataGrid.CellStyle>
+                    <Style TargetType="controls:DataGridCell">
+                        <Setter Property="Height" Value="50" />
+                    </Style>
+                </controls:DataGrid.CellStyle>
 
-            <controls:DataGrid.Columns>
-                <controls:DataGridTextColumn
+                <controls:DataGrid.Columns>
+                    <controls:DataGridTextColumn
                     Width="*"
                     Binding="{Binding JobName}"
                     Header="Job Name" />
-                <controls:DataGridTextColumn
+                    <controls:DataGridTextColumn
                     Width="*"
                     Binding="{Binding TaskName}"
                     Header="Task Name" />
-                <controls:DataGridTextColumn
+                    <controls:DataGridTextColumn
                     Width="*"
                     Binding="{Binding ErrorDate}"
                     Header="Error Date" />
-                <controls:DataGridTextColumn
+                    <controls:DataGridTextColumn
                     Width="2*"
                     Binding="{Binding ErrorMessage}"
                     Header="Error Message" />
-                <controls:DataGridTextColumn
+                    <controls:DataGridTextColumn
                     Width="*"
                     Binding="{Binding Status}"
                     Header="Status" />
-                <controls:DataGridTextColumn
+                    <controls:DataGridTextColumn
                     Width="*"
                     Binding="{Binding WorkedOn}"
                     Header="WorkedOn" />
-                <controls:DataGridTextColumn
+                    <controls:DataGridTextColumn
                     Width="*"
                     Binding="{Binding WorkedBy}"
                     Header="Worked By" />
-            </controls:DataGrid.Columns>
-        </controls:DataGrid>
+                </controls:DataGrid.Columns>
+            </controls:DataGrid>
+        </Grid>
+       
 
         <Grid Grid.Row="1"  Margin="0,10,0,0" HorizontalAlignment="Right">
             <Grid.ColumnDefinitions>
@@ -69,10 +71,10 @@
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
 
-            <Button Background="#25c1f3" Content="yes" Style="{StaticResource ButtonStyle}"
-                    VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,20,0" FontSize="10" Width="150" Height="30" Foreground="#FFFFFF" HorizontalContentAlignment="Center"/>
-            <Button Background="#99afb8" Content="no" Style="{StaticResource ButtonStyle}"
-                  Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right" FontSize="10" Width="150" Height="30" Foreground="#FFFFFF" HorizontalContentAlignment="Center"/>
+            <Button Background="{StaticResource IssueViewButtonBackground}" Content="Yes" Style="{StaticResource ButtonStyle}"
+                    VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,20,0"  Width="150" Height="30" Foreground="#FFFFFF" HorizontalContentAlignment="Center"/>
+            <Button Background="{StaticResource IssueSubViewButtonBackground}" Content="No" Style="{StaticResource ButtonStyle}"
+                  Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right"  Width="150" Height="30" Foreground="#FFFFFF" HorizontalContentAlignment="Center"/>
 
         </Grid>
     </Grid>

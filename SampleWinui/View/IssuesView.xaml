@@ -30,7 +30,7 @@
                     </Grid.ColumnDefinitions>
                     <TextBlock
                         VerticalAlignment="Center"
-                        FontWeight="SemiBold"
+                        Style="{StaticResource SubHeaderFontStyle}"
                         Text="Status:" />
                     <ComboBox
                         Grid.Column="1"
@@ -49,7 +49,7 @@
                     </Grid.ColumnDefinitions>
                     <TextBlock
                         VerticalAlignment="Center"
-                        FontWeight="SemiBold"
+                        Style="{StaticResource SubHeaderFontStyle}"
                         Text="Type:" />
                     <ComboBox
                         Grid.Column="1"
@@ -67,7 +67,7 @@
                     </Grid.ColumnDefinitions>
                     <TextBlock
                         VerticalAlignment="Center"
-                        FontWeight="SemiBold"
+                        Style="{StaticResource SubHeaderFontStyle}"
                         Text="Date:" />
                     <ComboBox
                         Grid.Column="1"
@@ -98,7 +98,7 @@
                 <TextBlock
                     Margin="15,0,0,0"
                     VerticalAlignment="Center"
-                    Style="{StaticResource TextFontColor}"
+                    Style="{StaticResource HeaderFontStyle}"
                     Text="List of Jobs" />
                 <ComboBox
                     Margin="0,0,20,0"
@@ -183,7 +183,7 @@
                     HorizontalAlignment="Left"
                     VerticalAlignment="Center"
                     HorizontalContentAlignment="Center"
-                    Background="#25c1f3"
+                    Background="{StaticResource IssueViewButtonBackground}"
                     Content="Select All"
                     FontSize="10"
                     Foreground="#FFFFFF"
@@ -195,7 +195,7 @@
                     HorizontalAlignment="Left"
                     VerticalAlignment="Center"
                     HorizontalContentAlignment="Center"
-                    Background="#99afb8"
+                    Background="{StaticResource IssueViewDisselectButtonBackground}"
                     Content="DisSelect All"
                     FontSize="10"
                     Foreground="#FFFFFF"
@@ -207,7 +207,7 @@
                     HorizontalAlignment="Right"
                     VerticalAlignment="Center"
                     HorizontalContentAlignment="Center"
-                    Background="#25c1f3"
+                    Background="{StaticResource IssueViewButtonBackground}"
                     Click="Button_Click"
                     Content="Mark As Worked"
                     FontSize="10"
