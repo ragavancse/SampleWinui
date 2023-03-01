@@ -14,7 +14,7 @@
                             CornerRadius="12">
                             <ContentPresenter
                                 HorizontalAlignment="Center"
-                                VerticalAlignment="Center" FontSize="14"
+                                VerticalAlignment="Center" FontSize="14" FontFamily="{ThemeResource Source_Sans_Pro_Black}"
                                 Content="{TemplateBinding Content}" />
                         </Border>
                         <VisualStateManager.VisualStateGroups>

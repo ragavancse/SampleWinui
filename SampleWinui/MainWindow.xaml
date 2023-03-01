@@ -38,7 +38,7 @@
                                 Height="50"
                                 Margin="10,0,30,0"
                                 VerticalAlignment="Center">
-                                <TextBlock FontFamily="ms-appx:///Fonts/SourceSansPro-Black.ttf#Source Sans Pro"
+                                <TextBlock 
                                     HorizontalAlignment="Center"
                                     VerticalAlignment="Center"
                                     FontSize="20"

@@ -134,23 +134,23 @@
                     Width="*">
                     </controls:DataGridCheckBoxColumn>
                     <controls:DataGridTextColumn
-                    Width="*"
+                    Width="2*"
                     Binding="{Binding JobName}"
                     Header="Job Name" />
                     <controls:DataGridTextColumn
-                    Width="*"
+                    Width="2*"
                     Binding="{Binding TaskName}"
                     Header="Task Name" />
                     <controls:DataGridTextColumn
-                    Width="*"
+                    Width="2*"
                     Binding="{Binding ErrorDate}"
                     Header="Error Date" />
                     <controls:DataGridTextColumn
-                    Width="3*"
+                    Width="4*"
                     Binding="{Binding ErrorMessage}"
                     Header="Error Message" />
                     <controls:DataGridTextColumn
-                    Width="*"
+                    Width="2*"
                     Binding="{Binding Status}"
                     Header="Status" />
                     <controls:DataGridTextColumn
