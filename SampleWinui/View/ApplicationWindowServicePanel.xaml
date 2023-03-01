@@ -63,6 +63,7 @@
                 Grid.Row="2"
                 Grid.ColumnSpan="2"
                 Margin="20,0,10,0"
+                Width="auto"
                 VerticalAlignment="Bottom"
                 BorderBrush="#bdbdbd"
                 BorderThickness="1" />
@@ -116,6 +117,7 @@
             <Border
                 Grid.Row="2"
                 Margin="20,0,10,0"
+                Width="auto"
                 VerticalAlignment="Bottom"
                 BorderBrush="#bdbdbd"
                 BorderThickness="1" />
@@ -137,10 +139,11 @@
             <Grid
                 Grid.Row="1"
                 Margin="20,10,10,0"
+                Width="800"
                 BorderBrush="#bdbdbd"
-                BorderThickness="1"
+                BorderThickness="1"                
                 CornerRadius="4">
-                <ListView x:Name="LogCollection" />
+                <ListView Width="auto" x:Name="LogCollection" />
             </Grid>
             <Button
                 Grid.Row="2"

@@ -37,42 +37,42 @@ namespace SampleWinui.View
             {
                 var item = gridView.SelectedItem as FileModel;
                 var window = new ChildWindow();
-                window.SetTitle(item.HeaderText);
+               
                 if (item.HeaderText == "Backup")
                 {
                     window.SetSize(850, 650);
                     window.SetContent(new Backup());
-                   
+                    window.SetTitle(item.HeaderText);
                 }
                 else if (item.HeaderText == "Show Schedule")
                 {
-                    window.SetSize(600, 800);
+                    window.SetSize(1080, 900);
                     window.SetContent(new ApplicationWindowServicePanel());
-                  
+                    window.SetTitle("Appliance Windows Service Control Panel");
                 }
                 else if (item.HeaderText == "Show Status")
                 {
-                    window.SetSize(950, 500);
+                    window.SetSize(1075, 500);
                     window.SetContent(new PMMSSetup());
-               
+                    window.SetTitle("PMMS Setup");
                 }
                 else if (item.HeaderText == "Validate Modules")
                 {
                     window.SetSize(350, 800);
                     window.SetContent(new Module_Validation());
-                  
+                    window.SetTitle("Module Validation");
                 }
                 else if (item.HeaderText == "Show Objects")
                 {
                     window.SetSize(550, 650);
                     window.SetContent(new Objects());
-                   
+                    window.SetTitle("Objects");
                 }
                 else
                 {
                     window.SetSize(1000, 1000);
                     window.SetContent(new EmailSetup());
-                  
+                    window.SetTitle("E-mail Setup");
                 }
                 window.Activate();
 
