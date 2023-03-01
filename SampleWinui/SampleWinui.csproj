@@ -17,6 +17,7 @@
   <ItemGroup>
     <None Remove="ButtonStyle.xaml" />
     <None Remove="ChildWindowControls\ChildWindow.xaml" />
+    <None Remove="Fonts\SourceSansPro-Black.ttf" />
     <None Remove="Image\Group 1560.svg" />
     <None Remove="Image\Icon_About.svg" />
     <None Remove="Image\Icon_Account.svg" />
@@ -85,6 +86,9 @@
     <Page Remove="View\UserControl1.xaml" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Fonts\SourceSansPro-Black.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Image\__MACOSX\._Group 1560.svg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
