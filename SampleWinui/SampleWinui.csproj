@@ -86,7 +86,9 @@
     <Page Remove="View\UserControl1.xaml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Fonts\SourceSansPro-Black.ttf" />
+    <Content Include="Fonts\SourceSansPro-Black.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Image\__MACOSX\._Group 1560.svg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
