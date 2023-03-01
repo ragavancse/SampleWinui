@@ -92,10 +92,17 @@
                         Margin="5"
                         VerticalAlignment="Top"
                         Text="Instance :" />
-                    <ComboBox Width="150" SelectedIndex="0">
+                    <ComboBox
+                        Width="150"
+                        BorderBrush="#bdbdbd"
+                        CornerRadius="15"
+                        SelectedIndex="0">
                         <ComboBoxItem>Primary</ComboBoxItem>
                     </ComboBox>
-                    <ComboBox Width="150" BorderThickness="0" SelectedIndex="0">
+                    <ComboBox
+                        Width="150"
+                        BorderThickness="0"
+                        SelectedIndex="0">
                         <ComboBoxItem>AccountName</ComboBoxItem>
                     </ComboBox>
                     <Grid Margin="0,0,20,0" VerticalAlignment="Top">
