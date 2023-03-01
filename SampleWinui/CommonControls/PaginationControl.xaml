@@ -29,7 +29,6 @@
             Orientation="Horizontal">
             <Button
                 x:Name="btnFirst"
-                Background="Transparent"
                 BorderThickness="0"
                 Click="btnFirst_Click">
                 <Path
@@ -43,7 +42,6 @@
             </Button>
             <Button
                 x:Name="btnPrev"
-                Background="Transparent"
                 BorderThickness="0"
                 Click="btnPrev_Click">
                 <Path

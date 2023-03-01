@@ -72,11 +72,30 @@ namespace SampleWinui.CommonControls
                 {
                     btnFirst.IsEnabled = false;
                     btnPrev.IsEnabled = false;
-                }
+                    btnFirst.Opacity = 0.3;
+                    btnPrev.Opacity = 0.3;
+                 }
                 else
                 {
                     btnFirst.IsEnabled = true;
                     btnPrev.IsEnabled = true;
+                    btnFirst.Opacity = 1;
+                    btnPrev.Opacity = 1;
+                }
+
+                if(value == TotalPage)
+                {
+                    btnNext.IsEnabled= false;
+                    btnLast.IsEnabled = false;
+                    btnNext.Opacity = 0.3;
+                    btnLast.Opacity = 0.3;
+                }
+                else
+                {
+                    btnNext.IsEnabled = true;
+                    btnLast.IsEnabled = true;
+                    btnNext.Opacity = 1;
+                    btnLast.Opacity = 1;
                 }
                 RaisePropertyChanged(nameof(CurrentPage));
             }
