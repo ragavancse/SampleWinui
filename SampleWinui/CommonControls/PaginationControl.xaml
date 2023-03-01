@@ -28,8 +28,9 @@
             HorizontalAlignment="Center"
             Orientation="Horizontal">
             <Button
-                Name="btnFirst"
+                x:Name="btnFirst"
                 Background="Transparent"
+                BorderThickness="0"
                 Click="btnFirst_Click">
                 <Path
                     Width="10"
@@ -41,8 +42,9 @@
                     Stretch="Uniform" />
             </Button>
             <Button
-                Name="btnPrev"
+                x:Name="btnPrev"
                 Background="Transparent"
+                BorderThickness="0"
                 Click="btnPrev_Click">
                 <Path
                     Width="10"
@@ -59,8 +61,9 @@
                 <Run Text="{x:Bind TotalPage, Mode=OneWay}" />
             </TextBlock>
             <Button
-                Name="btnNext"
+                x:Name="btnNext"
                 Background="Transparent"
+                BorderThickness="0"
                 Click="btnNext_Click">
                 <Path
                     Width="10"
@@ -72,8 +75,9 @@
                     Stretch="Uniform" />
             </Button>
             <Button
-                Name="btnLast"
+                x:Name="btnLast"
                 Background="Transparent"
+                BorderThickness="0"
                 Click="btnLast_Click">
                 <Path
                     Width="10"

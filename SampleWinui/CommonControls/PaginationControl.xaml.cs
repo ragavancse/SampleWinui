@@ -18,6 +18,7 @@ namespace SampleWinui.CommonControls
         public PaginationControl()
         {
             this.InitializeComponent();
+
         }
 
         #region Properties
@@ -66,7 +67,17 @@ namespace SampleWinui.CommonControls
             get { return _CurrentPage; }
             set
             {
-                _CurrentPage = value;
+                _CurrentPage = value;              
+                if (value == 1)
+                {
+                    btnFirst.IsEnabled = false;
+                    btnPrev.IsEnabled = false;
+                }
+                else
+                {
+                    btnFirst.IsEnabled = true;
+                    btnPrev.IsEnabled = true;
+                }
                 RaisePropertyChanged(nameof(CurrentPage));
             }
         }
@@ -169,6 +180,7 @@ namespace SampleWinui.CommonControls
                 CurrentPage = CurrentPageIndex + 1;
                 CurrentPageStart = (CurrentPageIndex * ItemPerPage) + 1;
                 CurrentPageEnd = (CurrentPageIndex + 1) * ItemPerPage > TotalItems ? TotalItems : (CurrentPageIndex + 1) * ItemPerPage;
+               
             }
         }
 
