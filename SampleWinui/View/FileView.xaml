@@ -32,26 +32,55 @@
                 <NavigationView.MenuItems>
                     <NavigationViewItem
                         Height="60"
-                        Content="SYSTEM UTILITIES"
-                        FontSize="16"
+                        FontSize="15"
                         FontWeight="SemiBold"
                         IsExpanded="True"
                         IsSelected="True"
                         Tag="SystemUtilities">
-                        <NavigationViewItem.Icon>
-                            <ImageIcon Foreground="#6593a4" Source="/Image/Icon_service.svg" />
-                        </NavigationViewItem.Icon>
+                        <NavigationViewItem.Content>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition />
+                                </Grid.ColumnDefinitions>
+                                <ImageIcon
+                                Width="28"
+                                Height="28"
+                                    Foreground="#6593a4"
+                                    Source="/Image/Icon_service.svg"
+                               />
+                                <TextBlock
+                                Grid.Column="1"
+                                Margin="15,5,0,0"
+                                Text="SYSTEM UTILITIES" />
+                            </Grid>
+                        </NavigationViewItem.Content>
                     </NavigationViewItem>
                     <NavigationViewItem
                         Height="60"
-                        Content="SETUP"
-                        FontSize="16"
+                        FontSize="15"
                         FontWeight="SemiBold"
                         IsExpanded="True"
                         Tag="Setup">
-                        <NavigationViewItem.Icon>
-                            <ImageIcon Foreground="#6593a4" Source="/Image/Path 1854.svg" />
-                        </NavigationViewItem.Icon>
+                        <NavigationViewItem.Content>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition />
+                                </Grid.ColumnDefinitions>
+                                <ImageIcon
+                                Width="28"
+                                Height="28"
+                                    Foreground="#6593a4"
+                                     Source="/Image/Path 1854.svg"
+                               />
+
+                                <TextBlock
+                                Grid.Column="1"
+                                Margin="15,5,0,0"
+                                Text="SETUP" />
+                            </Grid>
+                        </NavigationViewItem.Content>
                     </NavigationViewItem>
                 </NavigationView.MenuItems>
             </NavigationView>
