@@ -30,6 +30,7 @@
                 <TextBox
                     Grid.Column="1"
                     Height="30"
+                    Width="700"
                     Margin="10"
                     HorizontalContentAlignment="Center"
                     VerticalContentAlignment="Center"
@@ -72,10 +73,10 @@
                     </Grid.ColumnDefinitions>
 
                     <TextBlock
-                        Width="250"
                         Height="50"
                         Margin="0,10,0,0"
                         HorizontalAlignment="Left"
+                          VerticalAlignment="Center"
                         FontSize="15"
                         Text="SMTP Server Port Number" />
 
@@ -89,13 +90,12 @@
                         <RadioButton
                             Grid.Column="0"
                             MinWidth="10"
-                            Margin="0,5,0,15"
+                            Margin="20,5,0,15"
                             IsChecked="True" />
                         <TextBlock
                             Grid.Column="1"
-                            MinWidth="100"
                             Margin="0,5,0,15"
-                            HorizontalAlignment="Center"
+                            HorizontalAlignment="Left"
                             VerticalAlignment="Center"
                             FontSize="15"
                             Text="Default" />
@@ -121,7 +121,7 @@
                         <TextBox
                             Grid.Column="1"
                             Height="30"
-                            MinWidth="50"
+                            Width="130"
                             BorderBrush="Gray"
                             CornerRadius="17" />
 
@@ -132,20 +132,22 @@
 
             <Grid>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="100" />
-                    <ColumnDefinition Width="100" />
+                    <ColumnDefinition Width="50" />
+                    <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
 
                 <ToggleSwitch
                     Grid.Column="0"
-                    Width="150"
                     Height="50"
                     Foreground="Gray"
                     IsEnabled="True"
-                    IsOn="True" />
+                    IsOn="True" 
+                    OffContent=""
+                    OnContent=""
+                    />
                 <TextBlock
                     Grid.Column="1"
-                    Margin="10,8,0,0"
+                    Margin="0,8,0,0"
                     FontSize="15"
                     Text="Use SSL" />
             </Grid>
@@ -181,7 +183,7 @@
                             <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
                         <RadioButton />
-                        <TextBlock Margin="40,0,0,2" Text="None" />
+                        <TextBlock VerticalAlignment="Center" Margin="40,0,0,2" Text="None" />
                     </Grid>
 
                     <Grid Margin="0,5,0,0">
@@ -190,7 +192,7 @@
                             <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
                         <RadioButton />
-                        <TextBlock Margin="40,0,0,2" Text="Default" />
+                        <TextBlock VerticalAlignment="Center" Margin="40,0,0,2" Text="Default" />
                     </Grid>
 
 
@@ -200,7 +202,7 @@
                             <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
                         <RadioButton />
-                        <TextBlock Margin="40,0,0,2" Text="Default Application Credential" />
+                        <TextBlock VerticalAlignment="Center" Margin="40,0,0,2" Text="Default Application Credential" />
                     </Grid>
 
                     <Grid Margin="0,5,0,0">
@@ -209,7 +211,7 @@
                             <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
                         <RadioButton />
-                        <TextBlock Margin="40,0,0,2" Text="Default Network Credentials" />
+                        <TextBlock VerticalAlignment="Center" Margin="40,0,0,2" Text="Default Network Credentials" />
                     </Grid>
 
                     <Grid Margin="0,5,0,0">
@@ -218,7 +220,7 @@
                             <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
                         <RadioButton />
-                        <TextBlock Margin="40,0,0,2" Text="Explicit NetWork Credentials" />
+                        <TextBlock  VerticalAlignment="Center" Margin="40,0,0,2" Text="Explicit NetWork Credentials" />
                     </Grid>
 
 
@@ -231,7 +233,8 @@
                         <TextBox
                             Grid.Column="1"
                             Height="30"
-                            Margin="15,0,0,0"
+                             VerticalAlignment="Center"
+                            Margin="55,0,0,0"
                             BorderBrush="Gray"
                             CornerRadius="17" />
                     </Grid>
@@ -245,7 +248,8 @@
                         <TextBox
                             Grid.Column="1"
                             Height="30"
-                            Margin="15,0,0,0"
+                             VerticalAlignment="Center"
+                            Margin="60,0,0,0"
                             BorderBrush="Gray"
                             CornerRadius="17" />
                     </Grid>
@@ -259,6 +263,7 @@
                         <TextBox
                             Grid.Column="1"
                             Height="30"
+                            VerticalAlignment="Center"
                             Margin="15,0,0,0"
                             BorderBrush="Gray"
                             CornerRadius="17" />
