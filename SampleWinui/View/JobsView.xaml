@@ -52,20 +52,44 @@
                         ToolTipService.ToolTip="STANDARD GROUPS">
                         <NavigationViewItem.MenuItems>
                             <NavigationViewItem
-                                Content="All Jobs"
                                 FontWeight="SemiBold"
-                                Tag="SamplePage3"
-                                ToolTipService.ToolTip="All Jobs" />
+                                Tag="All Jobs"
+                                ToolTipService.ToolTip="All Jobs" >
+                                <NavigationViewItem.Content>
+                                    <TextBlock>
+                                        <Run Text="All Jobs"/>
+                                        <Run Text=" ("/>
+                                        <Run Text="{Binding AllJobsCount}"/>
+                                        <Run Text=")"/>
+                                    </TextBlock>
+                                </NavigationViewItem.Content>
+                            </NavigationViewItem>
                             <NavigationViewItem
-                                Content="Running jobs"
                                 FontWeight="SemiBold"
-                                Tag="SamplePage4"
-                                ToolTipService.ToolTip="Running jobs" />
+                                Tag="Running Jobs"
+                                ToolTipService.ToolTip="Running jobs" >
+                                <NavigationViewItem.Content>
+                                    <TextBlock>
+                                        <Run Text="Running Jobs"/>
+                                        <Run Text=" ("/>
+                                        <Run Text="{Binding RunningJobsCount}"/>
+                                        <Run Text=")"/>
+                                    </TextBlock>
+                                </NavigationViewItem.Content>
+                            </NavigationViewItem>
                             <NavigationViewItem
-                                Content="Failed jobs"
                                 FontWeight="SemiBold"
-                                Tag="SamplePage4"
-                                ToolTipService.ToolTip="Failed jobs" />
+                                Tag="Failed Jobs"
+                                ToolTipService.ToolTip="Failed jobs" >
+                                <NavigationViewItem.Content>
+                                    <TextBlock>
+                                        <Run Text="Failed Jobs"/>
+                                        <Run Text=" ("/>
+                                        <Run Text="{Binding FailedJobsCount}"/>
+                                        <Run Text=")"/>
+                                    </TextBlock>
+                                </NavigationViewItem.Content>
+                            </NavigationViewItem>
                         </NavigationViewItem.MenuItems>
                     </NavigationViewItem>
                     <NavigationViewItem

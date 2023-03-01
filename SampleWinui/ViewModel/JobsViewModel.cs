@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace SampleWinui.ViewModel
 {
-    public class JobsViewModel: ViewModelBase
+    public class JobsViewModel : ViewModelBase
     {
         public JobsViewModel()
         {
@@ -23,7 +23,9 @@ namespace SampleWinui.ViewModel
         public ObservableCollection<Job> Jobs
         {
             get { return _jobs; }
-            set { _jobs = value;
+            set
+            {
+                _jobs = value;
                 OnPropertyChanged(nameof(Jobs));
             }
         }
@@ -37,6 +39,42 @@ namespace SampleWinui.ViewModel
                 Jobs = new ObservableCollection<Job>(GetJobs().Where(a => a.JobId.Contains(value) || a.Descripton.ToLower().Contains(searchText.ToLower())));
             }
         }
+        private int _AllJobsCount;
+
+        public int AllJobsCount
+        {
+            get { return Jobs.Count; }
+            set
+            {
+                _AllJobsCount = value;
+                OnPropertyChanged(nameof(AllJobsCount));
+            }
+        }
+
+        private int _RunningJobsCount;
+
+        public int RunningJobsCount
+        {
+            get { return Jobs.Where(a => a.Status == "Complete").Count(); }
+            set
+            {
+                _RunningJobsCount = value;
+                OnPropertyChanged(nameof(RunningJobsCount));
+            }
+        }
+
+        private int _FailedJobsCount;
+
+        public int FailedJobsCount
+        {
+            get { return Jobs.Where(a => a.Status == "Failed").Count(); }
+            set
+            {
+                _FailedJobsCount = value;
+                OnPropertyChanged(nameof(FailedJobsCount));
+            }
+        }
+
 
         public object SelectedItem
         {
@@ -46,15 +84,15 @@ namespace SampleWinui.ViewModel
                 selectedItem = value;
                 if (value is NavigationViewItem item)
                 {
-                    switch (item.Content.ToString())
+                    switch (item.Tag.ToString())
                     {
                         case "All Jobs":
                             Jobs = GetJobs();
                             break;
-                        case "Running jobs":
+                        case "Running Jobs":
                             Jobs = new ObservableCollection<Job>(GetJobs().Where(a => a.Status == "Complete"));
                             break;
-                        case "Failed jobs":
+                        case "Failed Jobs":
                             Jobs = new ObservableCollection<Job>(GetJobs().Where(a => a.Status == "Failed"));
                             break;
                     }
