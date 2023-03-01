@@ -6,8 +6,9 @@
     xmlns:local="using:SampleWinui.View"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
+    <ScrollViewer>
 
-    <Grid HorizontalAlignment="Center" Background="White">
+        <Grid HorizontalAlignment="Center" Background="White">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
@@ -365,7 +366,8 @@
 
 
 
-
+    
 
     </Grid>
+    </ScrollViewer>
 </UserControl>
