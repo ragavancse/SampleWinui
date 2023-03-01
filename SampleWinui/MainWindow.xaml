@@ -88,7 +88,10 @@
                     Margin="10"
                     HorizontalAlignment="Right"
                     Orientation="Horizontal">
-                    <TextBlock Margin="5" Text="Instance" />
+                    <TextBlock
+                        Margin="5"
+                        VerticalAlignment="Top"
+                        Text="Instance" />
                     <ComboBox Width="150" SelectedIndex="0">
                         <ComboBoxItem>Primary</ComboBoxItem>
                     </ComboBox>
