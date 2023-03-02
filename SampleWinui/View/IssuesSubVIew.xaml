@@ -11,13 +11,16 @@
 
     <Grid CornerRadius="5">
         <Grid.RowDefinitions>
-            <RowDefinition Height="8*" />
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
+               <RowDefinition Height="auto" />
+                <RowDefinition Height="5*"/>
+                <RowDefinition Height="auto" />
+            </Grid.RowDefinitions>
+            
+            <TextBlock x:Name="text" Grid.Row="0" FontSize="17"  Style="{StaticResource SubHeaderFontStyle}"  Margin="35,30,0,0" />
 
-        <Grid Margin="30">
-            <controls:DataGrid
-                x:Name="gridView"
+            <Grid Margin="30,25,30,30"  Grid.Row="1">
+                <controls:DataGrid
+                x:Name="gridView" Width="1100" Height="500"
                 AutoGenerateColumns="False"
                 Background="White"
                 Foreground="Black"
@@ -25,49 +28,48 @@
                 HorizontalGridLinesBrush="#bdbdbd"
                 ItemsSource="{Binding SelectedItemsList}"
                 VerticalGridLinesBrush="#bdbdbd">
-                <controls:DataGrid.CellStyle>
-                    <Style TargetType="controls:DataGridCell">
-                        <Setter Property="Height" Value="50" />
-                    </Style>
-                </controls:DataGrid.CellStyle>
+                    <controls:DataGrid.CellStyle>
+                        <Style TargetType="controls:DataGridCell">
+                            <Setter Property="Height" Value="50" />
+                        </Style>
+                    </controls:DataGrid.CellStyle>
 
-                <controls:DataGrid.Columns>
-                    <controls:DataGridTextColumn
+                    <controls:DataGrid.Columns>
+                        <controls:DataGridTextColumn
                         Width="*"
                         Binding="{Binding JobName}"
                         Header="Job Name" />
-                    <controls:DataGridTextColumn
+                        <controls:DataGridTextColumn
                         Width="*"
                         Binding="{Binding TaskName}"
                         Header="Task Name" />
-                    <controls:DataGridTextColumn
+                        <controls:DataGridTextColumn
                         Width="*"
                         Binding="{Binding ErrorDate}"
                         Header="Error Date" />
-                    <controls:DataGridTextColumn
+                        <controls:DataGridTextColumn
                         Width="2*"
                         Binding="{Binding ErrorMessage}"
                         Header="Error Message" />
-                    <controls:DataGridTextColumn
+                        <controls:DataGridTextColumn
                         Width="*"
                         Binding="{Binding Status}"
                         Header="Status" />
-                    <controls:DataGridTextColumn
+                        <controls:DataGridTextColumn
                         Width="*"
                         Binding="{Binding WorkedOn}"
                         Header="WorkedOn" />
-                    <controls:DataGridTextColumn
+                        <controls:DataGridTextColumn
                         Width="*"
                         Binding="{Binding WorkedBy}"
                         Header="Worked By" />
-                </controls:DataGrid.Columns>
-            </controls:DataGrid>
-        </Grid>
+                    </controls:DataGrid.Columns>
+                </controls:DataGrid>
+            </Grid>
 
 
-        <Grid
-            Grid.Row="1"
-            Margin="0,10,0,0"
+        <Grid  
+            Margin="0,30,20,0" Grid.Row="2"
             HorizontalAlignment="Right">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition />
@@ -100,5 +102,6 @@
                 Style="{StaticResource ButtonStyle}" />
 
         </Grid>
+
     </Grid>
 </UserControl>

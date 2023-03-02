@@ -35,5 +35,7 @@ namespace SampleWinui.View
 
         public Button NoButton1 => this.NoButton;
 
+        public TextBlock text1 => this.text;
+
     }
 }

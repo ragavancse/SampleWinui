@@ -44,7 +44,8 @@ namespace SampleWinui.View
             issuesSubVIew.DataContext= viewModel;
             issuesSubVIew.YesButton1.Click += YesButton_Click;
             issuesSubVIew.NoButton1.Click += YesButton_Click;
-            window.SetSize(1800, 1520);
+            issuesSubVIew.text1.Text = "You have marked " + viewModel.SelectedItemsList.Count() + " selcted items are worked,are you sure?";
+            window.SetSize(1250, 750);
             window.SetContent(issuesSubVIew);
             window.SetTitle("By saving you will mark " + viewModel.SelectedItemsList.Count() + " item to as worked.Are you sure?");
             window.Activate();
