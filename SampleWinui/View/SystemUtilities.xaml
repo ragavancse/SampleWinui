@@ -26,7 +26,10 @@
             Margin="30,0,20,20"
             Background="#fff"
             CornerRadius="6">
-            <GridView VerticalAlignment="Top" SelectionChanged="GridView_SelectionChanged"  ItemsSource="{Binding SystemUtilitiesCollections}">
+            <GridView
+                VerticalAlignment="Top"
+                ItemsSource="{Binding SystemUtilitiesCollections}"
+                SelectionChanged="GridView_SelectionChanged">
                 <GridView.ItemsPanel>
                     <ItemsPanelTemplate>
                         <controls:WrapPanel Orientation="Horizontal" />
@@ -36,7 +39,7 @@
                     <DataTemplate>
                         <Grid
                             Grid.Column="0"
-                            Margin="20"
+                            Margin="46"
                             BorderThickness="0">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="50" />
@@ -60,7 +63,8 @@
                                     Grid.Row="1"
                                     Margin="0,5,0,0"
                                     FontSize="12"
-                                    MaxLines="3" Style="{StaticResource MainFontStyle}"
+                                    MaxLines="3"
+                                    Style="{StaticResource MainFontStyle}"
                                     Text="{Binding FooterText}"
                                     TextWrapping="Wrap" />
                             </Grid>

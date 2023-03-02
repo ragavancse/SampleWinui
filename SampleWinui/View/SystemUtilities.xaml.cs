@@ -1,6 +1,7 @@
 // Copyright (c) Microsoft Corporation and Contributors.
 // Licensed under the MIT License.
 
+using ColorCode.Styling;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Controls.Primitives;
@@ -43,6 +44,7 @@ namespace SampleWinui.View
                     window.SetSize(850, 650);
                     window.SetContent(new Backup());
                     window.SetTitle(item.HeaderText);
+                   // window.SetTitleBar(-16, 0X20000,0X10000);
                 }
                 else if (item.HeaderText == "Show Schedule")
                 {
