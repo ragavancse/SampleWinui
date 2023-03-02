@@ -1,4 +1,5 @@
-﻿using Microsoft.UI.Xaml;
+﻿using Microsoft.UI.Windowing;
+using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Controls.Primitives;
 using Microsoft.UI.Xaml.Data;
@@ -43,26 +44,17 @@ namespace SampleWinui.ChildWindowControls
         }
         public void SetSize(int width, int height)
         {
-            IntPtr hWnd = WinRT.Interop.WindowNative.GetWindowHandle(this);
-            var windowId = Microsoft.UI.Win32Interop.GetWindowIdFromWindow(hWnd);
-            var appWindow = Microsoft.UI.Windowing.AppWindow.GetFromWindowId(windowId);
+            AppWindow appWindow = GetAppWindow();
             appWindow.Resize(new Windows.Graphics.SizeInt32 { Width = width, Height = height });
-
-
-            
-
-
-
-            
-
-             
-
-     
-
-
 
         }
 
-
+        private AppWindow GetAppWindow()
+        {
+            IntPtr hWnd = WinRT.Interop.WindowNative.GetWindowHandle(this);
+            var windowId = Microsoft.UI.Win32Interop.GetWindowIdFromWindow(hWnd);
+            var appWindow = Microsoft.UI.Windowing.AppWindow.GetFromWindowId(windowId);
+            return appWindow;
+        }
     }
 }
