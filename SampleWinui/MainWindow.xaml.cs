@@ -35,7 +35,7 @@ namespace SampleWinui
 
         private void Grid_SizeChanged(object sender, SizeChangedEventArgs e)
         {
-            if (sender is Grid grid && grid.ActualWidth < 1200)
+            if (sender is Grid grid && grid.ActualWidth < 1400)
             {
                 Grid.SetColumn(rightPanel, 0);
                 rightPanel.Margin= new Thickness(0,50, 0, 0);
