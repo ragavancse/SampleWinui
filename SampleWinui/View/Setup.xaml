@@ -23,7 +23,7 @@
             Text="Setup" />
         <Border
             Grid.Row="1"
-            Margin="30,0,20,20"
+            Margin="30,0,20,60"
             Background="#ffffff"
             CornerRadius="6">
             <GridView
@@ -65,7 +65,8 @@
                                     Grid.Row="1"
                                     Margin="0,5,0,0"
                                     FontSize="12"
-                                    MaxLines="3" Style="{StaticResource MainFontStyle}"
+                                    MaxLines="3"
+                                    Style="{StaticResource MainFontStyle}"
                                     Text="{Binding FooterText}"
                                     TextWrapping="Wrap" />
                             </Grid>
