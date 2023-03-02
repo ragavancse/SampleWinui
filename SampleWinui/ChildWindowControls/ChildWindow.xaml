@@ -14,15 +14,16 @@
         </Grid.RowDefinitions>
 
         <Grid x:Name="AppTitleBar" Background="{StaticResource TitleBarBackground}">
-            <TextBlock x:Name="AppTitleTextBlock"
-               TextWrapping="NoWrap"
-               Foreground="#FFFFFF"
-               FontSize="15"
-               FontWeight="Bold"
-               Style="{StaticResource CaptionTextBlockStyle}" 
-               VerticalAlignment="Center"
-               HorizontalTextAlignment="Center"
-               Margin="0,0,0,0"/>
+            <TextBlock
+                x:Name="AppTitleTextBlock"
+                Margin="0,0,0,0"
+                VerticalAlignment="Center"
+                FontSize="15"
+                FontWeight="Bold"
+                Foreground="#FFFFFF"
+                HorizontalTextAlignment="Center"
+                Style="{StaticResource CaptionTextBlockStyle}"
+                TextWrapping="NoWrap" />
         </Grid>
         <ContentControl x:Name="content" Grid.Row="1" />
     </Grid>

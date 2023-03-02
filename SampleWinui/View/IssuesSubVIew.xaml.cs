@@ -30,5 +30,10 @@ namespace SampleWinui.View
         {
             this.InitializeComponent();
         }
+
+        public Button YesButton1=> this.YesButton;
+
+        public Button NoButton1 => this.NoButton;
+
     }
 }

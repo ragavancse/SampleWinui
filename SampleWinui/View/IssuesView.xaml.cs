@@ -8,6 +8,7 @@ using Microsoft.UI.Xaml.Data;
 using Microsoft.UI.Xaml.Input;
 using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Navigation;
+using SampleWinui.ChildWindowControls;
 using SampleWinui.ViewModel;
 using System;
 using System.Collections.Generic;
@@ -25,25 +26,34 @@ namespace SampleWinui.View
     public sealed partial class IssuesView : UserControl
     {
         IssuesViewModel viewModel;
+
+        ChildWindow window = null;
+        ContentDialog contentDialog = null;
+
         public IssuesView()
         {
             this.InitializeComponent();
             viewModel = new IssuesViewModel();
             this.DataContext = viewModel;
         }
-        
+
         private async void Button_Click(object sender, RoutedEventArgs e)
         {
-            ContentDialog contentDialog = new ContentDialog
-            {
-                Content = new IssuesSubVIew(),
-                XamlRoot = this.XamlRoot,
-                CloseButtonText = "NO",
-                Title = "By saving you will mark " + viewModel.SelectedItemsList.Count() + " item to as worked.Are you sure?",
-                Style = Application.Current.Resources["MainFontStyle"] as Style,
-                DataContext = this.DataContext
-            }; 
-            await contentDialog.ShowAsync();
+            window = new ChildWindow(); 
+            IssuesSubVIew issuesSubVIew = new IssuesSubVIew();
+            issuesSubVIew.DataContext= viewModel;
+            issuesSubVIew.YesButton1.Click += YesButton_Click;
+            issuesSubVIew.NoButton1.Click += YesButton_Click;
+            window.SetSize(1800, 1520);
+            window.SetContent(issuesSubVIew);
+            window.SetTitle("By saving you will mark " + viewModel.SelectedItemsList.Count() + " item to as worked.Are you sure?");
+            window.Activate();
+        }
+
+        private void YesButton_Click(object sender, RoutedEventArgs e)
+        {
+            window.Close();
+
         }
     }
 }
