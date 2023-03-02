@@ -20,7 +20,7 @@
 
             <Grid Margin="30,25,30,30"  Grid.Row="1">
                 <controls:DataGrid
-                x:Name="gridView" Width="1100" Height="500"
+                x:Name="gridView"
                 AutoGenerateColumns="False"
                 Background="White"
                 Foreground="Black"
