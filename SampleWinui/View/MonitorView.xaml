@@ -134,11 +134,11 @@
 
                     <controls:DataGrid.Columns>
                         <controls:DataGridTextColumn
-                    Width="*"
+                    Width="2*"
                         Binding="{Binding RunningProcessId}"
                     Header="Running Process ID" />
                         <controls:DataGridTextColumn
-                    Width="*"
+                    Width="2*"
                          Binding="{Binding RunningActivity}"
                     Header="Running Activity" />
                         <controls:DataGridTextColumn
