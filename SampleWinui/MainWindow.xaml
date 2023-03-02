@@ -38,11 +38,10 @@
                                 Height="50"
                                 Margin="10,0,30,0"
                                 VerticalAlignment="Center">
-                                <TextBlock 
+                                <TextBlock Style="{StaticResource SubHeaderFontStyle}"
                                     HorizontalAlignment="Center"
                                     VerticalAlignment="Center"
-                                    FontSize="20"
-                                    FontWeight="Bold"
+                                    FontSize="25"
                                     Text="{Binding}"
                                     TextAlignment="Center" />
                             </Border>
@@ -90,6 +89,8 @@
                     Orientation="Horizontal">
                     <TextBlock
                         Margin="5"
+                        Style="{StaticResource SubHeaderFontStyle}"
+                        FontSize="14"
                         VerticalAlignment="Top"
                         Text="Instance :" />
                     <ComboBox
@@ -102,6 +103,7 @@
                     <ComboBox
                         Width="150"
                         BorderThickness="0"
+                        FontFamily="{ThemeResource Source_Sans_Pro_Bold}"
                         SelectedIndex="0">
                         <ComboBoxItem>AccountName</ComboBoxItem>
                     </ComboBox>

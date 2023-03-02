@@ -45,14 +45,12 @@
                     <NavigationViewItem
                         Content="STANDARD GROUPS"
                         FontSize="16"
-                        FontWeight="bold"
                         Icon="Contact"
                         IsExpanded="True"
                         Tag="SamplePage2"
                         ToolTipService.ToolTip="STANDARD GROUPS">
                         <NavigationViewItem.MenuItems>
                             <NavigationViewItem
-                                FontWeight="SemiBold"
                                 Tag="All Jobs"
                                 ToolTipService.ToolTip="All Jobs" >
                                 <NavigationViewItem.Content>
@@ -65,7 +63,6 @@
                                 </NavigationViewItem.Content>
                             </NavigationViewItem>
                             <NavigationViewItem
-                                FontWeight="SemiBold"
                                 Tag="Running Jobs"
                                 ToolTipService.ToolTip="Running jobs" >
                                 <NavigationViewItem.Content>
@@ -78,7 +75,6 @@
                                 </NavigationViewItem.Content>
                             </NavigationViewItem>
                             <NavigationViewItem
-                                FontWeight="SemiBold"
                                 Tag="Failed Jobs"
                                 ToolTipService.ToolTip="Failed jobs" >
                                 <NavigationViewItem.Content>
@@ -95,7 +91,6 @@
                     <NavigationViewItem
                         Content="SHARED GROUPS"
                         FontSize="16"
-                        FontWeight="bold"
                         Icon="ReShare"
                         IsExpanded="True"
                         SelectsOnInvoked="False"
@@ -103,17 +98,17 @@
                         <NavigationViewItem.MenuItems>
                             <NavigationViewItem
                                 Content="ImaginePay"
-                                FontWeight="SemiBold"
+                                FontFamily="{ThemeResource Source_Sans_Pro_Regular}"
                                 Tag="SamplePage5"
                                 ToolTipService.ToolTip="ImaginePay" />
                             <NavigationViewItem
                                 Content="Statement Extracts"
-                                FontWeight="SemiBold"
+                                 FontFamily="{ThemeResource Source_Sans_Pro_Regular}"
                                 Tag="SamplePage6"
                                 ToolTipService.ToolTip="Statement Extracts" />
                             <NavigationViewItem
                                 Content="QA Jobs"
-                                FontWeight="SemiBold"
+                                 FontFamily="{ThemeResource Source_Sans_Pro_Regular}"
                                 Tag="SamplePage6"
                                 ToolTipService.ToolTip="QA Jobs" />
                         </NavigationViewItem.MenuItems>
@@ -152,6 +147,7 @@
                         HorizontalAlignment="Left"
                         VerticalAlignment="Center"
                         Text="Include sub-groups" Style="{StaticResource SubHeaderFontStyle}"
+                        FontSize="16"
                         TextTrimming="CharacterEllipsis" />
                     <CheckBox
                         Grid.Column="1"

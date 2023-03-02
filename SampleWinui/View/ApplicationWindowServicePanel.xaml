@@ -32,7 +32,6 @@
                 Grid.Row="0"
                 Grid.Column="0"
                 Margin="10"
-                FontWeight="SemiBold"
                 Text="Service installed correctly for windows : Yes" />
             <Button
                 Grid.Row="0"
@@ -47,7 +46,7 @@
             <TextBlock
                 Grid.Row="1"
                 Grid.Column="0"
-                Margin="10" Style="{StaticResource SubHeaderFontStyle}"
+                Margin="10"
                 Text="Service Status : Running" />
             <Button
                 Grid.Row="1"
@@ -78,7 +77,6 @@
             <TextBlock
                 Grid.Row="0"
                 Margin="20,10,10,10"
-                Style="{StaticResource SubHeaderFontStyle}"
                 Text="Commands" />
             <Grid Grid.Row="1">
                 <Grid.ColumnDefinitions>
@@ -134,7 +132,6 @@
                 Margin="20,10,10,10"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
-                FontWeight="SemiBold"
                 Text="Log" />
             <Grid
                 Grid.Row="1"
@@ -143,7 +140,14 @@
                 BorderBrush="#bdbdbd"
                 BorderThickness="1"                
                 CornerRadius="4">
-                <ListView Width="auto" x:Name="LogCollection" />
+                
+                <ListView Width="auto" x:Name="LogCollection"  >
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding }" FontFamily="{ThemeResource Source_Sans_Pro_Regular}"/>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
             </Grid>
             <Button
                 Grid.Row="2"

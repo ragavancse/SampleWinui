@@ -18,6 +18,9 @@
     <None Remove="ButtonStyle.xaml" />
     <None Remove="ChildWindowControls\ChildWindow.xaml" />
     <None Remove="Fonts\SourceSansPro-Black.ttf" />
+    <None Remove="Fonts\SourceSansPro-Bold.ttf" />
+    <None Remove="Fonts\SourceSansPro-Regular.ttf" />
+    <None Remove="Fonts\SourceSansPro-SemiBold.ttf" />
     <None Remove="Image\Group 1560.svg" />
     <None Remove="Image\Icon_About.svg" />
     <None Remove="Image\Icon_Account.svg" />
@@ -87,6 +90,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Fonts\SourceSansPro-Black.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Fonts\SourceSansPro-Bold.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Fonts\SourceSansPro-Regular.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Fonts\SourceSansPro-SemiBold.ttf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Image\__MACOSX\._Group 1560.svg">

@@ -34,7 +34,13 @@
             Grid.Row="1"
             BorderBrush="#bdbdbd"
             BorderThickness="0,1,0,0" Margin="0,0,0,20">
-            <ListView x:Name="LogViewCollection"  />
+            <ListView x:Name="LogViewCollection"  >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding }" FontFamily="{ThemeResource Source_Sans_Pro_Regular}"/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
         </Grid>
         <Grid Grid.Row="2" VerticalAlignment="Bottom">
             <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">

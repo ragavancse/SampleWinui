@@ -19,7 +19,7 @@
         <TextBlock
             Margin="30,20,20,20"
             FontSize="30"
-            FontWeight="Bold"
+            Style="{StaticResource ExtraBlackFontStyle}"
             Text="Setup" />
         <Border
             Grid.Row="1"
@@ -59,7 +59,7 @@
                                 </Grid.RowDefinitions>
                                 <TextBlock
                                     FontSize="18"
-                                    FontWeight="Bold" 
+                                    Style="{StaticResource HeaderFontStyle}"
                                     Text="{Binding HeaderText}" />
                                 <TextBlock
                                     Grid.Row="1"

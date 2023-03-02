@@ -82,21 +82,25 @@
             <CheckBox
                 Grid.Row="0"
                 Margin="30,20,20,10"
+                Style="{StaticResource CheckBoxRegularFont}"
                 Content="SQL Server Action-Weekly Translations Email"
                 IsChecked="True" />
             <CheckBox
                 Grid.Row="1"
                 Margin="30,0,20,10"
+                Style="{StaticResource CheckBoxRegularFont}"
                 Content="Data Export-Test Aideo File"
                 IsChecked="True" />
             <CheckBox
                 Grid.Row="2"
                 Margin="30,0,20,10"
+                Style="{StaticResource CheckBoxRegularFont}"
                 Content="Data Export-Test Gebbs File"
                 IsChecked="True" />
             <CheckBox
                 Grid.Row="3"
                 Margin="30,0,20,10"
+                Style="{StaticResource CheckBoxRegularFont}"
                 Content="Data Export-Test Aideo Feedback"
                 IsChecked="True" />
         </Grid>

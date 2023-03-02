@@ -24,7 +24,7 @@
             Margin="30"
             HorizontalAlignment="Left"
             FontSize="35"
-            FontWeight="Bold"
+            Style="{StaticResource ExtraBlackFontStyle}"
             Text="Schedule" />
 
         <Grid
