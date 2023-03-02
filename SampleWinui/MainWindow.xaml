@@ -90,8 +90,6 @@
                     <TextBlock
                         Margin="5"
                         Style="{StaticResource SubHeaderFontStyle}"
-                        FontSize="14"
-                        VerticalAlignment="Top"
                         Text="Instance :" />
                     <ComboBox
                         Width="150"
@@ -101,7 +99,7 @@
                         <ComboBoxItem>Primary</ComboBoxItem>
                     </ComboBox>
                     <ComboBox
-                        Width="150"
+                        Width="135"
                         BorderThickness="0"
                         FontFamily="{ThemeResource Source_Sans_Pro_Bold}"
                         SelectedIndex="0">
