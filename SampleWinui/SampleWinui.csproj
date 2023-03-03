@@ -64,6 +64,7 @@
     <None Remove="Image\__MACOSX\._Icon_Show Schedule.svg" />
     <None Remove="Image\__MACOSX\._Icon_Succeeded_S.svg" />
     <None Remove="Image\__MACOSX\._Path 1854.svg" />
+    <None Remove="Theme\DataGridStyle.xaml" />
     <None Remove="View\IssuesView.xaml" />
     <None Remove="View\ApplicationInstances.xaml" />
     <None Remove="View\EmailSetup.xaml" />
@@ -258,6 +259,11 @@
   -->
   <ItemGroup Condition="'$(DisableMsixProjectCapabilityAddedByProject)'!='true' and '$(EnableMsixTooling)'=='true'">
     <ProjectCapability Include="Msix" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Theme\DataGridStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Page Update="View\ScheduleView.xaml">

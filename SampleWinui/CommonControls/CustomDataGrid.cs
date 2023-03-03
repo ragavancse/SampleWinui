@@ -16,18 +16,18 @@ namespace SampleWinui.CommonControls
         {
             foreach (var item in this.Columns)
             {
-                var colum = item as DataGridBoundColumn;
-                if (colum != null)
-                {
-                    var headerstyle = colum.HeaderStyle == null ? new Style(typeof(DataGridColumnHeader)) : colum.HeaderStyle;
-                    headerstyle.Setters.Add(new Setter(DataGridColumnHeader.FontSizeProperty, 18));
-                    var background = Application.Current.Resources["PivotItemBackGround"] as SolidColorBrush;
-                    var fontFamily = Application.Current.Resources["Source_Sans_Pro_Bold"] as FontFamily;
+                //var colum = item as DataGridBoundColumn;
+                //if (colum != null)
+                //{
+                //    var headerstyle = colum.HeaderStyle == null ? new Style(typeof(DataGridColumnHeader)) : colum.HeaderStyle;
+                //    headerstyle.Setters.Add(new Setter(DataGridColumnHeader.FontSizeProperty, 18));
+                //    var background = Application.Current.Resources["PivotItemBackGround"] as SolidColorBrush;
+                //    var fontFamily = Application.Current.Resources["Source_Sans_Pro_Bold"] as FontFamily;
 
-                    headerstyle.Setters.Add(new Setter(DataGridColumnHeader.BackgroundProperty, background));
-                    headerstyle.Setters.Add(new Setter(DataGridColumnHeader.FontFamilyProperty, fontFamily));
-                    colum.HeaderStyle = headerstyle;
-                }
+                //    headerstyle.Setters.Add(new Setter(DataGridColumnHeader.BackgroundProperty, background));
+                //    headerstyle.Setters.Add(new Setter(DataGridColumnHeader.FontFamilyProperty, fontFamily));
+                //    colum.HeaderStyle = headerstyle;
+                //}
             }
         }
     }
