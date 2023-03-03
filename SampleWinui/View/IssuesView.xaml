@@ -16,81 +16,83 @@
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
 
-            <Grid  Background="#FFFFFF">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="AUTO" />
-                    <RowDefinition Height="AUTO"/>
-                    <RowDefinition Height="AUTO"/>
-                </Grid.RowDefinitions>
-
-                <Grid Margin="5,20,5,10" Grid.Row="0">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="3*" />
-                    </Grid.ColumnDefinitions>
-                    <TextBlock
-                        VerticalAlignment="Center"
-                        Style="{StaticResource SubHeaderFontStyle}"
-                        Text="Status:" />
-                    <ComboBox
-                        Grid.Column="1"
-                        Margin="15,0,0,0"
-                         Width="150"
-                        CornerRadius="15"
-                        SelectedIndex="0">
-                        <ComboBoxItem>Open</ComboBoxItem>
-                    </ComboBox>
-                </Grid>
-
-                <Grid Margin="5,10,5,10" Grid.Row="1">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="3*" />
-                    </Grid.ColumnDefinitions>
-                    <TextBlock
-                        VerticalAlignment="Center"
-                        Style="{StaticResource SubHeaderFontStyle}"
-                        Text="Type:" />
-                    <ComboBox
-                        Grid.Column="1"
-                        Margin="15,0,0,0"
-                        CornerRadius="15"
-                          Width="150"
-                        SelectedIndex="0">
-                        <ComboBoxItem>All</ComboBoxItem>
-                    </ComboBox>
-                </Grid>
-                <Grid Margin="5,10,5,10" Grid.Row="2">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="3*" />
-                    </Grid.ColumnDefinitions>
-                    <TextBlock
-                        VerticalAlignment="Center"
-                        Style="{StaticResource SubHeaderFontStyle}"
-                        Text="Date:" />
-                    <ComboBox
-                        Grid.Column="1"
-                         Width="150"
-                        Margin="15,0,0,0"
-                        CornerRadius="15"
-                        SelectedIndex="0">
-                        <ComboBoxItem>Last 24H</ComboBoxItem>
-                    </ComboBox>
-                </Grid>
-            </Grid>
-          
-        
-        <Grid  Margin="30,30,30,40"
-        CornerRadius="5" Grid.Column="1">
+        <Grid Background="#FFFFFF">
             <Grid.RowDefinitions>
-                <RowDefinition Height="auto" />
-                <RowDefinition Height="5*"/>
-                <RowDefinition Height="auto" />
-                <RowDefinition Height="auto"/>
+                <RowDefinition Height="AUTO" />
+                <RowDefinition Height="AUTO" />
+                <RowDefinition Height="AUTO" />
             </Grid.RowDefinitions>
 
-            <Grid Background="White" Height="60">
+            <Grid Grid.Row="0" Margin="5,20,5,10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="3*" />
+                </Grid.ColumnDefinitions>
+                <TextBlock
+                    VerticalAlignment="Center"
+                    Style="{StaticResource SubHeaderFontStyle}"
+                    Text="Status:" />
+                <ComboBox
+                    Grid.Column="1"
+                    Width="150"
+                    Margin="15,0,0,0"
+                    CornerRadius="15"
+                    SelectedIndex="0">
+                    <ComboBoxItem>Open</ComboBoxItem>
+                </ComboBox>
+            </Grid>
+
+            <Grid Grid.Row="1" Margin="5,10,5,10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="3*" />
+                </Grid.ColumnDefinitions>
+                <TextBlock
+                    VerticalAlignment="Center"
+                    Style="{StaticResource SubHeaderFontStyle}"
+                    Text="Type:" />
+                <ComboBox
+                    Grid.Column="1"
+                    Width="150"
+                    Margin="15,0,0,0"
+                    CornerRadius="15"
+                    SelectedIndex="0">
+                    <ComboBoxItem>All</ComboBoxItem>
+                </ComboBox>
+            </Grid>
+            <Grid Grid.Row="2" Margin="5,10,5,10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="3*" />
+                </Grid.ColumnDefinitions>
+                <TextBlock
+                    VerticalAlignment="Center"
+                    Style="{StaticResource SubHeaderFontStyle}"
+                    Text="Date:" />
+                <ComboBox
+                    Grid.Column="1"
+                    Width="150"
+                    Margin="15,0,0,0"
+                    CornerRadius="15"
+                    SelectedIndex="0">
+                    <ComboBoxItem>Last 24H</ComboBoxItem>
+                </ComboBox>
+            </Grid>
+        </Grid>
+
+
+        <Grid
+            Grid.Column="1"
+            Margin="30,30,30,40"
+            CornerRadius="5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="5*" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+            </Grid.RowDefinitions>
+
+            <Grid Height="60" Background="White">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="AUTO" />
@@ -129,38 +131,49 @@
                 </controls:DataGrid.CellStyle>
 
                 <controls:DataGrid.Columns>
-                    <controls:DataGridCheckBoxColumn IsThreeState="False" 
-                        Binding="{Binding IsSelected,Mode=TwoWay}" 
-                    Width="*">
-                    </controls:DataGridCheckBoxColumn>
+                    <controls:DataGridTemplateColumn Width="*">
+                        <controls:DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+                                    <CheckBox Grid.Column="1" IsChecked="{Binding IsSelected, UpdateSourceTrigger=PropertyChanged}" />
+                                </Grid>
+
+                            </DataTemplate>
+                        </controls:DataGridTemplateColumn.CellTemplate>
+                    </controls:DataGridTemplateColumn>
                     <controls:DataGridTextColumn
-                    Width="2*"
-                    Binding="{Binding JobName}"
-                    Header="Job Name" />
+                        Width="2*"
+                        Binding="{Binding JobName}"
+                        Header="Job Name" />
                     <controls:DataGridTextColumn
-                    Width="2*"
-                    Binding="{Binding TaskName}"
-                    Header="Task Name" />
+                        Width="2*"
+                        Binding="{Binding TaskName}"
+                        Header="Task Name" />
                     <controls:DataGridTextColumn
-                    Width="2*"
-                    Binding="{Binding ErrorDate}"
-                    Header="Error Date" />
+                        Width="2*"
+                        Binding="{Binding ErrorDate}"
+                        Header="Error Date" />
                     <controls:DataGridTextColumn
-                    Width="4*"
-                    Binding="{Binding ErrorMessage}"
-                    Header="Error Message" />
+                        Width="4*"
+                        Binding="{Binding ErrorMessage}"
+                        Header="Error Message" />
                     <controls:DataGridTextColumn
-                    Width="2*"
-                    Binding="{Binding Status}"
-                    Header="Status" />
+                        Width="2*"
+                        Binding="{Binding Status}"
+                        Header="Status" />
                     <controls:DataGridTextColumn
-                    Width="2*"
-                    Binding="{Binding WorkedOn}"
-                    Header="WorkedOn" />
+                        Width="2*"
+                        Binding="{Binding WorkedOn}"
+                        Header="WorkedOn" />
                     <controls:DataGridTextColumn
-                    Width="2*"
-                    Binding="{Binding WorkedBy}"
-                    Header="Worked By" />
+                        Width="2*"
+                        Binding="{Binding WorkedBy}"
+                        Header="Worked By" />
                 </controls:DataGrid.Columns>
             </controls:DataGrid>
 
@@ -170,7 +183,7 @@
                 Grid.Row="2"
                 Source="{Binding Issues}" />
 
-            <Grid Grid.Row="3"  Margin="0,20,0,0">
+            <Grid Grid.Row="3" Margin="0,20,0,0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="180" />
                     <ColumnDefinition />
