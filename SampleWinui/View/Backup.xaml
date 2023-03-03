@@ -22,7 +22,7 @@
             <Button
                 Width="150"
                 Height="30"
-                Margin="30,10,10,10"
+                Margin="25,20,10,10"
                 HorizontalAlignment="Left"
                 HorizontalContentAlignment="Center"
                 Background="{StaticResource FilesViewChildrenWindowBlueBackground}"
@@ -43,9 +43,9 @@
  
         <TextBox
             Grid.Row="2"
-            Width="600"
-            Height="285"
-            Margin="20,0,0,0"
+            Width="780"
+            Height="420"
+            Margin="25,0,0,0"
             AcceptsReturn="True"
             TextWrapping="Wrap"
             BorderBrush="#bdbdbd"
@@ -55,7 +55,7 @@
             <Button
                 Width="150"
                 Height="30"
-                Margin="10,10,10,15"
+                Margin="10,25,10,15"
                 HorizontalAlignment="Right"
                 HorizontalContentAlignment="Center"
                 Background="{StaticResource FilesViewChildrenWindowGreenBackground}"

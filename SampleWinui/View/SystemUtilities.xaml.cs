@@ -71,7 +71,7 @@ namespace SampleWinui.View
                 }
                 else
                 {
-                    window.SetSize(1000, 1000);
+                    window.SetSize(930, 1000);
                     window.SetContent(new EmailSetup());
                     window.SetTitle("E-mail Setup");
                 }
