@@ -6,6 +6,7 @@
     xmlns:controls1="using:CommunityToolkit.WinUI.UI.Controls"
     xmlns:converter="using:SampleWinui.Converter"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:gl="using:Windows.Globalization"
     xmlns:local="using:SampleWinui.View"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
@@ -176,25 +177,25 @@
             </Grid>
             <Grid
                 Grid.Column="1"
-                Height="30"
+                Height="40"
                 Margin="10,15,10,10"
                 VerticalAlignment="Top"
                 BorderBrush="#bdbdbd"
                 BorderThickness="1"
-                CornerRadius="12"
+                CornerRadius="18"
                 Visibility="{Binding LeftTimePanel, Converter={StaticResource BooleanToVisibilityConverter}}">
 
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="Auto" />
                 </Grid.ColumnDefinitions>
                 <TimePicker
                     x:Name="MyTimePicker"
                     Grid.Column="0"
-                    Width="130"
-                    Margin="8,10,0,0"
+                    Margin="0,7,0,0"
                     VerticalAlignment="Top"
-                    BorderThickness="0" />
+                    BorderThickness="0"
+                    Time="11:10:45" />
                 <Grid
                     Grid.Column="1"
                     Margin="0,8,0,0"
@@ -211,7 +212,7 @@
                         Click="IncrementButton_Click">
                         <Path
                             Width="10"
-                            Height="10"
+                            Height="5"
                             Margin="0,0,0,0"
                             Data="M0,10 L5,0 L10,10 Z"
                             Fill="Black"
@@ -225,8 +226,8 @@
                         Click="DecrementButton_Click">
                         <Path
                             Width="10"
-                            Height="10"
-                            Margin="0,0,0,0"
+                            Height="5"
+                            Margin="0,0,0,3"
                             Data="M0,0 L5,10 L10,0 Z"
                             Fill="Black"
                             RenderTransformOrigin="0.5,0.5"
@@ -269,27 +270,27 @@
                 <Grid Grid.Row="1">
                     <StackPanel Orientation="Horizontal">
                         <TextBlock
-                            Margin="8"
+                            Margin="8,20,8,10"
                             Style="{StaticResource MainFontStyle}"
                             Text="Starting at" />
                         <Grid
-                            Height="30"
+                            Height="40"
                             Margin="10,10,15,10"
                             BorderBrush="#bdbdbd"
                             BorderThickness="1"
-                            CornerRadius="12">
+                            CornerRadius="18">
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
                                 <ColumnDefinition Width="Auto" />
                             </Grid.ColumnDefinitions>
                             <TimePicker
                                 x:Name="StartingAtTimePicker"
                                 Grid.Column="0"
-                                Width="130"
-                                Margin="8,10,0,0"
+                                Margin="0,7,0,0"
                                 VerticalAlignment="Top"
                                 HorizontalContentAlignment="Center"
-                                BorderThickness="0" />
+                                BorderThickness="0"
+                                Time="11:34:45" />
                             <Grid
                                 Grid.Column="1"
                                 Margin="0,8,0,0"
@@ -305,7 +306,7 @@
                                     Click="StartingAtIncrementButton_Click">
                                     <Path
                                         Width="10"
-                                        Height="10"
+                                        Height="5"
                                         Margin="0,0,0,0"
                                         Data="M0,10 L5,0 L10,10 Z"
                                         Fill="Black"
@@ -319,8 +320,8 @@
                                     Click="StartingAtDecrementButton_Click">
                                     <Path
                                         Width="10"
-                                        Height="10"
-                                        Margin="0,0,0,0"
+                                        Height="5"
+                                        Margin="0,0,0,3"
                                         Data="M0,0 L5,10 L10,0 Z"
                                         Fill="Black"
                                         RenderTransformOrigin="0.5,0.5"
@@ -333,28 +334,28 @@
                 <Grid Grid.Row="2">
                     <StackPanel Orientation="Horizontal">
                         <TextBlock
-                            Margin="8"
+                            Margin="8,20,8,10"
                             Style="{StaticResource MainFontStyle}"
                             Text="Ending at" />
                         <Grid
-                            Height="30"
+                            Height="40"
                             Margin="15,10,15,10"
                             BorderBrush="#bdbdbd"
                             BorderThickness="1"
-                            CornerRadius="12">
+                            CornerRadius="18">
 
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
                                 <ColumnDefinition Width="Auto" />
                             </Grid.ColumnDefinitions>
                             <TimePicker
                                 x:Name="EndingAtTimePicker"
                                 Grid.Column="0"
-                                Width="130"
-                                Margin="8,10,0,0"
+                                Margin="0,7,0,0"
                                 VerticalAlignment="Top"
                                 HorizontalContentAlignment="Center"
-                                BorderThickness="0" />
+                                BorderThickness="0"
+                                Time="10:33:45" />
                             <Grid
                                 Grid.Column="1"
                                 Margin="0,8,0,0"
@@ -370,7 +371,7 @@
                                     Click="EndingAtIncrementButton_Click">
                                     <Path
                                         Width="10"
-                                        Height="10"
+                                        Height="5"
                                         Margin="0,0,0,0"
                                         Data="M0,10 L5,0 L10,10 Z"
                                         Fill="Black"
@@ -384,8 +385,8 @@
                                     Click="EndingAtDecrementButton_Click">
                                     <Path
                                         Width="10"
-                                        Height="10"
-                                        Margin="0,0,0,0"
+                                        Height="5"
+                                        Margin="0,0,0,2"
                                         Data="M0,0 L5,10 L10,0 Z"
                                         Fill="Black"
                                         RenderTransformOrigin="0.5,0.5"
