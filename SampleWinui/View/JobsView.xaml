@@ -50,39 +50,33 @@
                         Tag="SamplePage2"
                         ToolTipService.ToolTip="STANDARD GROUPS">
                         <NavigationViewItem.MenuItems>
-                            <NavigationViewItem
-                                Tag="All Jobs"
-                                ToolTipService.ToolTip="All Jobs" >
+                            <NavigationViewItem Tag="All Jobs" ToolTipService.ToolTip="All Jobs">
                                 <NavigationViewItem.Content>
                                     <TextBlock>
-                                        <Run Text="All Jobs"/>
-                                        <Run Text=" ("/>
-                                        <Run Text="{Binding AllJobsCount}"/>
-                                        <Run Text=")"/>
+                                        <Run Text="All Jobs" />
+                                        <Run Text=" (" />
+                                        <Run Text="{Binding AllJobsCount}" />
+                                        <Run Text=")" />
                                     </TextBlock>
                                 </NavigationViewItem.Content>
                             </NavigationViewItem>
-                            <NavigationViewItem
-                                Tag="Running Jobs"
-                                ToolTipService.ToolTip="Running jobs" >
+                            <NavigationViewItem Tag="Running Jobs" ToolTipService.ToolTip="Running jobs">
                                 <NavigationViewItem.Content>
                                     <TextBlock>
-                                        <Run Text="Running Jobs"/>
-                                        <Run Text=" ("/>
-                                        <Run Text="{Binding RunningJobsCount}"/>
-                                        <Run Text=")"/>
+                                        <Run Text="Running Jobs" />
+                                        <Run Text=" (" />
+                                        <Run Text="{Binding RunningJobsCount}" />
+                                        <Run Text=")" />
                                     </TextBlock>
                                 </NavigationViewItem.Content>
                             </NavigationViewItem>
-                            <NavigationViewItem
-                                Tag="Failed Jobs"
-                                ToolTipService.ToolTip="Failed jobs" >
+                            <NavigationViewItem Tag="Failed Jobs" ToolTipService.ToolTip="Failed jobs">
                                 <NavigationViewItem.Content>
                                     <TextBlock>
-                                        <Run Text="Failed Jobs"/>
-                                        <Run Text=" ("/>
-                                        <Run Text="{Binding FailedJobsCount}"/>
-                                        <Run Text=")"/>
+                                        <Run Text="Failed Jobs" />
+                                        <Run Text=" (" />
+                                        <Run Text="{Binding FailedJobsCount}" />
+                                        <Run Text=")" />
                                     </TextBlock>
                                 </NavigationViewItem.Content>
                             </NavigationViewItem>
@@ -103,12 +97,12 @@
                                 ToolTipService.ToolTip="ImaginePay" />
                             <NavigationViewItem
                                 Content="Statement Extracts"
-                                 FontFamily="{ThemeResource Source_Sans_Pro_Regular}"
+                                FontFamily="{ThemeResource Source_Sans_Pro_Regular}"
                                 Tag="SamplePage6"
                                 ToolTipService.ToolTip="Statement Extracts" />
                             <NavigationViewItem
                                 Content="QA Jobs"
-                                 FontFamily="{ThemeResource Source_Sans_Pro_Regular}"
+                                FontFamily="{ThemeResource Source_Sans_Pro_Regular}"
                                 Tag="SamplePage6"
                                 ToolTipService.ToolTip="QA Jobs" />
                         </NavigationViewItem.MenuItems>
@@ -146,8 +140,9 @@
                     <TextBlock
                         HorizontalAlignment="Left"
                         VerticalAlignment="Center"
-                        Text="Include sub-groups" Style="{StaticResource SubHeaderFontStyle}"
                         FontSize="16"
+                        Style="{StaticResource SubHeaderFontStyle}"
+                        Text="Include sub-groups"
                         TextTrimming="CharacterEllipsis" />
                     <CheckBox
                         Grid.Column="1"
@@ -163,7 +158,8 @@
                     <TextBlock
                         HorizontalAlignment="Left"
                         VerticalAlignment="Center"
-                        Text="Include duplicates" Style="{StaticResource SubHeaderFontStyle}"
+                        Style="{StaticResource SubHeaderFontStyle}"
+                        Text="Include duplicates"
                         TextTrimming="CharacterEllipsis" />
                     <CheckBox
                         Grid.Column="1"
@@ -178,7 +174,8 @@
                     </Grid.ColumnDefinitions>
                     <TextBlock
                         HorizontalAlignment="Left"
-                        VerticalAlignment="Center" Style="{StaticResource SubHeaderFontStyle}"
+                        VerticalAlignment="Center"
+                        Style="{StaticResource SubHeaderFontStyle}"
                         Text="Select running task on refresh"
                         TextTrimming="CharacterEllipsis" />
                     <CheckBox
