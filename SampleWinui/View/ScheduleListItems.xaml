@@ -22,6 +22,7 @@
             <RowDefinition Height=".3*" />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
+
         <Grid
             Grid.Row="0"
             Margin="10,12,10,10"
@@ -244,24 +245,33 @@
                 </Grid.RowDefinitions>
                 <Grid Margin="10" HorizontalAlignment="Right">
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock Margin="8" Text="Every"  Style="{StaticResource MainFontStyle}"/>
+                        <TextBlock
+                            Margin="8"
+                            Style="{StaticResource MainFontStyle}"
+                            Text="Every" />
                         <TextBox
                             Width="30"
                             Height="5"
                             Padding="20,4,0,0"
                             HorizontalAlignment="Left"
                             VerticalAlignment="Center"
-                            BorderBrush="#bdbdbd" 
+                            BorderBrush="#bdbdbd"
                             BorderThickness="1"
                             CornerRadius="12"
                             HorizontalTextAlignment="Center"
                             Text="28" />
-                        <TextBlock Margin="8" Text="Minutes" Style="{StaticResource MainFontStyle}" />
+                        <TextBlock
+                            Margin="8"
+                            Style="{StaticResource MainFontStyle}"
+                            Text="Minutes" />
                     </StackPanel>
                 </Grid>
                 <Grid Grid.Row="1">
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock Margin="8" Text="Starting at" Style="{StaticResource MainFontStyle}" />
+                        <TextBlock
+                            Margin="8"
+                            Style="{StaticResource MainFontStyle}"
+                            Text="Starting at" />
                         <Grid
                             Height="30"
                             Margin="10,10,15,10"
@@ -322,7 +332,10 @@
                 </Grid>
                 <Grid Grid.Row="2">
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock Margin="8" Text="Ending at" Style="{StaticResource MainFontStyle}" />
+                        <TextBlock
+                            Margin="8"
+                            Style="{StaticResource MainFontStyle}"
+                            Text="Ending at" />
                         <Grid
                             Height="30"
                             Margin="15,10,15,10"

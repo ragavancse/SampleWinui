@@ -44,7 +44,6 @@ namespace SampleWinui.View
                     window.SetSize(850, 650);
                     window.SetContent(new Backup());
                     window.SetTitle(item.HeaderText);
-                   // window.SetTitleBar(-16, 0X20000,0X10000);
                 }
                 else if (item.HeaderText == "Show Schedule")
                 {
