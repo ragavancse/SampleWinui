@@ -39,8 +39,8 @@
         </Grid>
 
         <Grid
-            Grid.Row="1"
-            Margin="10,12,10,10"
+            Grid.Row="1" Width="495"
+            Margin="20,12,10,10"
             BorderBrush="#bdbdbd"
             BorderThickness="1"
             CornerRadius="6">
