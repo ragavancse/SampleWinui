@@ -114,7 +114,7 @@
             </Grid>
 
 
-            <controls:DataGrid
+            <common:CustomDataGrid
                 x:Name="gridView"
                 Grid.Row="1"
                 AutoGenerateColumns="False"
@@ -140,7 +140,7 @@
                                         <ColumnDefinition Width="*" />
                                         <ColumnDefinition Width="*" />
                                     </Grid.ColumnDefinitions>
-                                    <CheckBox Grid.Column="1" IsChecked="{Binding IsSelected, UpdateSourceTrigger=PropertyChanged}" />
+                                    <CheckBox Grid.Column="1" IsChecked="{Binding IsSelected, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" />
                                 </Grid>
 
                             </DataTemplate>
@@ -175,7 +175,7 @@
                         Binding="{Binding WorkedBy}"
                         Header="Worked By" />
                 </controls:DataGrid.Columns>
-            </controls:DataGrid>
+            </common:CustomDataGrid>
 
             <!--  Pagination Control for NG data  -->
             <common:PaginationControl

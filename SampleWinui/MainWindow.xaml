@@ -38,10 +38,11 @@
                                 Height="50"
                                 Margin="10,0,30,0"
                                 VerticalAlignment="Center">
-                                <TextBlock Style="{StaticResource SubHeaderFontStyle}"
+                                <TextBlock
                                     HorizontalAlignment="Center"
                                     VerticalAlignment="Center"
                                     FontSize="25"
+                                    Style="{StaticResource SubHeaderFontStyle}"
                                     Text="{Binding}"
                                     TextAlignment="Center" />
                             </Border>

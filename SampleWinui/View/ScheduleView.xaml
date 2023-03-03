@@ -47,7 +47,7 @@
             </Grid>
 
 
-            <controls:DataGrid
+            <common:CustomDataGrid
                 x:Name="gridView"
                 Grid.Row="1"
                 AutoGenerateColumns="False"
@@ -78,7 +78,7 @@
                         Header="Job Name" />
 
                 </controls:DataGrid.Columns>
-            </controls:DataGrid>
+            </common:CustomDataGrid>
 
             <common:PaginationControl
                 x:Name="PagingControl"

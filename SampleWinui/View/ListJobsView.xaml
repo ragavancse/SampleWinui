@@ -94,7 +94,7 @@
         </Grid>
 
 
-        <controls:DataGrid
+        <common:CustomDataGrid
             x:Name="gridView"
             Grid.Row="1"
             AutoGenerateColumns="False"
@@ -132,7 +132,7 @@
                     Binding="{Binding LastMessage}"
                     Header="Last Message" />
             </controls:DataGrid.Columns>
-        </controls:DataGrid>
+        </common:CustomDataGrid>
 
         <!--  Pagination Control for NG data  -->
         <common:PaginationControl

@@ -20,75 +20,92 @@
         </Grid.ColumnDefinitions>
 
         <Grid Background="#FFFFFF">
-            <Grid  Margin="5,10,10,0">
+            <Grid Margin="5,10,10,0">
                 <Grid.RowDefinitions>
-                <RowDefinition Height="auto"/>
-                <RowDefinition Height="auto"/>
-                <RowDefinition Height="auto"/>
-                <RowDefinition Height="auto"/>
-                <RowDefinition Height="2*"/>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="2*" />
                 </Grid.RowDefinitions>
 
                 <CheckBox
                     Grid.Row="0"
                     Margin="0,10,0,0"
-                    
-                      Padding="80,0,0,0"
+                    Padding="80,0,0,0"
                     VerticalAlignment="Center"
-                    IsChecked="True"
                     HorizontalContentAlignment="Left"
                     VerticalContentAlignment="Center"
                     FlowDirection="RightToLeft"
-                    FontWeight="SemiBold">
+                    FontWeight="SemiBold"
+                    IsChecked="True">
                     <CheckBox.Content>
-                        <TextBlock Text="Include Succeeded Items:" Style="{StaticResource SubHeaderFontStyle}" TextTrimming="CharacterEllipsis"  />
+                        <TextBlock
+                            Style="{StaticResource SubHeaderFontStyle}"
+                            Text="Include Succeeded Items:"
+                            TextTrimming="CharacterEllipsis" />
                     </CheckBox.Content>
                 </CheckBox>
 
                 <CheckBox
                     Grid.Row="1"
                     Margin="0,10,0,0"
-                      Padding="96,0,0,0"
+                    Padding="96,0,0,0"
                     VerticalAlignment="Center"
-                    IsChecked="True"
                     HorizontalContentAlignment="Left"
                     VerticalContentAlignment="Center"
                     FlowDirection="RightToLeft"
-                    FontWeight="SemiBold">
+                    FontWeight="SemiBold"
+                    IsChecked="True">
                     <CheckBox.Content>
-                        <TextBlock Text="Include Running Items:" Style="{StaticResource SubHeaderFontStyle}" TextTrimming="CharacterEllipsis" />
+                        <TextBlock
+                            Style="{StaticResource SubHeaderFontStyle}"
+                            Text="Include Running Items:"
+                            TextTrimming="CharacterEllipsis" />
                     </CheckBox.Content>
                 </CheckBox>
 
                 <CheckBox
                     Grid.Row="2"
                     Margin="0,10,0,0"
-                      Padding="115,0,0,0"
+                    Padding="115,0,0,0"
                     VerticalAlignment="Center"
                     HorizontalContentAlignment="Left"
                     VerticalContentAlignment="Center"
                     FlowDirection="RightToLeft"
                     FontWeight="SemiBold">
                     <CheckBox.Content>
-                        <TextBlock Text="Include Future Jobs:" Style="{StaticResource SubHeaderFontStyle}"  TextTrimming="CharacterEllipsis" />
+                        <TextBlock
+                            Style="{StaticResource SubHeaderFontStyle}"
+                            Text="Include Future Jobs:"
+                            TextTrimming="CharacterEllipsis" />
                     </CheckBox.Content>
                 </CheckBox>
 
 
                 <TextBlock
-                    Padding="0,10,0,0"  Margin="0,10,0,0"
-                    FontSize="20" Grid.Row="3"
+                    Grid.Row="3"
+                    Margin="0,10,0,0"
+                    Padding="0,10,0,0"
+                    FontSize="20"
                     FontWeight="bold"
                     Foreground="{StaticResource MonitorViewTextForeground}"
                     Text="Dates" />
 
                 <Grid Grid.Row="4" Margin="0,10,0,0">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="90*"/>
-                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="90*" />
+                        <ColumnDefinition Width="*" />
                     </Grid.ColumnDefinitions>
-                    <TextBox Text="None" Grid.Column="1" Width="200" FontFamily="{ThemeResource Source_Sans_Pro_SemiBold}"  Height="800" Margin="5,20,5,0" HorizontalAlignment="Left"/>
+                    <TextBox
+                        Grid.Column="1"
+                        Width="200"
+                        Height="800"
+                        Margin="5,20,5,0"
+                        HorizontalAlignment="Left"
+                        FontFamily="{ThemeResource Source_Sans_Pro_SemiBold}"
+                        Text="None" />
                 </Grid>
             </Grid>
         </Grid>
@@ -102,12 +119,12 @@
             <Grid Margin="30,30,30,10" CornerRadius="5">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="auto" />
-                    <RowDefinition Height="7*"/>
+                    <RowDefinition Height="7*" />
                     <RowDefinition Height="auto" />
-                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto" />
                 </Grid.RowDefinitions>
 
-                <Grid Background="White" Height="60">
+                <Grid Height="60" Background="White">
                     <TextBlock
                         Margin="15,0,0,0"
                         VerticalAlignment="Center"
@@ -116,7 +133,7 @@
                 </Grid>
 
 
-                <controls:DataGrid
+                <common:CustomDataGrid
                     x:Name="gridView"
                     Grid.Row="1"
                     AutoGenerateColumns="False"
@@ -134,43 +151,44 @@
 
                     <controls:DataGrid.Columns>
                         <controls:DataGridTextColumn
-                    Width="2*"
-                        Binding="{Binding RunningProcessId}"
-                    Header="Running Process ID" />
+                            Width="2*"
+                            Binding="{Binding RunningProcessId}"
+                            Header="Running Process ID" />
                         <controls:DataGridTextColumn
-                    Width="2*"
-                         Binding="{Binding RunningActivity}"
-                    Header="Running Activity" />
+                            Width="2*"
+                            Binding="{Binding RunningActivity}"
+                            Header="Running Activity" />
                         <controls:DataGridTextColumn
-                    Width="*"
-                         Binding="{Binding Started}"
-                    Header="Started" />
+                            Width="*"
+                            Binding="{Binding Started}"
+                            Header="Started" />
                         <controls:DataGridTextColumn
-                    Width="*"
-                         Binding="{Binding Ended}"
-                    Header="Ended" />
+                            Width="*"
+                            Binding="{Binding Ended}"
+                            Header="Ended" />
                         <controls:DataGridTextColumn
-                    Width="*"
-                         Binding="{Binding Type}"
-                    Header="Type" />
+                            Width="*"
+                            Binding="{Binding Type}"
+                            Header="Type" />
                         <controls:DataGridTextColumn
-                    Width="*"
-                         Binding="{Binding Id}"
-                    Header="ID" />
+                            Width="*"
+                            Binding="{Binding Id}"
+                            Header="ID" />
                         <controls:DataGridTextColumn
-                    Width="2*"
-                         Binding="{Binding Description}"
-                    Header="Description" />
+                            Width="2*"
+                            Binding="{Binding Description}"
+                            Header="Description" />
                         <controls:DataGridTextColumn
-                    Width="*"
-                         Binding="{Binding FailedTask}"
-                    Header="Failed Task" />
+                            Width="*"
+                            Binding="{Binding FailedTask}"
+                            Header="Failed Task" />
                         <controls:DataGridTextColumn
-                    Width="3*"
-                         Binding="{Binding Status}"
-                    Header="Status" Foreground="{StaticResource TitleBarBackground}" />
+                            Width="3*"
+                            Binding="{Binding Status}"
+                            Foreground="{StaticResource TitleBarBackground}"
+                            Header="Status" />
                     </controls:DataGrid.Columns>
-                </controls:DataGrid>
+                </common:CustomDataGrid>
 
                 <common:PaginationControl
                     x:Name="PagingControl"
@@ -219,15 +237,17 @@
                 </Grid>
             </Grid>
 
-            <Grid Margin="30,15,30,0"
-        CornerRadius="5" Grid.Row="1">
+            <Grid
+                Grid.Row="1"
+                Margin="30,15,30,0"
+                CornerRadius="5">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="auto" />
-                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*" />
                     <RowDefinition Height="auto" />
                 </Grid.RowDefinitions>
 
-                <Grid Background="White" Height="60">
+                <Grid Height="60" Background="White">
                     <TextBlock
                         Margin="15,0,0,0"
                         VerticalAlignment="Center"
@@ -235,7 +255,7 @@
                         Text="Task" />
                 </Grid>
 
-                <controls:DataGrid
+                <common:CustomDataGrid
                     Grid.Row="1"
                     AutoGenerateColumns="False"
                     Background="White"
@@ -252,35 +272,35 @@
 
                     <controls:DataGrid.Columns>
                         <controls:DataGridTextColumn
-                    Width="*"
-                        Binding="{Binding Groups}"
-                    Header="Groups" />
+                            Width="*"
+                            Binding="{Binding Groups}"
+                            Header="Groups" />
                         <controls:DataGridTextColumn
-                    Width="*"
-                         Binding="{Binding Started}"
-                    Header="Started" />
+                            Width="*"
+                            Binding="{Binding Started}"
+                            Header="Started" />
                         <controls:DataGridTextColumn
-                    Width="*"
-                         Binding="{Binding Enabled}"
-                    Header="Enabled" />
+                            Width="*"
+                            Binding="{Binding Enabled}"
+                            Header="Enabled" />
                         <controls:DataGridTextColumn
-                    Width="*"
-                         Binding="{Binding TaskId}"
-                    Header="TaskId" />
+                            Width="*"
+                            Binding="{Binding TaskId}"
+                            Header="TaskId" />
                         <controls:DataGridTextColumn
-                    Width="2*"
-                         Binding="{Binding TaskDescription}"
-                    Header="TaskDescription" />
+                            Width="2*"
+                            Binding="{Binding TaskDescription}"
+                            Header="TaskDescription" />
                         <controls:DataGridTextColumn
-                    Width="3*"
-                         Binding="{Binding Status}"
-                    Header="Status" />
+                            Width="3*"
+                            Binding="{Binding Status}"
+                            Header="Status" />
                         <controls:DataGridTextColumn
-                    Width="*"
-                         Binding="{Binding TaskModule}"
-                    Header="TaskModule" />
+                            Width="*"
+                            Binding="{Binding TaskModule}"
+                            Header="TaskModule" />
                     </controls:DataGrid.Columns>
-                </controls:DataGrid>
+                </common:CustomDataGrid>
 
                 <!--  Pagination Control for NG data  -->
 
