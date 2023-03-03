@@ -47,7 +47,11 @@
             <DropDownButton
                 Name="MyComboBox"
                 Grid.Column="2"
-                Width="100"
+                CornerRadius="12"
+                Height="30"
+                Width="150"
+                Background="{ThemeResource IssueSubViewButtonBackground}"
+                FontFamily="{ThemeResource Source_Sans_Pro_Regular}"
                 Margin="15"
                 Content="Set Up"
                 Foreground="White"

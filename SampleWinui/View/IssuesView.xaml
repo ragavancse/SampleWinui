@@ -102,15 +102,23 @@
                     VerticalAlignment="Center"
                     Style="{StaticResource HeaderFontStyle}"
                     Text="List of Jobs" />
-                <ComboBox
-                    Margin="0,0,20,0"
-                    HorizontalAlignment="Right"
-                    VerticalAlignment="Center"
-                    SelectedIndex="0"
-                    Style="{StaticResource ComboBoxStyle}">
-                    <ComboBoxItem Content="Filter" />
-                </ComboBox>
-
+                <DropDownButton
+                Name="MyComboBox"
+                Grid.Column="2"
+                CornerRadius="12"
+                Background="{ThemeResource IssueSubViewButtonBackground}"
+                Height="30"
+                Width="150"
+                Margin="15"
+                Content="Filter"
+                Foreground="White"
+               Style="{StaticResource DropDownButtonStyle}">
+                    <DropDownButton.Flyout>
+                        <MenuFlyout Placement="Bottom">
+                            <MenuFlyoutItem Text="None" />
+                        </MenuFlyout>
+                    </DropDownButton.Flyout>
+                </DropDownButton>
             </Grid>
 
 
