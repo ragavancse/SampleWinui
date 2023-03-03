@@ -50,6 +50,7 @@
             <SolidColorBrush x:Key="PivotItemBackGround" Color="#D9E4E8" />
             <SolidColorBrush x:Key="DropDownButtonForegroundPressed" Color="White" />
             <SolidColorBrush x:Key="DataGridColumnHeaderBackgroundColor" Color="#D9E4E8" />
+            <SolidColorBrush x:Key="PivotHeaderItemSelectedPipeFill" Color="#3871CA" />
 
             <Style TargetType="TextBlock">
                 <Setter Property="FontFamily" Value="{ThemeResource Source_Sans_Pro_Regular}" />
