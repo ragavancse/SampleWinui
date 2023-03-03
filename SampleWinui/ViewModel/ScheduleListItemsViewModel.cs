@@ -1,4 +1,5 @@
-﻿using SampleWinui.Common;
+﻿using Microsoft.UI.Xaml.Controls;
+using SampleWinui.Common;
 using SampleWinui.Helpers;
 using SampleWinui.Model;
 using System;
@@ -73,11 +74,13 @@ namespace SampleWinui.ViewModel
             WeekCollection.Add(new ScheduleListItemsModel() { Day = "Friday" });
             WeekCollection.Add(new ScheduleListItemsModel() { Day = "Saturday" });
             WeekCollection.Add(new ScheduleListItemsModel() { Day = "Sunday" });
-
+           
             Filter = new RelayCommand(obj => OnFilterDays(obj));
             TimeFilter = new RelayCommand(obj => OnTimeFilter(obj));
             OnFilter(DefaultFilter);
         }
+
+
 
         private void OnTimeFilter(object obj)
         {

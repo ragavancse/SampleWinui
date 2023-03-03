@@ -25,8 +25,10 @@ namespace SampleWinui.View
         public ScheduleListItems()
         {
             this.InitializeComponent();
+           
             this.DataContext = new ScheduleListItemsViewModel();
-    }
+            
+        }
 
         private void IncrementButton_Click(object sender, RoutedEventArgs e)
         {
