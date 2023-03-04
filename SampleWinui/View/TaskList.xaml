@@ -23,7 +23,7 @@
             BorderBrush="#bdbdbd"
             BorderThickness="0,0,0,1">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="auto" />
                 <ColumnDefinition Width="auto" />
                 <ColumnDefinition Width="auto" />
@@ -47,13 +47,13 @@
             <DropDownButton
                 Name="MyComboBox"
                 Grid.Column="2"
-                CornerRadius="12"
-                Height="30"
                 Width="150"
-                Background="{ThemeResource IssueSubViewButtonBackground}"
-                FontFamily="{ThemeResource Source_Sans_Pro_Regular}"
+                Height="30"
                 Margin="15"
+                Background="{ThemeResource IssueSubViewButtonBackground}"
                 Content="Set Up"
+                CornerRadius="12"
+                FontFamily="{ThemeResource Source_Sans_Pro_Regular}"
                 Foreground="White"
                 Style="{StaticResource DropDownButtonStyle}">
                 <DropDownButton.Flyout>
@@ -69,6 +69,7 @@
                 Width="150"
                 Height="30"
                 Margin="15"
+                HorizontalAlignment="Right"
                 HorizontalContentAlignment="Center"
                 Background="{StaticResource TagListViewBlueButtonBackGround}"
                 Content="Start Job"
