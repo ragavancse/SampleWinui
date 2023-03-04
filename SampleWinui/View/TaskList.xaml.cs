@@ -30,7 +30,7 @@ namespace SampleWinui.View
         private void ScheduleButton_Click(object sender, RoutedEventArgs e)
         {
             var window = new ChildWindow();
-            window.SetSize(900, 700);
+            window.SetSize(850, 550);
             window.SetContent(new ScheduleListItems());
             window.Activate();
         }
