@@ -36,7 +36,6 @@
     <None Remove="Image\Icon_Instances.svg" />
     <None Remove="Image\Icon_Minimize.svg" />
     <None Remove="Image\Icon_PMMS.svg" />
-    <None Remove="Image\Icon_Refresh.svg" />
     <None Remove="Image\Icon_RestoreDown.svg" />
     <None Remove="Image\Icon_service.svg" />
     <None Remove="Image\Icon_Show Schedule.svg" />
@@ -58,12 +57,12 @@
     <None Remove="Image\__MACOSX\._Icon_Instances.svg" />
     <None Remove="Image\__MACOSX\._Icon_Minimize.svg" />
     <None Remove="Image\__MACOSX\._Icon_PMMS.svg" />
-    <None Remove="Image\__MACOSX\._Icon_Refresh.svg" />
     <None Remove="Image\__MACOSX\._Icon_RestoreDown.svg" />
     <None Remove="Image\__MACOSX\._Icon_service.svg" />
     <None Remove="Image\__MACOSX\._Icon_Show Schedule.svg" />
     <None Remove="Image\__MACOSX\._Icon_Succeeded_S.svg" />
     <None Remove="Image\__MACOSX\._Path 1854.svg" />
+    <None Remove="Image\__MACOSX\Icon_Refresh.svg" />
     <None Remove="Theme\DataGridStyle.xaml" />
     <None Remove="View\IssuesView.xaml" />
     <None Remove="View\ApplicationInstances.xaml" />
@@ -178,9 +177,6 @@
     <Content Include="Image\Icon_PMMS.svg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Icon_Refresh.svg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="Image\Icon_RestoreDown.svg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -223,9 +219,6 @@
     <Content Include="Image\__MACOSX\._Icon_PMMS.svg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\__MACOSX\._Icon_Refresh.svg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="Image\__MACOSX\._Icon_RestoreDown.svg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -239,6 +232,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Image\__MACOSX\._Path 1854.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\Icon_Refresh.svg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

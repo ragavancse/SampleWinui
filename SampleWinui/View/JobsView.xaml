@@ -22,7 +22,7 @@
         <Grid Grid.Column="0" Background="#FFFFFF">
             <Grid.RowDefinitions>
                 <RowDefinition Height="50" />
-                <RowDefinition Height="*" />
+                <RowDefinition Height="auto" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
             <TextBlock
@@ -117,7 +117,7 @@
             </NavigationView>
             <Grid
                 Grid.Row="2"
-                Margin="15"
+                Margin="15,0,15,15"
                 VerticalAlignment="Top">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="40" />
