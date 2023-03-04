@@ -24,7 +24,7 @@
             FontSize="17"
             Style="{StaticResource SubHeaderFontStyle}" />
 
-        <Grid Grid.Row="1" Margin="30,25,30,30">
+        <Grid Grid.Row="1" Margin="30,25,30,30" BorderThickness="1" BorderBrush="#bdbdbd">
             <commoncontrols:CustomDataGrid
                 x:Name="gridView"
                 AutoGenerateColumns="False"
