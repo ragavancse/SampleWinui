@@ -13,7 +13,7 @@
             <RowDefinition />
         </Grid.RowDefinitions>
 
-        <Grid x:Name="AppTitleBar" Background="{StaticResource TitleBarBackground}">
+        <Grid x:Name="AppTitleBar" Background="{StaticResource ChildTitleBarBackground}">
             <TextBlock
                 x:Name="AppTitleTextBlock"
                 Margin="0,0,0,0"
