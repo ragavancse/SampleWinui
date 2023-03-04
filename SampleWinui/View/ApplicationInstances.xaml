@@ -8,7 +8,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:x1="using:System"
     mc:Ignorable="d">
-    <Grid Background="White">
+    <Grid Margin="25" Background="White">
 
         <Grid.RowDefinitions>
             <RowDefinition />
@@ -100,7 +100,7 @@
                 Margin="10,0,10,15"
                 HorizontalAlignment="Right"
                 HorizontalContentAlignment="Center"
-                Background="{StaticResource  FilesViewChildrenWindowBlueBackground}"
+                Background="{StaticResource FilesViewChildrenWindowBlueBackground}"
                 Content="Save"
                 FontSize="10"
                 Foreground="#FFFFFF"
