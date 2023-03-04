@@ -103,16 +103,16 @@
                     Style="{StaticResource HeaderFontStyle}"
                     Text="List of Jobs" />
                 <DropDownButton
-                Name="MyComboBox"
-                Grid.Column="2"
-                CornerRadius="12"
-                Background="{ThemeResource IssueSubViewButtonBackground}"
-                Height="30"
-                Width="150"
-                Margin="15"
-                Content="Filter"
-                Foreground="White"
-               Style="{StaticResource DropDownButtonStyle}">
+                    Name="MyComboBox"
+                    Grid.Column="2"
+                    Width="150"
+                    Height="30"
+                    Margin="15"
+                    Background="{ThemeResource IssueSubViewButtonBackground}"
+                    Content="Filter"
+                    CornerRadius="12"
+                    Foreground="White"
+                    Style="{StaticResource DropDownButtonStyle}">
                     <DropDownButton.Flyout>
                         <MenuFlyout Placement="Bottom">
                             <MenuFlyoutItem Text="None" />
@@ -122,68 +122,74 @@
             </Grid>
 
 
-            <common:CustomDataGrid
-                x:Name="gridView"
-                Grid.Row="1"
-                AutoGenerateColumns="False"
-                Background="White"
-                Foreground="Black"
-                GridLinesVisibility="All"
-                HorizontalGridLinesBrush="#bdbdbd"
-                ItemsSource="{Binding ElementName=PagingControl, Path=FilteredSource}"
-                VerticalGridLinesBrush="#bdbdbd">
-                <controls:DataGrid.CellStyle>
-                    <Style TargetType="controls:DataGridCell">
-                        <Setter Property="Height" Value="50" />
-                    </Style>
-                </controls:DataGrid.CellStyle>
+            <Grid Grid.Row="1" Background="White">
 
-                <controls:DataGrid.Columns>
-                    <controls:DataGridTemplateColumn Width="*">
-                        <controls:DataGridTemplateColumn.CellTemplate>
-                            <DataTemplate>
-                                <Grid>
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="*" />
-                                        <ColumnDefinition Width="*" />
-                                        <ColumnDefinition Width="*" />
-                                    </Grid.ColumnDefinitions>
-                                    <CheckBox Grid.Column="1" IsChecked="{Binding IsSelected, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" />
-                                </Grid>
+                <common:CustomDataGrid
+                    x:Name="gridView"
+                    Grid.Row="1"
+                    Margin="0,0,20,0"
+                    AutoGenerateColumns="False"
+                    Background="White"
+                    BorderBrush="{ThemeResource PivotItemBackGround}"
+                    BorderThickness="1"
+                    Foreground="Black"
+                    GridLinesVisibility="All"
+                    HorizontalGridLinesBrush="{ThemeResource PivotItemBackGround}"
+                    ItemsSource="{Binding ElementName=PagingControl, Path=FilteredSource}"
+                    VerticalGridLinesBrush="{ThemeResource PivotItemBackGround}">
+                    <controls:DataGrid.CellStyle>
+                        <Style TargetType="controls:DataGridCell">
+                            <Setter Property="Height" Value="50" />
+                        </Style>
+                    </controls:DataGrid.CellStyle>
 
-                            </DataTemplate>
-                        </controls:DataGridTemplateColumn.CellTemplate>
-                    </controls:DataGridTemplateColumn>
-                    <controls:DataGridTextColumn
-                        Width="2*"
-                        Binding="{Binding JobName}"
-                        Header="Job Name" />
-                    <controls:DataGridTextColumn
-                        Width="2*"
-                        Binding="{Binding TaskName}"
-                        Header="Task Name" />
-                    <controls:DataGridTextColumn
-                        Width="2*"
-                        Binding="{Binding ErrorDate}"
-                        Header="Error Date" />
-                    <controls:DataGridTextColumn
-                        Width="4*"
-                        Binding="{Binding ErrorMessage}"
-                        Header="Error Message" />
-                    <controls:DataGridTextColumn
-                        Width="2*"
-                        Binding="{Binding Status}"
-                        Header="Status" />
-                    <controls:DataGridTextColumn
-                        Width="2*"
-                        Binding="{Binding WorkedOn}"
-                        Header="WorkedOn" />
-                    <controls:DataGridTextColumn
-                        Width="2*"
-                        Binding="{Binding WorkedBy}"
-                        Header="Worked By" />
-                </controls:DataGrid.Columns>
-            </common:CustomDataGrid>
+                    <controls:DataGrid.Columns>
+                        <controls:DataGridTemplateColumn Width="*">
+                            <controls:DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+                                        <CheckBox Grid.Column="1" IsChecked="{Binding IsSelected, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" />
+                                    </Grid>
+
+                                </DataTemplate>
+                            </controls:DataGridTemplateColumn.CellTemplate>
+                        </controls:DataGridTemplateColumn>
+                        <controls:DataGridTextColumn
+                            Width="2*"
+                            Binding="{Binding JobName}"
+                            Header="Job Name" />
+                        <controls:DataGridTextColumn
+                            Width="2*"
+                            Binding="{Binding TaskName}"
+                            Header="Task Name" />
+                        <controls:DataGridTextColumn
+                            Width="2*"
+                            Binding="{Binding ErrorDate}"
+                            Header="Error Date" />
+                        <controls:DataGridTextColumn
+                            Width="4*"
+                            Binding="{Binding ErrorMessage}"
+                            Header="Error Message" />
+                        <controls:DataGridTextColumn
+                            Width="2*"
+                            Binding="{Binding Status}"
+                            Header="Status" />
+                        <controls:DataGridTextColumn
+                            Width="2*"
+                            Binding="{Binding WorkedOn}"
+                            Header="WorkedOn" />
+                        <controls:DataGridTextColumn
+                            Width="2*"
+                            Binding="{Binding WorkedBy}"
+                            Header="Worked By" />
+                    </controls:DataGrid.Columns>
+                </common:CustomDataGrid>
+            </Grid>
 
             <!--  Pagination Control for NG data  -->
             <common:PaginationControl

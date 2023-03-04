@@ -94,45 +94,51 @@
         </Grid>
 
 
-        <common:CustomDataGrid
-            x:Name="gridView"
-            Grid.Row="1"
-            AutoGenerateColumns="False"
-            Background="White"
-            Foreground="Black"
-            GridLinesVisibility="All"
-            HorizontalGridLinesBrush="#bdbdbd"
-            ItemsSource="{Binding ElementName=PagingControl, Path=FilteredSource}"
-            VerticalGridLinesBrush="#bdbdbd">
-            <controls:DataGrid.CellStyle>
-                <Style TargetType="controls:DataGridCell">
-                    <Setter Property="Height" Value="50" />
-                </Style>
-            </controls:DataGrid.CellStyle>
+        <Grid Grid.Row="1" Background="White">
 
-            <controls:DataGrid.Columns>
-                <controls:DataGridTextColumn
-                    Width="*"
-                    Binding="{Binding JobType}"
-                    Header="Job Type" />
-                <controls:DataGridTextColumn
-                    Width="*"
-                    Binding="{Binding JobId}"
-                    Header="Job ID" />
-                <controls:DataGridTextColumn
-                    Width="3*"
-                    Binding="{Binding Descripton}"
-                    Header="Descripton" />
-                <controls:DataGridTextColumn
-                    Width="*"
-                    Binding="{Binding Status}"
-                    Header="Status" />
-                <controls:DataGridTextColumn
-                    Width="*"
-                    Binding="{Binding LastMessage}"
-                    Header="Last Message" />
-            </controls:DataGrid.Columns>
-        </common:CustomDataGrid>
+            <common:CustomDataGrid
+                x:Name="gridView"
+                Grid.Row="1"
+                Margin="0,0,20,0"
+                AutoGenerateColumns="False"
+                Background="White"
+                BorderBrush="{ThemeResource PivotItemBackGround}"
+                BorderThickness="1"
+                Foreground="Black"
+                GridLinesVisibility="All"
+                HorizontalGridLinesBrush="{ThemeResource PivotItemBackGround}"
+                ItemsSource="{Binding ElementName=PagingControl, Path=FilteredSource}"
+                VerticalGridLinesBrush="{ThemeResource PivotItemBackGround}">
+                <controls:DataGrid.CellStyle>
+                    <Style TargetType="controls:DataGridCell">
+                        <Setter Property="Height" Value="50" />
+                    </Style>
+                </controls:DataGrid.CellStyle>
+
+                <controls:DataGrid.Columns>
+                    <controls:DataGridTextColumn
+                        Width="*"
+                        Binding="{Binding JobType}"
+                        Header="Job Type" />
+                    <controls:DataGridTextColumn
+                        Width="*"
+                        Binding="{Binding JobId}"
+                        Header="Job ID" />
+                    <controls:DataGridTextColumn
+                        Width="3*"
+                        Binding="{Binding Descripton}"
+                        Header="Descripton" />
+                    <controls:DataGridTextColumn
+                        Width="*"
+                        Binding="{Binding Status}"
+                        Header="Status" />
+                    <controls:DataGridTextColumn
+                        Width="*"
+                        Binding="{Binding LastMessage}"
+                        Header="Last Message" />
+                </controls:DataGrid.Columns>
+            </common:CustomDataGrid>
+        </Grid>
 
         <!--  Pagination Control for NG data  -->
         <common:PaginationControl

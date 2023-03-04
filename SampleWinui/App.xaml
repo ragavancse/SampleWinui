@@ -45,7 +45,7 @@
             <SolidColorBrush x:Key="FilesViewChildrenWindowBlueBackground" Color="#25c1f3" />
             <SolidColorBrush x:Key="FilesViewChildrenWindowGreenBackground" Color="#6593a4" />
             <SolidColorBrush x:Key="FilesViewChildrenWindowGrayBackground" Color="#99afb8" />
-            <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="Red" />
+            <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#bdbdbd" />
             <SolidColorBrush x:Key="ButtonForegroundPressed" Color="White" />
             <SolidColorBrush x:Key="PivotItemBackGround" Color="#D9E4E8" />
             <SolidColorBrush x:Key="DropDownButtonForegroundPressed" Color="White" />

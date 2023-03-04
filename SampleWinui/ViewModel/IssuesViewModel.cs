@@ -1,4 +1,5 @@
 ﻿using SampleWinui.Common;
+using SampleWinui.Helpers;
 using SampleWinui.Model;
 using System;
 using System.Collections.Generic;
@@ -12,6 +13,9 @@ namespace SampleWinui.ViewModel
 {
     public class IssuesViewModel : ViewModelBase
     {
+        public RelayCommand SelectAllCommand { get; set; }
+        public RelayCommand DisSelectAll { get; set; }
+
         private ObservableCollection<Issue> issues;
         public ObservableCollection<Issue> Issues
         {
@@ -25,6 +29,8 @@ namespace SampleWinui.ViewModel
 
         public IssuesViewModel()
         {
+            SelectAllCommand = new RelayCommand(obj => OnClick(obj));
+            DisSelectAll = new RelayCommand(obj => OnClickDisselect(obj));
             Issues = new ObservableCollection<Issue>()
             {
                  new Issue{JobName="Job Name",TaskName="Task Name",ErrorDate="1/1/2022",ErrorMessage="Error Message",Status="Completed",WorkedOn="Worked On",WorkedBy="John Doe"},
@@ -84,7 +90,28 @@ namespace SampleWinui.ViewModel
             };
         }
 
+        private void OnClick(object obj)
+        {
+            foreach (var item in Issues)
+            {
+                item.IsSelected= true;
+            }
+
+
+        }
+
+        private void OnClickDisselect(object obj)
+        {
+            foreach (var item in Issues)
+            {
+                item.IsSelected = false;
+            }
+
+        }
+
+
+
         public List<Issue> SelectedItemsList => Issues.Where(item => item.IsSelected).ToList();
-  
+
     }
 }

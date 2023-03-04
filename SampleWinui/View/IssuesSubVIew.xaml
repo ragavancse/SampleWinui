@@ -30,14 +30,15 @@
             BorderBrush="#bdbdbd"
             BorderThickness="1">
             <commoncontrols:CustomDataGrid
-                x:Name="gridView"
+                x:Name="gridView" 
+                Margin="30,25,30,30"
                 AutoGenerateColumns="False"
-                Background="White"
+                Background="White" BorderThickness="1" BorderBrush="{ThemeResource PivotItemBackGround}"
                 Foreground="Black"
                 GridLinesVisibility="All"
-                HorizontalGridLinesBrush="#bdbdbd"
+                HorizontalGridLinesBrush="{ThemeResource PivotItemBackGround}"
                 ItemsSource="{Binding SelectedItemsList}"
-                VerticalGridLinesBrush="#bdbdbd">
+                VerticalGridLinesBrush="{ThemeResource PivotItemBackGround}">
                 <controls:DataGrid.CellStyle>
                     <Style TargetType="controls:DataGridCell">
                         <Setter Property="Height" Value="50" />

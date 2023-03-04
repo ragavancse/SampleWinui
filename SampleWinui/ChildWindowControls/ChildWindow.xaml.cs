@@ -38,6 +38,8 @@ namespace SampleWinui.ChildWindowControls
             content.Content = userControl;
 
             (GetAppWindow().Presenter as OverlappedPresenter).IsResizable = false;
+            (GetAppWindow().Presenter as OverlappedPresenter).IsMaximizable = false;
+
         }
 
         public void SetTitle(string title)

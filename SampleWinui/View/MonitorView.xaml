@@ -132,63 +132,67 @@
                         Text="List of Jobs" />
                 </Grid>
 
+                <Grid Grid.Row="1" Background="White">
+                    <common:CustomDataGrid
+                        x:Name="gridView"
+                        Grid.Row="1"
+                        Margin="0,0,20,0"
+                        AutoGenerateColumns="False"
+                        Background="White"
+                        BorderBrush="{ThemeResource PivotItemBackGround}"
+                        BorderThickness="1"
+                        Foreground="Black"
+                        GridLinesVisibility="All"
+                        HorizontalGridLinesBrush="{ThemeResource PivotItemBackGround}"
+                        ItemsSource="{Binding ElementName=PagingControl, Path=FilteredSource}"
+                        VerticalGridLinesBrush="{ThemeResource PivotItemBackGround}">
+                        <controls:DataGrid.CellStyle>
+                            <Style TargetType="controls:DataGridCell">
+                                <Setter Property="Height" Value="50" />
+                            </Style>
+                        </controls:DataGrid.CellStyle>
 
-                <common:CustomDataGrid
-                    x:Name="gridView"
-                    Grid.Row="1"
-                    AutoGenerateColumns="False"
-                    Background="White"
-                    Foreground="Black"
-                    GridLinesVisibility="All"
-                    HorizontalGridLinesBrush="#bdbdbd"
-                    ItemsSource="{Binding ElementName=PagingControl, Path=FilteredSource}"
-                    VerticalGridLinesBrush="#bdbdbd">
-                    <controls:DataGrid.CellStyle>
-                        <Style TargetType="controls:DataGridCell">
-                            <Setter Property="Height" Value="50" />
-                        </Style>
-                    </controls:DataGrid.CellStyle>
-
-                    <controls:DataGrid.Columns>
-                        <controls:DataGridTextColumn
-                            Width="2*"
-                            Binding="{Binding RunningProcessId}"
-                            Header="Running Process ID" />
-                        <controls:DataGridTextColumn
-                            Width="2*"
-                            Binding="{Binding RunningActivity}"
-                            Header="Running Activity" />
-                        <controls:DataGridTextColumn
-                            Width="*"
-                            Binding="{Binding Started}"
-                            Header="Started" />
-                        <controls:DataGridTextColumn
-                            Width="*"
-                            Binding="{Binding Ended}"
-                            Header="Ended" />
-                        <controls:DataGridTextColumn
-                            Width="*"
-                            Binding="{Binding Type}"
-                            Header="Type" />
-                        <controls:DataGridTextColumn
-                            Width="*"
-                            Binding="{Binding Id}"
-                            Header="ID" />
-                        <controls:DataGridTextColumn
-                            Width="2*"
-                            Binding="{Binding Description}"
-                            Header="Description" />
-                        <controls:DataGridTextColumn
-                            Width="*"
-                            Binding="{Binding FailedTask}"
-                            Header="Failed Task" />
-                        <controls:DataGridTextColumn
-                            Width="3*"
-                            Binding="{Binding Status}"
-                            Foreground="{StaticResource TitleBarBackground}"
-                            Header="Status" />
-                    </controls:DataGrid.Columns>
-                </common:CustomDataGrid>
+                        <controls:DataGrid.Columns>
+                            <controls:DataGridTextColumn
+                                Width="2*"
+                                Binding="{Binding RunningProcessId}"
+                                Header="Running Process ID" />
+                            <controls:DataGridTextColumn
+                                Width="2*"
+                                Binding="{Binding RunningActivity}"
+                                Header="Running Activity" />
+                            <controls:DataGridTextColumn
+                                Width="*"
+                                Binding="{Binding Started}"
+                                Header="Started" />
+                            <controls:DataGridTextColumn
+                                Width="*"
+                                Binding="{Binding Ended}"
+                                Header="Ended" />
+                            <controls:DataGridTextColumn
+                                Width="*"
+                                Binding="{Binding Type}"
+                                Header="Type" />
+                            <controls:DataGridTextColumn
+                                Width="*"
+                                Binding="{Binding Id}"
+                                Header="ID" />
+                            <controls:DataGridTextColumn
+                                Width="2*"
+                                Binding="{Binding Description}"
+                                Header="Description" />
+                            <controls:DataGridTextColumn
+                                Width="*"
+                                Binding="{Binding FailedTask}"
+                                Header="Failed Task" />
+                            <controls:DataGridTextColumn
+                                Width="3*"
+                                Binding="{Binding Status}"
+                                Foreground="{StaticResource TitleBarBackground}"
+                                Header="Status" />
+                        </controls:DataGrid.Columns>
+                    </common:CustomDataGrid>
+                </Grid>
 
                 <common:PaginationControl
                     x:Name="PagingControl"
@@ -255,52 +259,58 @@
                         Text="Task" />
                 </Grid>
 
-                <common:CustomDataGrid
-                    Grid.Row="1"
-                    AutoGenerateColumns="False"
-                    Background="White"
-                    Foreground="Black"
-                    GridLinesVisibility="All"
-                    HorizontalGridLinesBrush="#bdbdbd"
-                    ItemsSource="{Binding ElementName=PagingControl1, Path=FilteredSource}"
-                    VerticalGridLinesBrush="#bdbdbd">
-                    <controls:DataGrid.CellStyle>
-                        <Style TargetType="controls:DataGridCell">
-                            <Setter Property="Height" Value="50" />
-                        </Style>
-                    </controls:DataGrid.CellStyle>
+                <Grid Grid.Row="1" Background="White">
 
-                    <controls:DataGrid.Columns>
-                        <controls:DataGridTextColumn
-                            Width="*"
-                            Binding="{Binding Groups}"
-                            Header="Groups" />
-                        <controls:DataGridTextColumn
-                            Width="*"
-                            Binding="{Binding Started}"
-                            Header="Started" />
-                        <controls:DataGridTextColumn
-                            Width="*"
-                            Binding="{Binding Enabled}"
-                            Header="Enabled" />
-                        <controls:DataGridTextColumn
-                            Width="*"
-                            Binding="{Binding TaskId}"
-                            Header="TaskId" />
-                        <controls:DataGridTextColumn
-                            Width="2*"
-                            Binding="{Binding TaskDescription}"
-                            Header="TaskDescription" />
-                        <controls:DataGridTextColumn
-                            Width="3*"
-                            Binding="{Binding Status}"
-                            Header="Status" />
-                        <controls:DataGridTextColumn
-                            Width="*"
-                            Binding="{Binding TaskModule}"
-                            Header="TaskModule" />
-                    </controls:DataGrid.Columns>
-                </common:CustomDataGrid>
+                    <common:CustomDataGrid
+                        Grid.Row="1"
+                        Margin="0,0,20,0"
+                        AutoGenerateColumns="False"
+                        Background="White"
+                        BorderBrush="{ThemeResource PivotItemBackGround}"
+                        BorderThickness="1"
+                        Foreground="Black"
+                        GridLinesVisibility="All"
+                        HorizontalGridLinesBrush="{ThemeResource PivotItemBackGround}"
+                        ItemsSource="{Binding ElementName=PagingControl1, Path=FilteredSource}"
+                        VerticalGridLinesBrush="{ThemeResource PivotItemBackGround}">
+                        <controls:DataGrid.CellStyle>
+                            <Style TargetType="controls:DataGridCell">
+                                <Setter Property="Height" Value="50" />
+                            </Style>
+                        </controls:DataGrid.CellStyle>
+
+                        <controls:DataGrid.Columns>
+                            <controls:DataGridTextColumn
+                                Width="*"
+                                Binding="{Binding Groups}"
+                                Header="Groups" />
+                            <controls:DataGridTextColumn
+                                Width="*"
+                                Binding="{Binding Started}"
+                                Header="Started" />
+                            <controls:DataGridTextColumn
+                                Width="*"
+                                Binding="{Binding Enabled}"
+                                Header="Enabled" />
+                            <controls:DataGridTextColumn
+                                Width="*"
+                                Binding="{Binding TaskId}"
+                                Header="TaskId" />
+                            <controls:DataGridTextColumn
+                                Width="2*"
+                                Binding="{Binding TaskDescription}"
+                                Header="TaskDescription" />
+                            <controls:DataGridTextColumn
+                                Width="3*"
+                                Binding="{Binding Status}"
+                                Header="Status" />
+                            <controls:DataGridTextColumn
+                                Width="*"
+                                Binding="{Binding TaskModule}"
+                                Header="TaskModule" />
+                        </controls:DataGrid.Columns>
+                    </common:CustomDataGrid>
+                </Grid>
 
                 <!--  Pagination Control for NG data  -->
 
