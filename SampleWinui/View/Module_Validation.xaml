@@ -14,13 +14,13 @@
         <viewmodel:ModuleValidationViewModel />
     </UserControl.DataContext>
     <Grid>
-        <TreeView ItemsSource="{Binding Items}">
+        <TreeView Width="480" ItemsSource="{Binding Items}">
             <TreeView.ItemTemplate>
                 <DataTemplate>
                     <TreeViewItem ItemsSource="{Binding Children}">
 
 
-                        <TextBlock  Text="{Binding Name}" Style="{StaticResource MainFontStyle}" />
+                        <TextBlock Style="{StaticResource MainFontStyle}" Text="{Binding Name}" />
 
                     </TreeViewItem>
                 </DataTemplate>

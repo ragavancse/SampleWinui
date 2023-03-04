@@ -59,7 +59,7 @@ namespace SampleWinui.View
                 }
                 else if (item.HeaderText == "Validate Modules")
                 {
-                    window.SetSize(350, 800);
+                    window.SetSize(500, 700);
                     window.SetContent(new Module_Validation());
                     window.SetTitle("Module Validation");
                 }
