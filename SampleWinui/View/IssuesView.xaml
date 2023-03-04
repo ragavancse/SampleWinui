@@ -7,7 +7,8 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="using:SampleWinui.View"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:viewmodel="using:SampleWinui.ViewModel"
+    xmlns:viewmodel="using:SampleWinui.ViewModel" 
+    d:DataContext="{d:DesignInstance Type=viewmodel:IssuesViewModel}"
     mc:Ignorable="d">
 
     <Grid>
@@ -214,6 +215,7 @@
                     Content="Select All"
                     FontSize="10"
                     Foreground="#FFFFFF"
+                    Command="{Binding SelectAllCommand}"
                     Style="{StaticResource ButtonStyle}" />
                 <Button
                     Grid.Column="1"
@@ -226,6 +228,7 @@
                     Content="DisSelect All"
                     FontSize="10"
                     Foreground="#FFFFFF"
+                    Command="{Binding DisSelectAll}"
                     Style="{StaticResource ButtonStyle}" />
                 <Button
                     Grid.Column="2"
