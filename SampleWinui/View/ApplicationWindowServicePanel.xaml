@@ -28,12 +28,12 @@
             <TextBlock
                 Grid.Row="0"
                 Grid.Column="0"
-                Margin="20,10,10,10" 
+                Margin="20,10,10,10"
                 Text="Service installed correctly for windows : Yes" />
             <Button
                 Grid.Row="0"
                 Grid.Column="1"
-               Width="150"
+                Width="150"
                 Height="30"
                 Margin="100,10,10,10"
                 Background="{StaticResource FilesViewChildrenWindowGrayBackground}"
@@ -42,13 +42,13 @@
                 Style="{StaticResource ButtonStyle}" />
             <TextBlock
                 Grid.Row="1"
-                Grid.Column="0" 
+                Grid.Column="0"
                 Margin="20,10,10,10"
                 Text="Service Status : Running" />
             <Button
                 Grid.Row="1"
                 Grid.Column="1"
-               Width="150"
+                Width="150"
                 Height="30"
                 Margin="100,10,10,10"
                 Background="{StaticResource FilesViewChildrenWindowGrayBackground}"
@@ -57,8 +57,8 @@
                 Style="{StaticResource ButtonStyle}" />
             <Border
                 Grid.Row="2"
-                Width="990"
                 Grid.ColumnSpan="2"
+                Width="990"
                 Margin="20,0,10,0"
                 VerticalAlignment="Bottom"
                 BorderBrush="#bdbdbd"
@@ -111,8 +111,8 @@
             </Grid>
             <Border
                 Grid.Row="2"
-                Margin="20,0,10,0"
                 Width="auto"
+                Margin="20,0,10,0"
                 VerticalAlignment="Bottom"
                 BorderBrush="#bdbdbd"
                 BorderThickness="1" />
@@ -132,23 +132,29 @@
                 Text="Log" />
             <Grid
                 Grid.Row="1"
-                Margin="20,10,10,0"
                 Width="990"
+                Margin="20,10,10,0"
                 BorderBrush="#bdbdbd"
-                BorderThickness="1"                
+                BorderThickness="1"
                 CornerRadius="4">
-                
-                <ListView Width="auto" x:Name="LogCollection"  >
+
+                <ListView x:Name="LogCollection" Width="auto">
+                    <ListView.Resources>
+                        <Style TargetType="ListViewItem">
+                            <Setter Property="Height" Value="23" />
+                            <Setter Property="MinHeight" Value="20" />
+                        </Style>
+                    </ListView.Resources>
                     <ListView.ItemTemplate>
                         <DataTemplate>
-                            <TextBlock Text="{Binding }" FontFamily="{ThemeResource Source_Sans_Pro_Regular}"/>
+                            <TextBlock FontFamily="{ThemeResource Source_Sans_Pro_Regular}" Text="{Binding}" />
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
             </Grid>
             <Button
                 Grid.Row="2"
-              Width="150"
+                Width="150"
                 Height="30"
                 Margin="20,10,10,10"
                 HorizontalAlignment="Right"
@@ -167,7 +173,7 @@
             </Grid.ColumnDefinitions>
             <Button
                 Grid.Column="0"
-             Width="150"
+                Width="150"
                 Height="30"
                 Margin="20,10,10,10"
                 Background="{StaticResource FilesViewChildrenWindowBlueBackground}"

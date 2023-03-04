@@ -20,9 +20,7 @@
             <Pivot.HeaderTemplate>
                 <DataTemplate>
                     <Border>
-                        <TextBlock
-                            Style="{StaticResource HeaderFontStyle}"                            
-                            Text="{Binding}"  />
+                        <TextBlock Style="{StaticResource HeaderFontStyle}" Text="{Binding}" />
                     </Border>
                 </DataTemplate>
             </Pivot.HeaderTemplate>
@@ -32,12 +30,20 @@
 
         <Grid
             Grid.Row="1"
+            Margin="0,0,0,20"
             BorderBrush="#bdbdbd"
-            BorderThickness="0,1,0,0" Margin="0,0,0,20">
-            <ListView x:Name="LogViewCollection"  >
+            BorderThickness="0,1,0,0">
+            <ListView x:Name="LogViewCollection">
+                <ListView.Resources>
+                    <Style TargetType="ListViewItem">
+                        <Setter Property="Height" Value="25" />
+                        <Setter Property="MinHeight" Value="20" />
+                    </Style>
+                </ListView.Resources>
+
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <TextBlock Text="{Binding }" FontFamily="{ThemeResource Source_Sans_Pro_Regular}"/>
+                        <TextBlock FontFamily="{ThemeResource Source_Sans_Pro_Regular}" Text="{Binding}" />
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
