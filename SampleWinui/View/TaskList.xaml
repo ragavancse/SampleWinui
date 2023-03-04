@@ -9,7 +9,7 @@
     mc:Ignorable="d">
 
     <Grid
-        Margin="15"
+        Margin="30,5,20,30"
         Background="#FFFF"
         CornerRadius="6">
         <Grid.RowDefinitions>
