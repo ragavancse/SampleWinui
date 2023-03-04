@@ -9,7 +9,7 @@
     mc:Ignorable="d">
 
     <Grid
-        Margin="15"
+        Margin="30,5,20,30"
         Background="#FFFF"
         CornerRadius="6">
         <Grid.RowDefinitions>
@@ -47,13 +47,13 @@
             <DropDownButton
                 Name="MyComboBox"
                 Grid.Column="2"
-                CornerRadius="12"
-                Height="30"
                 Width="150"
-                Background="{ThemeResource IssueSubViewButtonBackground}"
-                FontFamily="{ThemeResource Source_Sans_Pro_Regular}"
+                Height="30"
                 Margin="15"
+                Background="{ThemeResource IssueSubViewButtonBackground}"
                 Content="Set Up"
+                CornerRadius="12"
+                FontFamily="{ThemeResource Source_Sans_Pro_Regular}"
                 Foreground="White"
                 Style="{StaticResource DropDownButtonStyle}">
                 <DropDownButton.Flyout>

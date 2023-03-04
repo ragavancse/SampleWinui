@@ -10,7 +10,7 @@
     xmlns:viewmodel="using:SampleWinui.ViewModel"
     mc:Ignorable="d">
 
-    <Grid Margin="15" CornerRadius="6">
+    <Grid Margin="30" CornerRadius="6">
         <Grid.RowDefinitions>
             <RowDefinition Height="auto" />
             <RowDefinition Height="*" />
