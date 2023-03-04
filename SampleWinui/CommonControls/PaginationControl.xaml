@@ -8,7 +8,7 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
     mc:Ignorable="d">
 
-    <Grid Background="White" Height="60" VerticalAlignment="Center" >
+    <Grid Background="White" Height="60" VerticalAlignment="Center" Margin="1,0,0,0" CornerRadius="0,0,5,5" >
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="auto" />
             <ColumnDefinition Width="auto" />
