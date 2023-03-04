@@ -199,7 +199,8 @@
                 <Grid
                     Grid.Column="1"
                     Margin="0,8,0,0"
-                    HorizontalAlignment="Left">
+                    HorizontalAlignment="Left"
+                    Visibility="Collapsed">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto" />
                         <RowDefinition Height="Auto" />
@@ -296,7 +297,8 @@
                             <Grid
                                 Grid.Column="1"
                                 Margin="0,8,0,0"
-                                HorizontalAlignment="Left">
+                                HorizontalAlignment="Left"
+                                Visibility="Collapsed">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="Auto" />
                                     <RowDefinition Height="Auto" />
@@ -361,7 +363,8 @@
                             <Grid
                                 Grid.Column="1"
                                 Margin="0,8,0,0"
-                                HorizontalAlignment="Left">
+                                HorizontalAlignment="Left"
+                                Visibility="Collapsed">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="Auto" />
                                     <RowDefinition Height="Auto" />
