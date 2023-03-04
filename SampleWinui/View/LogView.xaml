@@ -66,6 +66,7 @@
                     Margin="10,10,10,15"
                     HorizontalContentAlignment="Center"
                     Background="{StaticResource LogViewGrayButtonBackGround}"
+                    Click="Button_Click_1"
                     Content="Clear"
                     FontSize="10"
                     Foreground="#FFFFFF"
