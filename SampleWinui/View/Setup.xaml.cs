@@ -41,7 +41,7 @@ namespace SampleWinui.View
                 var window = new ChildWindow();
                 if (item.HeaderText == "Instances")
                 {
-                    window.SetSize(1540, 520);
+                    window.SetSize(1850, 520);
                     window.SetContent(new ApplicationInstances());
                     window.SetTitle("Appliance Instances");
 

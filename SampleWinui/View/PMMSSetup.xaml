@@ -10,6 +10,7 @@
     <Grid Background="White">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
@@ -91,5 +92,34 @@
             </Border>
         </StackPanel>
 
+        <StackPanel
+            Grid.Row="2"
+            Margin="80,100,0,0"
+            HorizontalAlignment="Right"
+            Orientation="Horizontal">
+            <Button
+                Width="150"
+                Height="30"
+                Margin="10,0,10,15"
+                HorizontalAlignment="Right"
+                HorizontalContentAlignment="Center"
+                Background="{StaticResource FilesViewChildrenWindowBlueBackground}"
+                Content="Save"
+                FontSize="10"
+                Foreground="#FFFFFF"
+                Style="{StaticResource ButtonStyle}" />
+
+            <Button
+                Width="150"
+                Height="30"
+                Margin="10,0,10,15"
+                HorizontalAlignment="Right"
+                HorizontalContentAlignment="Center"
+                Background="{StaticResource FilesViewChildrenWindowBlueBackground}"
+                Content="Cancel"
+                FontSize="10"
+                Foreground="#FFFFFF"
+                Style="{StaticResource ButtonStyle}" />
+        </StackPanel>
     </Grid>
 </UserControl>

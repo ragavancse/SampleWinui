@@ -47,5 +47,20 @@ namespace SampleWinui.View
                 Grid.SetColumnSpan(logView, 1);
             }
         }
+
+        private void MainGrid_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void logView_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void logView_Unloaded(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

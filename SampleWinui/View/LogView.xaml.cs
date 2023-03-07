@@ -5,8 +5,10 @@ using Microsoft.UI.Xaml.Data;
 using Microsoft.UI.Xaml.Input;
 using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Navigation;
+using Microsoft.VisualBasic;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -20,10 +22,11 @@ namespace SampleWinui.View
 {
     public sealed partial class LogView : UserControl
     {
+        public List<string> strings;
         public LogView()
         {
             this.InitializeComponent();
-            List<string> strings = new List<string>() { new string("01/13/2015 01:59:01 678 PM: configuration saved by [DTear]"),
+            strings = new List<string>() { new string("01/13/2015 01:59:01 678 PM: configuration saved by [DTear]"),
                  new string("01/13/2015 01:59:01 678 PM: configuration saved by [DTear]"),
                 new string("01/13/2015 01:59:01 678 PM: configuration saved by [DTear]"),
                  new string("01/13/2015 01:59:01 678 PM: configuration saved by [DTear]"),

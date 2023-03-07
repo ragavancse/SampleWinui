@@ -13,6 +13,7 @@
         <Grid.RowDefinitions>
             <RowDefinition />
             <RowDefinition />
+
         </Grid.RowDefinitions>
 
         <controls:DataGrid
@@ -20,6 +21,8 @@
             Grid.Row="0"
             Height="200"
             AutoGenerateColumns="False"
+            BorderBrush="#bdbdbd"
+            BorderThickness="1"
             GridLinesVisibility="All"
             ItemsSource="{Binding Application}">
 
@@ -45,11 +48,15 @@
                 <controls:DataGridTextColumn
                     Width="150"
                     Binding="{Binding Privary}"
-                    Header="Privary" />
+                    Header="Primary" />
                 <controls:DataGridTextColumn
                     Width="570"
                     Binding="{Binding ExcutableName}"
-                    Header="Source ExcutableName" />
+                    Header="Service Executable Name" />
+                <controls:DataGridTextColumn
+                    Width="570"
+                    Binding="{Binding Service_Name}"
+                    Header="Service Name" />
             </controls:DataGrid.Columns>
         </controls:DataGrid>
 
@@ -92,19 +99,47 @@
 
 
             </StackPanel>
-
-            <Button
+            <StackPanel
                 Grid.Row="1"
-                Width="150"
-                Height="30"
-                Margin="10,0,10,15"
                 HorizontalAlignment="Right"
-                HorizontalContentAlignment="Center"
-                Background="{StaticResource FilesViewChildrenWindowBlueBackground}"
-                Content="Save"
-                FontSize="10"
-                Foreground="#FFFFFF"
-                Style="{StaticResource ButtonStyle}" />
+                Orientation="Horizontal">
+                <Button
+                    Width="150"
+                    Height="30"
+                    Margin="10,0,10,15"
+                    HorizontalAlignment="Right"
+                    HorizontalContentAlignment="Center"
+                    Background="{StaticResource FilesViewChildrenWindowBlueBackground}"
+                    Content="Save"
+                    FontSize="10"
+                    Foreground="#FFFFFF"
+                    Style="{StaticResource ButtonStyle}" />
+
+                <Button
+                    Width="150"
+                    Height="30"
+                    Margin="10,0,10,15"
+                    HorizontalAlignment="Right"
+                    HorizontalContentAlignment="Center"
+                    Background="{StaticResource FilesViewChildrenWindowBlueBackground}"
+                    Content="Cancel"
+                    FontSize="10"
+                    Foreground="#FFFFFF"
+                    Style="{StaticResource ButtonStyle}" />
+
+                <Button
+                    Width="150"
+                    Height="30"
+                    Margin="10,0,10,15"
+                    HorizontalAlignment="Right"
+                    HorizontalContentAlignment="Center"
+                    Background="{StaticResource FilesViewChildrenWindowBlueBackground}"
+                    Content="Close"
+                    FontSize="10"
+                    Foreground="#FFFFFF"
+                    Style="{StaticResource ButtonStyle}" />
+
+            </StackPanel>
         </Grid>
 
 

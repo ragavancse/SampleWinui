@@ -40,7 +40,7 @@
                     HorizontalContentAlignment="Center"
                     Background="{StaticResource TagListViewBlueButtonBackGround}"
                     Click="ScheduleButton_Click"
-                    Content="Schedule"
+                    Content="Schedule" 
                     FontSize="10"
                     Foreground="#FFFFFF"
                     Style="{StaticResource ButtonStyle}" />

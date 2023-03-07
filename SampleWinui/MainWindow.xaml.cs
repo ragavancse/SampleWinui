@@ -7,6 +7,7 @@ using Microsoft.UI.Xaml.Input;
 using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Navigation;
 using SampleWinui.Model;
+using SampleWinui.View;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -33,7 +34,6 @@ namespace SampleWinui
             ExtendsContentIntoTitleBar = true;
             SetTitleBar(AppTitleBar);
             RegisterWindowMinMax(this);
-
         }
 
         private static WinProc newWndProc = null;
@@ -142,6 +142,8 @@ namespace SampleWinui
                 (pivot.SelectedItem as PivotItem).Margin = new Thickness(0, 0, 0, 0);
             }
         }
+
+        
     }
 }
 

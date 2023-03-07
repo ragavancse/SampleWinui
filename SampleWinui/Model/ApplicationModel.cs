@@ -15,5 +15,7 @@ namespace SampleWinui.Model
         public string Privary { get; set; }
         public string ExcutableName { get; set; }
 
+        public string Service_Name { get; set; }
+
     }
 }

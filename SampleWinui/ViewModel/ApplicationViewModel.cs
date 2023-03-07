@@ -22,9 +22,9 @@ namespace SampleWinui.ViewModel
         public ApplicationViewModel()
         {
             Application = new ObservableCollection<ApplicationModel>();
-            Application.Add(new ApplicationModel { Name = "Privarcy", RootFolder = @"c:\Program Files(x84)\TPI\IMAGINE\Appliance", Local = "Yes", Privary = "Yes", ExcutableName = "ImagineApplianceService.exe"});
-            Application.Add(new ApplicationModel { Name = "Privarcy", RootFolder = @"c:\Program Files(x84)\TPI\IMAGINE\Appliance", Local = "Yes", Privary = "Yes", ExcutableName = "ImagineApplianceService.exe" });
-            Application.Add(new ApplicationModel { Name = "Privarcy", RootFolder = @"c:\Program Files(x84)\TPI\IMAGINE\Appliance", Local = "Yes", Privary = "Yes", ExcutableName = "ImagineApplianceService.exe" });
+            Application.Add(new ApplicationModel { Name = "Privarcy", RootFolder = @"c:\Program Files(x84)\TPI\IMAGINE\Appliance", Local = "Yes", Privary = "Yes", ExcutableName = "ImagineApplianceService.exe", Service_Name="ImagineApplianceService" });
+            Application.Add(new ApplicationModel { Name = "Privarcy", RootFolder = @"c:\Program Files(x84)\TPI\IMAGINE\Appliance", Local = "Yes", Privary = "Yes", ExcutableName = "ImagineApplianceService.exe", Service_Name= "ImagineApplianceService" });
+            Application.Add(new ApplicationModel { Name = "Privarcy", RootFolder = @"c:\Program Files(x84)\TPI\IMAGINE\Appliance", Local = "Yes", Privary = "Yes", ExcutableName = "ImagineApplianceService.exe", Service_Name="ImagineApplianceService" });
         }
     }
 }

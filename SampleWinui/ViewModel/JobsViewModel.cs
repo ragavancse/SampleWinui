@@ -30,6 +30,27 @@ namespace SampleWinui.ViewModel
             }
         }
 
+
+        private List<string> GetLogs()
+        {
+            return new List<string>() { new string ("01/13/2015 01:59:01 678 PM: configuration saved by [DTear]"),
+                 new string ("01/13/2015 01:59:01 678 PM: configuration saved by [DTear]"),
+                new string ("01/13/2015 01:59:01 678 PM: configuration saved by [DTear]"),
+                 new string ("01/13/2015 01:59:01 678 PM: configuration saved by [DTear]"),
+                 new string ("01/13/2015 01:59:01 678 PM: configuration saved by [DTear]"),
+                 new string ("01/13/2015 01:59:01 678 PM: configuration saved by [DTear]"),
+                 new string ("01/13/2015 01:59:01 678 PM: configuration saved by [DTear]") };
+        }
+
+        private RelayCommand clearLogsCommand;
+
+        public RelayCommand ClearLogsCommand
+        {
+            get { return clearLogsCommand; }
+            set { clearLogsCommand = value; }
+        }
+
+
         public string SearchText
         {
             get => searchText;

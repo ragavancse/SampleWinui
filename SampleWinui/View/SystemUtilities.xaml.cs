@@ -59,13 +59,13 @@ namespace SampleWinui.View
                 }
                 else if (item.HeaderText == "Validate Modules")
                 {
-                    window.SetSize(500, 700);
+                    window.SetSize(350, 600);
                     window.SetContent(new Module_Validation());
                     window.SetTitle("Module Validation");
                 }
                 else if (item.HeaderText == "Show Objects")
                 {
-                    window.SetSize(550, 650);
+                    window.SetSize(750, 650);
                     window.SetContent(new Objects());
                     window.SetTitle("Objects");
                 }
