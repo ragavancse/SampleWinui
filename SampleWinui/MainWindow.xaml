@@ -31,7 +31,8 @@
                 <Pivot
                     x:Name="pivot"
                     Grid.Row="1"
-                    Grid.ColumnSpan="3">
+                    Grid.ColumnSpan="3"
+                    SelectionChanged="pivot_SelectionChanged">
                     <Pivot.HeaderTemplate>
                         <DataTemplate>
                             <Border
@@ -66,7 +67,7 @@
                     </PivotItem>
                     <PivotItem Background="#D9E4E8" Header="Jobs">
                         <Grid>
-                            <view:JobsView />
+                            <view:JobsView x:Name="jobsView" />
                         </Grid>
                     </PivotItem>
                     <PivotItem Background="#D9E4E8" Header="Issues">

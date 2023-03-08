@@ -8,6 +8,7 @@ using Microsoft.UI.Xaml.Data;
 using Microsoft.UI.Xaml.Input;
 using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Navigation;
+using SampleWinui.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -27,6 +28,8 @@ namespace SampleWinui.View
         {
             this.InitializeComponent();
         }
+
+        public JobsViewModel ViewModel => rootGrid.DataContext as JobsViewModel;
 
         private void Grid_SizeChanged(object sender, SizeChangedEventArgs e)
         {

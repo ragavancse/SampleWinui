@@ -30,16 +30,23 @@ namespace SampleWinui.ViewModel
             }
         }
 
+        public ObservableCollection<string> Logs { get; set; }
 
-        private List<string> GetLogs()
+
+        public void SetLogs()
         {
-            return new List<string>() { new string ("01/13/2015 01:59:01 678 PM: configuration saved by [DTear]"),
+            Logs = new ObservableCollection<string>(){
+                new string ("01/13/2015 01:59:01 678 PM: configuration saved by [DTear]"),
                  new string ("01/13/2015 01:59:01 678 PM: configuration saved by [DTear]"),
                 new string ("01/13/2015 01:59:01 678 PM: configuration saved by [DTear]"),
                  new string ("01/13/2015 01:59:01 678 PM: configuration saved by [DTear]"),
                  new string ("01/13/2015 01:59:01 678 PM: configuration saved by [DTear]"),
                  new string ("01/13/2015 01:59:01 678 PM: configuration saved by [DTear]"),
                  new string ("01/13/2015 01:59:01 678 PM: configuration saved by [DTear]") };
+
+            OnPropertyChanged(nameof(Logs));
+
+
         }
 
         private RelayCommand clearLogsCommand;

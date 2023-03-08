@@ -6,6 +6,7 @@ using Microsoft.UI.Xaml.Input;
 using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Navigation;
 using Microsoft.VisualBasic;
+using SampleWinui.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -26,21 +27,25 @@ namespace SampleWinui.View
         public LogView()
         {
             this.InitializeComponent();
-            strings = new List<string>() { new string("01/13/2015 01:59:01 678 PM: configuration saved by [DTear]"),
-                 new string("01/13/2015 01:59:01 678 PM: configuration saved by [DTear]"),
-                new string("01/13/2015 01:59:01 678 PM: configuration saved by [DTear]"),
-                 new string("01/13/2015 01:59:01 678 PM: configuration saved by [DTear]"),
-                 new string("01/13/2015 01:59:01 678 PM: configuration saved by [DTear]"),
-                 new string("01/13/2015 01:59:01 678 PM: configuration saved by [DTear]"),
-                 new string("01/13/2015 01:59:01 678 PM: configuration saved by [DTear]"),
+            //strings = new List<string>() { new string("01/13/2015 01:59:01 678 PM: configuration saved by [DTear]"),
+            //     new string("01/13/2015 01:59:01 678 PM: configuration saved by [DTear]"),
+            //    new string("01/13/2015 01:59:01 678 PM: configuration saved by [DTear]"),
+            //     new string("01/13/2015 01:59:01 678 PM: configuration saved by [DTear]"),
+            //     new string("01/13/2015 01:59:01 678 PM: configuration saved by [DTear]"),
+            //     new string("01/13/2015 01:59:01 678 PM: configuration saved by [DTear]"),
+            //     new string("01/13/2015 01:59:01 678 PM: configuration saved by [DTear]"),
 
 
-            };
-            LogViewCollection.ItemsSource = strings;
+            //};
+            //LogViewCollection.ItemsSource = strings;
         }
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            LogViewCollection.ItemsSource = null;
+            if (this.DataContext is JobsViewModel jobsViewModel)
+            {
+                jobsViewModel.Logs.Clear();
+            }
+           // LogViewCollection.ItemsSource = null;
         }
     }
 }

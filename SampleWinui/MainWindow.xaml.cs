@@ -143,7 +143,16 @@ namespace SampleWinui
             }
         }
 
-        
+        private void pivot_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if(pivot.SelectedItem is PivotItem pivotitem && pivotitem.Header.ToString() == "Jobs")
+            {
+                if(jobsView.ViewModel!=null)
+                {
+                    jobsView.ViewModel.SetLogs();
+                }
+            }
+        }
     }
 }
 

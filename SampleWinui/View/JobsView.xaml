@@ -14,7 +14,10 @@
         <viewmodel:JobsViewModel x:Key="JobsViewModel" />
     </UserControl.Resources>
 
-    <Grid DataContext="{StaticResource JobsViewModel}" SizeChanged="Grid_SizeChanged">
+    <Grid
+        x:Name="rootGrid"
+        DataContext="{StaticResource JobsViewModel}"
+        SizeChanged="Grid_SizeChanged">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto" />
             <ColumnDefinition Width="*" />
