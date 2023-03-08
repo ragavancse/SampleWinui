@@ -62,6 +62,13 @@
             <SolidColorBrush x:Key="JobSetupBlueBackground" Color="#25c1f3" />
             <SolidColorBrush x:Key="JobSetupLightBlueBackground" Color="#9de0e8" />
 
+            <Style x:Key="TabViewShadowLine" TargetType="Grid">
+                <Setter Property="BorderBrush" Value="#D9E4E8" />
+                <Setter Property="BorderThickness" Value="0,2,0,0" />
+
+
+            </Style>
+
 
             <Style TargetType="TextBlock">
                 <Setter Property="FontFamily" Value="{ThemeResource Source_Sans_Pro_Regular}" />

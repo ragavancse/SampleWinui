@@ -61,22 +61,22 @@
                         </DataTemplate>
                     </Pivot.LeftHeaderTemplate>
                     <PivotItem Background="#D9E4E8" Header="File">
-                        <Grid>
+                        <Grid Margin="-12,0,0,0" Style="{StaticResource TabViewShadowLine}">
                             <view:FileView />
                         </Grid>
                     </PivotItem>
                     <PivotItem Background="#D9E4E8" Header="Jobs">
-                        <Grid>
+                        <Grid Margin="-12,0,0,0" Style="{StaticResource TabViewShadowLine}">
                             <view:JobsView x:Name="jobsView" />
                         </Grid>
                     </PivotItem>
                     <PivotItem Background="#D9E4E8" Header="Issues">
-                        <Grid>
+                        <Grid Margin="-12,0,0,0" Style="{StaticResource TabViewShadowLine}">
                             <view:IssuesView />
                         </Grid>
                     </PivotItem>
                     <PivotItem Background="#D9E4E8" Header="Monitor">
-                        <Grid>
+                        <Grid Margin="-12,0,0,0" Style="{StaticResource TabViewShadowLine}">
                             <view:MonitorView />
                         </Grid>
                     </PivotItem>

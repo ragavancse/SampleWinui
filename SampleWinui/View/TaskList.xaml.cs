@@ -40,7 +40,7 @@ namespace SampleWinui.View
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             var window = new ChildWindow();
-            window.SetSize(950, 1050);
+            window.SetSize(950, 1000);
             window.SetContent(new JobSetup());
             window.SetTitle("Schedule");
 
