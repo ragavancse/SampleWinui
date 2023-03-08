@@ -61,6 +61,7 @@
     <None Remove="Image\__MACOSX\._Path 1854.svg" />
     <None Remove="Image\__MACOSX\Icon_Refresh.svg" />
     <None Remove="Theme\DataGridStyle.xaml" />
+    <None Remove="View\ChildScheduleView.xaml" />
     <None Remove="View\IssuesView.xaml" />
     <None Remove="View\ApplicationInstances.xaml" />
     <None Remove="View\EmailSetup.xaml" />
@@ -68,6 +69,7 @@
     <None Remove="View\FileView.xaml" />
     <None Remove="View\IssuesSubVIew.xaml" />
     <None Remove="View\IssuesView.xaml" />
+    <None Remove="View\JobSetup.xaml" />
     <None Remove="View\JobsView.xaml" />
     <None Remove="View\ListJobsView.xaml" />
     <None Remove="View\LogView.xaml" />
@@ -80,7 +82,6 @@
     <None Remove="View\SystemUtilities.xaml" />
     <None Remove="View\PMMSSetup.xaml" />
     <None Remove="View\TaskList.xaml" />
-    <None Remove="View\UserControl1.xaml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Fonts\SourceSansPro-Black.ttf">
@@ -251,7 +252,12 @@
     <ProjectCapability Include="Msix" />
   </ItemGroup>
   <ItemGroup>
-    <Page Update="View\UserControl1.xaml">
+    <Page Update="View\JobSetup.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="View\ChildScheduleView.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>

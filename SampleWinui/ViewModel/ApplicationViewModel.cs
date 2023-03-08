@@ -16,6 +16,7 @@ namespace SampleWinui.ViewModel
         {
             get { return application; }
             set { application = value; }
+
         }
 
 

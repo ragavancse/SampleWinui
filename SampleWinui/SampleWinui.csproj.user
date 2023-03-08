@@ -5,7 +5,10 @@
     <None Update="App.xaml">
       <SubType>Designer</SubType>
     </None>
-    <Page Update="View\UserControl1.xaml">
+    <Page Update="View\JobSetup.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\ChildScheduleView.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Theme\DataGridStyle.xaml">

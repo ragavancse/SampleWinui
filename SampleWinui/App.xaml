@@ -53,6 +53,15 @@
             <SolidColorBrush x:Key="PivotHeaderItemSelectedPipeFill" Color="#25c1f3" />
             <SolidColorBrush x:Name="CheckBoxCheckBackgroundFillChecked" Color="#25c1f3" />
             <SolidColorBrush x:Key="ChildTitleBarBackground" Color="#6593a4" />
+            <SolidColorBrush x:Key="ChildScheduleviewBlueBackground" Color="#25c1f3" />
+            <SolidColorBrush x:Key="ChildScheduleviewGreenBackground" Color="#6593a4" />
+            <SolidColorBrush x:Key="ChildScheduleviewGrayBackground" Color="#99afb8" />
+            <SolidColorBrush x:Key="JobSetupGreenBackground" Color="#6593a4" />
+            <SolidColorBrush x:Key="JobSetupGrayBackground" Color="#99afb8" />
+            <SolidColorBrush x:Key="JobSetupLightGrayBackground" Color="#D9E4E8" />
+            <SolidColorBrush x:Key="JobSetupBlueBackground" Color="#25c1f3" />
+            <SolidColorBrush x:Key="JobSetupLightBlueBackground" Color="#9de0e8" />
+
 
             <Style TargetType="TextBlock">
                 <Setter Property="FontFamily" Value="{ThemeResource Source_Sans_Pro_Regular}" />

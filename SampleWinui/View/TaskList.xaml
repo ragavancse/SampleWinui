@@ -44,26 +44,20 @@
                     FontSize="10"
                     Foreground="#FFFFFF"
                     Style="{StaticResource ButtonStyle}" />
-                <DropDownButton
-                    Name="MyComboBox"
+
+                <Button
                     Grid.Column="2"
                     Width="150"
                     Height="30"
-                    Margin="15"
-                    Background="{ThemeResource IssueSubViewButtonBackground}"
-                    Content="Set Up"
-                    CornerRadius="12"
-                    FontFamily="{ThemeResource Source_Sans_Pro_Regular}"
-                    Foreground="White"
-                    Style="{StaticResource DropDownButtonStyle}">
-                    <DropDownButton.Flyout>
-                        <MenuFlyout Placement="Bottom">
-                            <MenuFlyoutItem Text="Send" />
-                            <MenuFlyoutItem Text="Reply" />
-                            <MenuFlyoutItem Text="Reply All" />
-                        </MenuFlyout>
-                    </DropDownButton.Flyout>
-                </DropDownButton>
+                    Margin="10,10,10,15"
+                    HorizontalContentAlignment="Center"
+                    Background="{StaticResource TagListViewGreenButtonBackGround}"
+                    Content="Setup"
+                    Click="Button_Click"
+                    FontSize="10"
+                    Foreground="#FFFFFF"
+                    Style="{StaticResource ButtonStyle}" />
+
                 <Button
                     Grid.Column="3"
                     Width="150"
